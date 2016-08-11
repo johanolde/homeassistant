@@ -63,9 +63,9 @@ HallEntre:
 
 Family:
   entities:
-    - device_tracker.101112110
-    - device_tracker.101112111
-    - device_tracker.101112112
+    - device_tracker.101112240
+    - device_tracker.101112241
+    - device_tracker.101112242
 
 Networking:
   entities:
