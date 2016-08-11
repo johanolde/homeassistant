@@ -6,9 +6,10 @@ homeassistant:
   temperature_unit: C
   time_zone: Europe/Stockholm
 
+customize: !include customize.yaml
 group: !include group.yaml
 sensor: !include_dir_merge_list sensors
-
+camera: !include cameras.yaml
 zwave:
   usb_path: /dev/ttyACM0
   config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
