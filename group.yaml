@@ -1,0 +1,160 @@
+###########################################################
+## Views
+###########################################################
+
+default_view:
+  view: yes
+  icon: mdi:home-variant
+  entities:
+    - camera.doorcam
+    - group.Weather
+    - group.Temperature
+    - group.Humidity
+    - group.Family
+
+Upstairs:
+  view: yes
+  entities:
+    - group.Upstairs_bath
+    - group.Upstairs_living
+
+Downstairs:
+  view: yes
+  entities:
+    - camera.livingroom
+    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10
+    - camera.PTZ_Cam
+    - Group.HallEntre
+    - group.Koket
+
+Basement:
+  view: yes
+  entities:
+    - camera.pannrumscam
+
+Outdoors:
+  view: yes
+  entities:
+    - camera.doorcam
+
+Security:
+  view: yes
+  entities:
+    - group.Fire
+    - group.cameras
+
+Admin:
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.Networking
+    - group.Powerusage
+    - group.AllaSwitchar
+    - group.Weblinks
+    - group.systemmonitor
+
+###########################################################
+## Groups
+###########################################################
+
+HallEntre:
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2
+
+Family:
+  entities:
+    - device_tracker.101112110
+    - device_tracker.101112111
+    - device_tracker.101112112
+
+Networking:
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+Temperature:
+  entities:
+    - sensor.fibaro_system_fgss101_smoke_sensor_temperature_7
+    - sensor.aeotec_zw074_multisensor_gen5_temperature_10
+    - sensor.aeotec_zw074_multisensor_gen5_temperature_11
+
+Humidity:
+  entities:
+    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10
+    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11
+    - sensor.yr_humidity
+
+Systemmonitor:
+- sensor.ram_free
+- sensor.cpu_use
+- sensor.disk_use_home
+
+AllaSwitchar:
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_3
+- switch.philio_technology_corporation_unknown_type0001_id0011_switch_12
+- switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
+- switch.qubino_zmnhadx_flush_1_relay_switch_4
+
+Powerusage:
+- sensor.energy_usage
+- sensor.qubino_zmnhadx_flush_1_relay_power_4
+- sensor.philio_technology_corporation_unknown_type0001_id0011_power_12
+- sensor.philio_technology_corporation_unknown_type0001_id0011_power_3
+- sensor.philio_technology_corporation_unknown_type0001_id0011_power_13
+- sensor.energy_budget
+- sensor.energy_cost
+
+Weather:
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - sensor.yr_condition
+    - sensor.yr_humidity
+    - sensor.yr_wind_direction
+    - sensor.yr_wind_speed
+
+Fire:
+  entities: 
+    - sensor.fibaro_system_fgss101_smoke_sensor_alarm_level_7
+    - sensor.fibaro_system_fgss101_smoke_sensor_alarm_type_7
+    - sensor.__alarm_level_7
+    - sensor.__alarm_type_7
+
+Koket:
+  entities:
+    - switch.philio_technology_corporation_unknown_type0001_id0011_switch_13
+    - sensor.philio_technology_corporation_unknown_type0001_id0011_energy_13
+    - sensor.philio_technology_corporation_unknown_type0001_id0011_power_13
+
+Upstairs_living:
+  entities:
+    - switch.philio_technology_corporation_unknown_type0001_id0011_switch_12
+    - switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
+    - sensor.philio_technology_corporation_unknown_type0001_id0011_power_12
+
+Upstairs_bath:
+  name: 'Badrum (uppe)'
+  entities:
+    - switch.qubino_zmnhadx_flush_1_relay_switch_4
+    - sensor.qubino_zmnhadx_flush_1_relay_energy_4
+    - sensor.qubino_zmnhadx_flush_1_relay_power_4
+
+Weblinks:
+- weblink.home_assistant
+- weblink.router
+- weblink.printer_brother
+- weblink.camera_axis_205
+- weblink.camera_sricam
+- weblink.PTZ_camera
+- weblink.HaRunbook
+- weblink.MDI_icons
+
+Cameras:
+- camera.doorcam
+- camera.livingroom
+- camera.pannrums_cam
+- camera.PTZCam
