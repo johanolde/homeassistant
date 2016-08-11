@@ -28,8 +28,11 @@ mqtt:
   username: !secret pi_username
   password: !secret pi_password
 
-device_tracker
+device_tracker:
   platform: nmap_tracker
   hosts: !secret track_hosts
   track_new_devices: no
   consider_home: 1800
+
+# Links to different things adminpages
+weblink: !include weblinks.yaml
