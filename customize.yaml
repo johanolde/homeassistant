@@ -1,0 +1,233 @@
+
+#################################################################
+## Customize
+#################################################################
+
+#################################################################
+# Switches
+#################################################################
+
+### Z-wave ------------------------------------------------------
+    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2:
+      friendly_name: "Hall Taklampa"
+      icon: mdi:toggle-switch
+
+    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2:
+      friendly_name: "Entrebelysning"
+      icon: mdi:toggle-switch
+
+    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_3:
+      friendly_name: "Hall och Entrebelysning"
+      icon: mdi:toggle-switch
+      hidden: true
+
+    switch.qubino_zmnhadx_flush_1_relay_switch_4:
+      friendly_name: "Badrum Flakt"
+      icon: mdi:fan
+
+    switch.philio_technology_corporation_unknown_type0001_id0011_switch_12:
+      friendly_name: "Vardagsrum TV"
+      icon: mdi:television
+
+    switch.philio_technology_corporation_unknown_type0001_id0011_switch_3:
+      friendly_name: "Hall Uppe Golvlampa"
+      icon: mdi:lightbulb
+
+    switch.philio_technology_corporation_unknown_type0001_id0011_switch_13:
+      friendly_name: "Kylskap"
+      icon: mdi:cart
+
+#################################################################
+# Sensors
+#################################################################
+
+### Misc --------------------------------------------------------
+    sensor.speedtest_download:
+      friendly_name: 'WAN Download'
+      icon: mdi:speedometer
+    sensor.speedtest_upload:
+      friendly_name: 'WAN Upload'
+      icon: mdi:speedometer
+    sensor.speedtest_ping:
+      friendly_name: 'WAN Ping'
+      icon: mdi:speedometer
+    sensor.energy_budget:
+      friendly_name: 'energibudget'
+    sensor.energy_cost:
+      friendly_name: 'energikostnad'
+    sensor.energy_usage:
+      friendly_name: 'Energiforbrukning totalt'
+
+### Z-wave - Temperature ----------------------------------------
+    sensor.aeotec_zw074_multisensor_gen5_temperature_10:
+      friendly_name: 'Badrum-Temperature'
+      icon: mdi:temperature-celsius    
+    sensor.aeotec_zw074_multisensor_gen5_temperature_11:
+      friendly_name: 'Hall-Temperature'
+      icon: mdi:temperature-celsius
+    sensor.fibaro_system_fgss101_smoke_sensor_temperature_7:
+      friendly_name: 'Salong-Temperature'
+      icon: mdi:temperature-celsius
+
+### Z-wave - Humidity ----------------------------------------
+    sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10:
+      friendly_name: 'Badrum-Luftfuktighet'
+      icon: mdi:water-percent    
+    sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11:
+      friendly_name: 'Hall-Luftfuktighet'
+      icon: mdi:water-percent
+
+# Z-wave - fire alarm -------------------------------------------
+    sensor.fibaro_system_fgss101_smoke_sensor_alarm_level_7:
+      friendly_name: 'Salong-Brand-level'
+      icon: mdi:fire
+    sensor.fibaro_system_fgss101_smoke_sensor_alarm_type_7:
+      friendly_name: 'Salong-Brand-type'
+      icon: mdi:fire
+
+# Z-wave - Energy -----------------------------------------------
+    sensor.philio_technology_corporation_unknown_type0001_id0011_power_12:
+      friendly_name: 'Energi TV'
+      icon: mdi:gauge
+    sensor.qubino_zmnhadx_flush_1_relay_power_4:
+      friendly_name: 'Aktuell forbrukning Badrumsflakt'
+      icon: mdi:gauge
+    sensor.philio_technology_corporation_unknown_type0001_id0011_power_3:
+      friendly_name: 'Energi Hall-Uppe-golvlampa'
+      icon: mdi:gauge
+    sensor.philio_technology_corporation_unknown_type0001_id0011_energy_13:
+      friendly_name: 'Energi Kylskap'
+      icon: mdi:gauge
+    sensor.philio_technology_corporation_unknown_type0001_id0011_power_13:
+      friendly_name: 'Energi Kylskap'
+      icon: mdi:gauge
+    sensor.qubino_zmnhadx_flush_1_relay_energy_4:
+      friendly_name: 'Energiforbrukning Badrumsflakt'
+      icon: mdi:gaugue
+
+# Weather - sensors  -----------------------------------------------
+    sensor.yr_symbol:
+      friendly_name: 'Conditions'
+    sensor.yr_temperature:
+      friendly_name: 'Temeprature'
+    sensor.yr_condition:
+      friendly_name: 'Rain'
+      icon: mdi:weather-rainy   
+    sensor.yr_humidity:
+      friendly_name: 'Humidity'
+      icon: mdi:water-percent    
+    sensor.yr_wind_direction:
+      friendly_name: 'Wind Direction'
+      icon: mdi:weather-windy
+    sensor.yr_wind_speed:
+      friendly_name: 'Wind Speed'
+      icon: mdi:weather-windy
+
+
+# Test to hide stuff --------------------------------------------
+    sensor.aeotec_zw074_multisensor_gen5_burglar_10:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_burglar_11:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_luminance_10:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_luminance_11:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_alarm_level_10:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_alarm_level_11:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_alarm_type_10:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_alarm_type_11:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_sourcenodeid_10:
+      hidden: true
+    sensor.aeotec_zw074_multisensor_gen5_sourcenodeid_11:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_alarm_level_12:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_alarm_level_3:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_alarm_type_12:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_alarm_type_3:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_current_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_current_2_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_current_2_3:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_2_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_2_3:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_factor_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_factor_2_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_factor_2_3:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_previous_reading_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_previous_reading_2_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_previous_reading_2_3:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_voltage_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_voltage_2_2:
+      hidden: true
+    sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_voltage_2_3:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_sourcenodeid_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_system_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_system_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_power_management_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_homehealth_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_homehealth_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_alarm_level_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_alarm_type_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_clock_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_clock_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_emergency_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_alarm_level_4_2:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_alarm_type_4:
+      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_emergency_4_2:
+      hidden: true
+#    sensor.qubino_zmnhadx_flush_1_relay_energy_4:
+#      hidden: true
+    sensor.qubino_zmnhadx_flush_1_relay_previous_reading_4:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_current_12:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_energy_12:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_power_factor_12:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_previous_reading_12:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_previous_reading_3:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_unknown_3:
+      hidden: true
+    sensor.philio_technology_corporation_unknown_type0001_id0011_voltage_12:
+      hidden: true
