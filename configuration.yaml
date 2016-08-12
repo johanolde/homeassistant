@@ -39,5 +39,5 @@ device_tracker:
   track_new_devices: no
   consider_home: 1800
 
-# Links to different things adminpages
 weblink: !include weblinks.yaml
+panel_iframe: !include panel_iframe.yaml
