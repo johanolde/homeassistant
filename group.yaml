@@ -142,6 +142,8 @@ Upstairs_bath:
     - switch.qubino_zmnhadx_flush_1_relay_switch_4
     - sensor.qubino_zmnhadx_flush_1_relay_energy_4
     - sensor.qubino_zmnhadx_flush_1_relay_power_4
+    - sensor.aeotec_zw074_multisensor_gen5_temperature_10
+    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10
 
 Weblinks:
 - weblink.home_assistant
