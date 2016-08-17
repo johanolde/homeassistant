@@ -82,7 +82,7 @@ script:
         data:
           entity_id: switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
       # Set new timer
-      - service: switch.turn_on
+      - service: script.turn_on
         data:
           entity_id: script.timer_off
 
@@ -90,7 +90,7 @@ script:
     alias: "Turn off lamp after 10 minutes"
     sequence:
       - delay:
-          minutes: 5
+          minutes: 1
       - service: switch.turn_off
         data:
           entity_id: switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
