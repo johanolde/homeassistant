@@ -6,7 +6,6 @@ default_view:
   view: yes
   icon: mdi:home-variant
   entities:
-#    - camera.doorcam
     - group.cameras
     - group.Weather
     - group.Temperature
@@ -23,17 +22,14 @@ Upstairs:
 Downstairs:
   view: yes
   entities:
-    - camera.livingroom
-    - sensor.entrance_multisensor_relative_humidity_11
-    - sensor.entrance_multisensor_luminance_11
-    - camera.PTZ_Cam
-    - group.HallEntre
+    - camera.dining_room
+    - group.entrance
     - group.Koket
 
 Basement:
   view: yes
   entities:
-    - camera.pannrumscam
+    - camera.pannrums_cam
 
 Outdoors:
   view: yes
@@ -60,10 +56,13 @@ Admin:
 ## Groups
 ###########################################################
 
-HallEntre:
+entrance:
 - switch.entrance_porch_light_switch_2
 - switch.entrance_porch_light_switch_2_2
 - switch.entrance_porch_light_switch_2_3
+- sensor.entrance_multisensor_luminance_11
+- sensor.entrance_multisensor_temperature_11
+- sensor.entrance_multisensor_relative_humidity_11
 
 Family:
   entities:

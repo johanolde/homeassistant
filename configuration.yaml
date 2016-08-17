@@ -21,13 +21,7 @@ conversation:
 history:
 logbook:
 sun:
-
-mqtt:
-  broker: 127.0.0.1
-  port: 1883
-  client_id: home-assistant-1
-  username: !secret pi_username
-  password: !secret pi_password
+mqtt: !include mqtt.yaml
 
 device_tracker:
   platform: nmap_tracker
