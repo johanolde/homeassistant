@@ -3,7 +3,8 @@ homeassistant:
   latitude: !secret my_latitude
   longitude: !secret my_longitude
   elevation: 142
-  temperature_unit: C
+  unit_system: metric
+#  temperature_unit: C
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
 
