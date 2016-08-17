@@ -6,7 +6,8 @@ default_view:
   view: yes
   icon: mdi:home-variant
   entities:
-    - camera.doorcam
+#    - camera.doorcam
+    - group.cameras
     - group.Weather
     - group.Temperature
     - group.Humidity
@@ -16,15 +17,17 @@ Upstairs:
   view: yes
   entities:
     - group.Upstairs_bath
-    - group.Upstairs_living
+    - group.livingroom
+    - group.stairs
 
 Downstairs:
   view: yes
   entities:
     - camera.livingroom
-    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10
+    - sensor.entrance_multisensor_relative_humidity_11
+    - sensor.entrance_multisensor_luminance_11
     - camera.PTZ_Cam
-    - Group.HallEntre
+    - group.HallEntre
     - group.Koket
 
 Basement:
@@ -58,8 +61,9 @@ Admin:
 ###########################################################
 
 HallEntre:
-- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2
-- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2
+- switch.entrance_porch_light_switch_2
+- switch.entrance_porch_light_switch_2_2
+- switch.entrance_porch_light_switch_2_3
 
 Family:
   entities:
@@ -75,14 +79,15 @@ Networking:
 
 Temperature:
   entities:
-    - sensor.fibaro_system_fgss101_smoke_sensor_temperature_7
-    - sensor.aeotec_zw074_multisensor_gen5_temperature_10
-    - sensor.aeotec_zw074_multisensor_gen5_temperature_11
+    - sensor.bathroom_multisensor_temperature_10
+    - sensor.entrance_multisensor_temperature_11
+    - sensor.lounge_smokedetector_temperature_7
+    - sensor.yr_temperature
 
 Humidity:
   entities:
-    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10
-    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11
+    - sensor.entrance_multisensor_relative_humidity_11
+    - sensor.bathroom_multisensor_relative_humidity_10
     - sensor.yr_humidity
 
 Systemmonitor:
@@ -91,19 +96,23 @@ Systemmonitor:
 - sensor.disk_use_home
 
 AllaSwitchar:
-- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2
-- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2
-- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_3
-- switch.philio_technology_corporation_unknown_type0001_id0011_switch_12
-- switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
-- switch.qubino_zmnhadx_flush_1_relay_switch_4
+- switch.livingroom_tv_switch_12
+- switch.stairs_switch_switch_3
+- switch.bathroom_fan_switch_4
+- switch.entrance_porch_light_switch_2
+- switch.entrance_porch_light_switch_2_2
+- switch.entrance_porch_light_switch_2_3
+- switch.kitchen_fridge_switch_13
 
 Powerusage:
 - sensor.energy_usage
-- sensor.qubino_zmnhadx_flush_1_relay_power_4
-- sensor.philio_technology_corporation_unknown_type0001_id0011_power_12
-- sensor.philio_technology_corporation_unknown_type0001_id0011_power_3
-- sensor.philio_technology_corporation_unknown_type0001_id0011_power_13
+- sensor.bathroom_fan_power_4
+- sensor.entance_porch_light_power_2
+- sensor.entance_porch_light_power_2_2
+- sensor.entance_porch_light_power_2_3
+- sensor.kitchen_fridge_power_13
+- sensor.livingroom_tv_power_12
+- sensor.stairs_switch_power_3
 - sensor.energy_budget
 - sensor.energy_cost
 
@@ -130,20 +139,19 @@ Koket:
     - sensor.philio_technology_corporation_unknown_type0001_id0011_energy_13
     - sensor.philio_technology_corporation_unknown_type0001_id0011_power_13
 
-Upstairs_living:
+livingroom:
   entities:
-    - switch.philio_technology_corporation_unknown_type0001_id0011_switch_12
-    - switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
-    - sensor.philio_technology_corporation_unknown_type0001_id0011_power_12
+    - switch.livingroom_tv_switch_12
+    - sensor.livingroom_tv_power_12
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
   entities:
-    - switch.qubino_zmnhadx_flush_1_relay_switch_4
-    - sensor.qubino_zmnhadx_flush_1_relay_energy_4
-    - sensor.qubino_zmnhadx_flush_1_relay_power_4
-    - sensor.aeotec_zw074_multisensor_gen5_temperature_10
-    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_10
+    - switch.bathroom_fan_switch_4
+    - sensor.bathroom_fan_power_4
+    - sensor.bathrom_multisensor_luminance_10
+    - sensor.bathrom_multisensor_realtive_humidity_10
+    - sensor.bathrom_multisensor_temperature_10
 
 Weblinks:
 - weblink.home_assistant
@@ -157,6 +165,17 @@ Weblinks:
 
 Cameras:
 - camera.doorcam
-- camera.livingroom
+- camera.dining_room
 - camera.pannrums_cam
 - camera.PTZCam
+
+stairs:
+- sensor.stairs_switch_alarm_level_3
+- sensor.stairs_switch_alarm_type_3
+- sensor.stairs_switch_current_3
+- sensor.stairs_switch_energy_3
+- sensor.stairs_switch_power_3
+- sensor.stairs_switch_power_factor_3
+- sensor.stairs_switch_previous_reading_3
+- sensor.stairs_switch_voltage_3
+

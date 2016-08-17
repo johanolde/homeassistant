@@ -11,6 +11,7 @@ homeassistant:
 group: !include group.yaml
 sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
+
 zwave:
   usb_path: /dev/ttyACM0
   config_path: /srv/hass/hass_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
@@ -50,7 +51,7 @@ automation:
     offset: "-00:30:00"
   action:
     service: switch.turn_on
-    entity_id: switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2
+    entity_id: switch.entrance_porch_light_switch_2_2
 
 automation 2:
   trigger:
@@ -59,12 +60,12 @@ automation 2:
     offset: "00:30:00"
   action:
     service: switch.turn_off
-    entity_id: switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_2
+    entity_id: switch.entrance_porch_light_switch_2_2
 
 automation 3:
   trigger:
     platform: state
-    entity_id: binary_sensor.aeotec_zw074_multisensor_gen5_sensor_10
+    entity_id: binary_sensor.bathroom_multisensor_sensor_10
     from: 'off'
     to: 'on'
   action:
@@ -81,7 +82,7 @@ script:
            entity_id: script.timer_off
       - service: switch.turn_on
         data:
-          entity_id: switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
+          entity_id: switch.bathroom_fan_switch_4
       # Set new timer
       - service: script.turn_on
         data:
@@ -91,7 +92,7 @@ script:
     alias: "Turn off lamp after 10 minutes"
     sequence:
       - delay:
-          minutes: 1
+          minutes: 5
       - service: switch.turn_off
         data:
-          entity_id: switch.philio_technology_corporation_unknown_type0001_id0011_switch_3
+          entity_id: switch.bathroom_fan_switch_4
