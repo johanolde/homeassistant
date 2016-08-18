@@ -23,8 +23,10 @@ Downstairs:
   view: yes
   entities:
     - camera.dining_room
+    - camera.doorcam
     - group.entrance
-    - group.Koket
+    - group.kitchen
+    - switch.__switch_14
 
 Basement:
   view: yes
@@ -126,17 +128,17 @@ Weather:
     - sensor.yr_wind_speed
 
 Fire:
-  entities: 
-    - sensor.fibaro_system_fgss101_smoke_sensor_alarm_level_7
-    - sensor.fibaro_system_fgss101_smoke_sensor_alarm_type_7
-    - sensor.__alarm_level_7
-    - sensor.__alarm_type_7
-
-Koket:
   entities:
-    - switch.philio_technology_corporation_unknown_type0001_id0011_switch_13
-    - sensor.philio_technology_corporation_unknown_type0001_id0011_energy_13
-    - sensor.philio_technology_corporation_unknown_type0001_id0011_power_13
+    - sensor.lounge_smokedetector_alarm_level_7
+    - sensor.lounge_smokedetector_alarm_type_7
+    - sensor.lounge_smokedetector_general_7
+    - sensor.lounge_smokedetector_heat_7
+    - sensor.lounge_smokedetector_smoke_7
+    - sensor.lounge_smokedetector_temperature_7
+
+kitchen:
+  entities:
+    - sensor.kitchen_fridge_power_13
 
 livingroom:
   entities:
@@ -178,3 +180,6 @@ stairs:
 - sensor.stairs_switch_previous_reading_3
 - sensor.stairs_switch_voltage_3
 
+suncontrol:
+- switch.entrance_porch_light_switch_2_2
+- switch.diningroom_light_switch_14

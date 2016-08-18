@@ -1,0 +1,12 @@
+sequence:
+  # Cancel ev. old timers
+  - service: script.timed_fan_off
+    data:
+       entity_id: script.timed_fan_off
+  - service: switch.turn_on
+    data:
+      entity_id: switch.bathroom_fan_switch_4
+  # Set new timer
+  - service: script.timed_fan
+    data:
+      entity_id: script.timed_fan_off
