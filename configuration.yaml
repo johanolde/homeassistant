@@ -9,7 +9,7 @@ homeassistant:
 
 group: !include group.yaml
 sensor: !include_dir_merge_list sensors
-camera: !include cameras.yaml
+#camera: !include cameras.yaml
 zwave: !include zwave.yaml
 frontend:
 http:
@@ -43,3 +43,4 @@ light:
 #  devices:
 #    10.11.12.25:
 #      name: lightify 
+scene: !include_dir_list scenes

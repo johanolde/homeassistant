@@ -22,11 +22,9 @@ Upstairs:
 Downstairs:
   view: yes
   entities:
-    - camera.dining_room
-    - camera.doorcam
     - group.entrance
     - group.kitchen
-    - switch.__switch_14
+    - group.dining
 
 Basement:
   view: yes
@@ -65,6 +63,7 @@ entrance:
 - sensor.entrance_multisensor_luminance_11
 - sensor.entrance_multisensor_temperature_11
 - sensor.entrance_multisensor_relative_humidity_11
+- camera.doorcam
 
 Family:
   entities:
@@ -90,6 +89,11 @@ Humidity:
     - sensor.entrance_multisensor_relative_humidity_11
     - sensor.bathroom_multisensor_relative_humidity_10
     - sensor.yr_humidity
+
+Dining:
+  entities:
+    - camera.dining_room
+    - switch.diningroom_light_switch_14
 
 Systemmonitor:
 - sensor.ram_free
@@ -143,6 +147,8 @@ kitchen:
     - light.p16tw_01
     - light.p16tw_02
     - light.p16tw_03
+    - scene.cooking
+    - scene.eating
 
 livingroom:
   entities:
@@ -187,3 +193,9 @@ stairs:
 suncontrol:
 - switch.entrance_porch_light_switch_2_2
 - switch.diningroom_light_switch_14
+
+outdoors:
+- camera.doorcam
+- sensor.yr_symbol
+- sensor.yr_temperature
+
