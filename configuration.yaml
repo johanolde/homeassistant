@@ -33,56 +33,13 @@ weblink: !include weblinks.yaml
 panel_iframe: !include panel_iframe.yaml
 
 automation: !include automation.yaml
-#automation: 
-#automation: !include_dir_merge_list automation
-#  trigger:
-#    platform: sun
-#    event: sunset
-#    offset: "-00:30:00"
-#  action:
-#    service: homeassistant.turn_on
-#    entity_id: group.suncontrol
-
-#automation 2:
-#  trigger:
-#    platform: sun
-#    event: sunrise
-#    offset: "00:30:00"
-#  action:
-#    service: homeassistant.turn_off
-#    entity_id: group.suncontrol
-
-#automation 3:
-#  trigger:
-#    platform: state
-#    entity_id: binary_sensor.bathroom_multisensor_sensor_10
-#    from: 'off'
-#    to: 'on'
-#  action:
-#    service: homeassistant.turn_on
-#    entity_id: script.timed_lamp
 script: !include scripts.yaml
-#script: !include_dir_merge_list scripts
-#  timed_lamp:
-#    alias: "Turn on lamp and set timer"
-#    sequence:
-#      # Cancel ev. old timers
-#      - service: script.turn_off
-#        data:
-#           entity_id: script.timer_off
-#      - service: switch.turn_on
-#        data:
-#          entity_id: switch.bathroom_fan_switch_4
-#      # Set new timer
-#      - service: script.turn_on
-#        data:
-#          entity_id: script.timer_off
 
-#  timer_off:
-#    alias: "Turn off lamp after 10 minutes"
-#    sequence:
-#      - delay:
-#          minutes: 10
-#      - service: switch.turn_off
-#        data:
-#          entity_id: switch.bathroom_fan_switch_4
+light:
+  platform: osramlightify
+  host: !secret lightify_ip
+#  platform: flux_led
+#  automatic_add: True
+#  devices:
+#    10.11.12.25:
+#      name: lightify 

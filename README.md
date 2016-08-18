@@ -14,6 +14,7 @@ Raspberry Pi 3 with Berryboot / iscsi / Q-nap TS-259
 <H3>Misc</H3>
 <ul>
 <li>Efergy Energy monitor
+<li>Osram Lightify
 </ul>
 <H3>Cameras</H3>
 <ul>

@@ -139,6 +139,10 @@ Fire:
 kitchen:
   entities:
     - sensor.kitchen_fridge_power_13
+    - light.a60rgbw_01
+    - light.p16tw_01
+    - light.p16tw_02
+    - light.p16tw_03
 
 livingroom:
   entities:

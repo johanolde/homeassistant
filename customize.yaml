@@ -127,6 +127,21 @@
       friendly_name: 'Wind Speed'
       icon: mdi:weather-windy
 
+# Osram Lightify  ------------------------------------------------- 
+    light.a60rgbw_01:
+      friendly_name: 'Kitchen table'
+      icon: mdi:lightbulb
+    light.p16tw_01:
+      friendly_name: 'Spot 1'
+      icon: mdi:spotlight
+    light.p16tw_02:
+      friendly_name: 'Spot 2'
+      icon: mdi:spotlight
+    light.p16tw_03:
+      friendly_name: 'Spot 3'
+      icon: mdi:spotlight
+
+
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4:
