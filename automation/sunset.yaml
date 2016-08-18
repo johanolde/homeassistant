@@ -6,4 +6,3 @@ trigger:
 action:
   service: homeassistant.turn_on
   entity_id: group.suncontrol
-

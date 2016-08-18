@@ -1,0 +1,3 @@
+- !include automation/sunset.yaml
+- !include automation/sunrise.yaml
+- !include automation/bathroom_fan.yaml

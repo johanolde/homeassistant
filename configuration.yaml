@@ -32,7 +32,9 @@ device_tracker:
 weblink: !include weblinks.yaml
 panel_iframe: !include panel_iframe.yaml
 
-automation: !include_dir_merge_list automation
+automation: !include automation.yaml
+#automation: 
+#automation: !include_dir_merge_list automation
 #  trigger:
 #    platform: sun
 #    event: sunset
@@ -59,8 +61,8 @@ automation: !include_dir_merge_list automation
 #  action:
 #    service: homeassistant.turn_on
 #    entity_id: script.timed_lamp
-
-script: !include_dir_merge_list scripts
+script: !include scripts.yaml
+#script: !include_dir_merge_list scripts
 #  timed_lamp:
 #    alias: "Turn on lamp and set timer"
 #    sequence:

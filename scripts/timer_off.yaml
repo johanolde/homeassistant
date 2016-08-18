@@ -1,0 +1,6 @@
+sequence:
+- delay:
+    minutes: 10
+- service: switch.turn_off
+  data:
+    entity_id: switch.bathroom_fan_switch_4
