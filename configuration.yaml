@@ -9,7 +9,7 @@ homeassistant:
 
 group: !include group.yaml
 sensor: !include_dir_merge_list sensors
-#camera: !include cameras.yaml
+camera: !include cameras.yaml
 zwave: !include zwave.yaml
 frontend:
 http:
@@ -38,9 +38,5 @@ script: !include scripts.yaml
 light:
   platform: osramlightify
   host: !secret lightify_ip
-#  platform: flux_led
-#  automatic_add: True
-#  devices:
-#    10.11.12.25:
-#      name: lightify 
+
 scene: !include_dir_list scenes

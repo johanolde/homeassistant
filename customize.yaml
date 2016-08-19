@@ -27,7 +27,7 @@
 
     switch.kitchen_fridge_switch_13:
       friendly_name: "Kitchen Fridge"
-      icon: mdi:cart
+      icon: mdi:fridge-filled
 
     switch.livingroom_tv_switch_12:
       friendly_name: "Livingroom TV"
@@ -140,7 +140,9 @@
     light.p16tw_03:
       friendly_name: 'Spot 3'
       icon: mdi:spotlight
-
+    light.flexrgbw_01:
+      friendly_nae: 'Kitchen Lightstrip'
+      icon: mdi:led-on
 
 
 # Test to hide stuff --------------------------------------------

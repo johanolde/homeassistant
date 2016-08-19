@@ -147,6 +147,7 @@ kitchen:
     - light.p16tw_01
     - light.p16tw_02
     - light.p16tw_03
+    - light.flexrgbw_01
     - scene.cooking
     - scene.eating
 

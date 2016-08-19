@@ -1,0 +1,10 @@
+sequence:
+- service: script.turn_off
+  data:
+    entity_id: script.light_timer_off
+- service: switch.turn_on
+  data:
+    entity_id: switch.entrance_porch_light_switch_2
+- service: script.turn_on
+  data:
+    entity_id: script.light_timer_off
