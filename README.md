@@ -10,6 +10,7 @@ Raspberry Pi 3 with Berryboot / iscsi / Q-nap TS-259
 <li>Aotec ZW074 Multisensors
 <Li>Qubino ZMNHADx Flush 1 relay
 <li>Philio Tech Pan-11
+<li>Philio Tech Pan04-1b
 </UL>
 <H3>Misc</H3>
 <ul>
@@ -23,3 +24,9 @@ Raspberry Pi 3 with Berryboot / iscsi / Q-nap TS-259
 <li>Edimax PTZ
 <li>Grandtec 
 </ul>
+<H3>RF-devices</h3>
+<ul>
+<li>Tellstic Duo USB interface
+<li>Anslut Switch
+</ul>
+

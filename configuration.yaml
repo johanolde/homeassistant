@@ -40,3 +40,9 @@ light:
   host: !secret lightify_ip
 
 scene: !include_dir_list scenes
+
+tellstick:
+  signal_repetitions: 2
+
+switch:
+  platform: tellstick

@@ -18,6 +18,7 @@ Upstairs:
     - group.Upstairs_bath
     - group.livingroom
     - group.stairs
+    - group.den
 
 Downstairs:
   view: yes
@@ -200,3 +201,5 @@ outdoors:
 - sensor.yr_symbol
 - sensor.yr_temperature
 
+den:
+- switch.den_window_light
