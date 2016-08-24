@@ -46,3 +46,5 @@ tellstick:
 
 switch:
   platform: tellstick
+
+battery_state:

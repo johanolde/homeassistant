@@ -52,6 +52,7 @@ Admin:
     - group.AllaSwitchar
     - group.Weblinks
     - group.systemmonitor
+    - group.battery
 
 ###########################################################
 ## Groups
@@ -203,3 +204,10 @@ outdoors:
 
 den:
 - switch.den_window_light
+
+battery:
+- binary_sensor.bathroom_multisensor_sensor_10_battery
+- binary_sensor.entrance_multisensor_sensor_11_battery
+- binary_sensor.stairs_smokedetector_sensor_15_battery
+- sensor.lounge_smokedetector_alarm_level_7_battery
+
