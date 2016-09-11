@@ -10,7 +10,7 @@ default_view:
     - group.Weather
     - group.Temperature
     - group.Humidity
-    - group.Family
+    - group.family
 
 Upstairs:
   view: yes
@@ -54,6 +54,7 @@ Admin:
     - group.systemmonitor
     - group.battery
 
+
 ###########################################################
 ## Groups
 ###########################################################
@@ -67,11 +68,11 @@ entrance:
 - sensor.entrance_multisensor_relative_humidity_11
 - camera.doorcam
 
-Family:
+family:
   entities:
-    - device_tracker.101112240
-    - device_tracker.101112241
-    - device_tracker.101112242
+    - device_tracker.johan_iphone
+    - device_tracker.anne_iphone
+    - device_tracker.wilma_iphone
 
 Networking:
   entities:
@@ -110,6 +111,7 @@ AllaSwitchar:
 - switch.entrance_porch_light_switch_2_2
 - switch.entrance_porch_light_switch_2_3
 - switch.kitchen_fridge_switch_13
+- switch.den_window_light
 
 Powerusage:
 - sensor.energy_usage
@@ -157,6 +159,7 @@ livingroom:
   entities:
     - switch.livingroom_tv_switch_12
     - sensor.livingroom_tv_power_12
+    - switch.stairs_switch_switch_3
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
@@ -192,10 +195,13 @@ stairs:
 - sensor.stairs_switch_power_factor_3
 - sensor.stairs_switch_previous_reading_3
 - sensor.stairs_switch_voltage_3
+- switch.stairs_switch_switch_3
 
 suncontrol:
 - switch.entrance_porch_light_switch_2_2
 - switch.diningroom_light_switch_14
+- switch.den_window_light
+- switch.stairs_switch_switch_3
 
 outdoors:
 - camera.doorcam
