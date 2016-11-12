@@ -1,5 +1,5 @@
 broker: 127.0.0.1
 port: 1883
-client_id: home-assistant-1
+client_id: home-assistant
 username: !secret pi_username
 password: !secret pi_password

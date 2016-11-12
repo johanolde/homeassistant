@@ -45,6 +45,18 @@ tellstick:
   signal_repetitions: 2
 
 switch:
-  platform: tellstick
+  - platform: tellstick
+#  - platform: rest
+#    resource: http://127.0.0.1:1234/park
+#  - platform: rest
+#    resource: http://127.0.0.1:1234/stop
+#  - platform: rest
+#    resource: http://127.0.0.1:1234/start
 
 battery_state:
+
+notify:
+  name: slack
+  platform: slack
+  api_key: !secret slack_api
+  default_channel: '#skarsjo'

@@ -36,6 +36,9 @@ Outdoors:
   view: yes
   entities:
     - camera.doorcam
+#    - sensor.mower_battery
+#    - sensor.mower_status
+    - group.mower
 
 Security:
   view: yes
@@ -53,26 +56,27 @@ Admin:
     - group.Weblinks
     - group.systemmonitor
     - group.battery
-
+    - group.test
 
 ###########################################################
 ## Groups
 ###########################################################
 
 entrance:
-- switch.entrance_porch_light_switch_2
-- switch.entrance_porch_light_switch_2_2
-- switch.entrance_porch_light_switch_2_3
-- sensor.entrance_multisensor_luminance_11
-- sensor.entrance_multisensor_temperature_11
-- sensor.entrance_multisensor_relative_humidity_11
+- switch.entrance_porch_light_switch_2_0
+- switch.entrance_porch_light_switch_2_0_2
+- switch.entrance_porch_light_switch_2_0_3
+- sensor.entrance_multisensor_luminance_11_3
+- sensor.entrance_multisensor_temperature_11_1
+- sensor.entrance_multisensor_relative_humidity_11_5
 - camera.doorcam
-
+- sensor.doorbell
 family:
   entities:
     - device_tracker.johan_iphone
     - device_tracker.anne_iphone
     - device_tracker.wilma_iphone
+    - device_tracker.fanny_iphone
 
 Networking:
   entities:
@@ -82,21 +86,21 @@ Networking:
 
 Temperature:
   entities:
-    - sensor.bathroom_multisensor_temperature_10
-    - sensor.entrance_multisensor_temperature_11
-    - sensor.lounge_smokedetector_temperature_7
+    - sensor.bathroom_multisensor_temperature_10_1
+    - sensor.entrance_multisensor_temperature_11_1
+    - sensor.lounge_smokedetector_temperature_7_1
     - sensor.yr_temperature
 
 Humidity:
   entities:
-    - sensor.entrance_multisensor_relative_humidity_11
-    - sensor.bathroom_multisensor_relative_humidity_10
+    - sensor.entrance_multisensor_relative_humidity_11_5
+    - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.yr_humidity
 
 Dining:
   entities:
     - camera.dining_room
-    - switch.diningroom_light_switch_14
+    - switch.diningroom_light_switch_14_0
 
 Systemmonitor:
 - sensor.ram_free
@@ -104,24 +108,28 @@ Systemmonitor:
 - sensor.disk_use_home
 
 AllaSwitchar:
-- switch.livingroom_tv_switch_12
-- switch.stairs_switch_switch_3
-- switch.bathroom_fan_switch_4
-- switch.entrance_porch_light_switch_2
-- switch.entrance_porch_light_switch_2_2
-- switch.entrance_porch_light_switch_2_3
-- switch.kitchen_fridge_switch_13
+- switch.livingroom_tv_switch_12_0
+- switch.stairs_switch_switch_3_0
+- switch.bathroom_fan_switch_4_0
+- switch.entrance_porch_light_switch_2_0
+- switch.entrance_porch_light_switch_2_0_2
+- switch.entrance_porch_light_switch_2_0_3
+- switch.kitchen_fridge_switch_13_0
 - switch.den_window_light
+- switch.porchpluginswitch
+- switch.doorbell1
+- switch.doorbell2
+- switch.diningroom_light_switch_14_0 
 
 Powerusage:
 - sensor.energy_usage
-- sensor.bathroom_fan_power_4
-- sensor.entance_porch_light_power_2
-- sensor.entance_porch_light_power_2_2
-- sensor.entance_porch_light_power_2_3
-- sensor.kitchen_fridge_power_13
-- sensor.livingroom_tv_power_12
-- sensor.stairs_switch_power_3
+- sensor.bathroom_fan_power_4_8
+- sensor.entance_porch_light_power_2_8
+- sensor.entance_porch_light_power_2_8_2
+- sensor.entance_porch_light_power_2_8_3
+- sensor.kitchen_fridge_power_13_8
+- sensor.livingroom_tv_power_12_8
+- sensor.stairs_switch_power_3_8
 - sensor.energy_budget
 - sensor.energy_cost
 
@@ -137,16 +145,16 @@ Weather:
 
 Fire:
   entities:
-    - sensor.lounge_smokedetector_alarm_level_7
-    - sensor.lounge_smokedetector_alarm_type_7
-    - sensor.lounge_smokedetector_general_7
-    - sensor.lounge_smokedetector_heat_7
-    - sensor.lounge_smokedetector_smoke_7
-    - sensor.lounge_smokedetector_temperature_7
+    - sensor.lounge_smokedetector_alarm_level_7_1
+    - sensor.lounge_smokedetector_alarm_type_7_0
+    - sensor.lounge_smokedetector_general_7_0
+    - sensor.lounge_smokedetector_heat_7_4
+    - sensor.lounge_smokedetector_smoke_7_1
+    - sensor.lounge_smokedetector_temperature_7_1
 
 kitchen:
   entities:
-    - sensor.kitchen_fridge_power_13
+    - sensor.kitchen_fridge_power_13_8
     - light.a60rgbw_01
     - light.p16tw_01
     - light.p16tw_02
@@ -157,18 +165,18 @@ kitchen:
 
 livingroom:
   entities:
-    - switch.livingroom_tv_switch_12
-    - sensor.livingroom_tv_power_12
-    - switch.stairs_switch_switch_3
+    - switch.livingroom_tv_switch_12_0
+    - sensor.livingroom_tv_power_12_8
+    - switch.stairs_switch_switch_3_0
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
   entities:
-    - switch.bathroom_fan_switch_4
-    - sensor.bathroom_fan_power_4
-    - sensor.bathrom_multisensor_luminance_10
-    - sensor.bathrom_multisensor_realtive_humidity_10
-    - sensor.bathrom_multisensor_temperature_10
+    - switch.bathroom_fan_switch_4_0
+    - sensor.bathroom_fan_power_4_8
+    - sensor.bathrom_multisensor_luminance_10_3
+    - sensor.bathrom_multisensor_realtive_humidity_10_5
+    - sensor.bathrom_multisensor_temperature_10_1
 
 Weblinks:
 - weblink.home_assistant
@@ -187,21 +195,21 @@ Cameras:
 - camera.PTZCam
 
 stairs:
-- sensor.stairs_switch_alarm_level_3
-- sensor.stairs_switch_alarm_type_3
-- sensor.stairs_switch_current_3
-- sensor.stairs_switch_energy_3
-- sensor.stairs_switch_power_3
-- sensor.stairs_switch_power_factor_3
-- sensor.stairs_switch_previous_reading_3
-- sensor.stairs_switch_voltage_3
-- switch.stairs_switch_switch_3
+- sensor.stairs_switch_alarm_level_3_1
+- sensor.stairs_switch_alarm_type_3_0
+- sensor.stairs_switch_current_3_20
+- sensor.stairs_switch_energy_3_0
+- sensor.stairs_switch_power_3_8
+- sensor.stairs_switch_power_factor_3_24
+- sensor.stairs_switch_previous_reading_3_1
+- sensor.stairs_switch_voltage_3_16
+- switch.stairs_switch_switch_3_0
 
 suncontrol:
-- switch.entrance_porch_light_switch_2_2
-- switch.diningroom_light_switch_14
+- switch.entrance_porch_light_switch_2_0_2
+- switch.diningroom_light_switch_14_0
 - switch.den_window_light
-- switch.stairs_switch_switch_3
+- switch.stairs_switch_switch_3_0
 
 outdoors:
 - camera.doorcam
@@ -212,8 +220,20 @@ den:
 - switch.den_window_light
 
 battery:
-- binary_sensor.bathroom_multisensor_sensor_10_battery
-- binary_sensor.entrance_multisensor_sensor_11_battery
-- binary_sensor.stairs_smokedetector_sensor_15_battery
-- sensor.lounge_smokedetector_alarm_level_7_battery
+- binary_sensor.bathroom_multisensor_sensor_10_0_battery
+- binary_sensor.entrance_multisensor_sensor_11_0_battery
+- binary_sensor.stairs_smokedetector_sensor_15_0_battery
+- sensor.lounge_smokedetector_alarm_level_7_0_battery
 
+mower:
+- sensor.mower_battery
+- sensor.mower_status
+- switch.rest_switch
+- switch.rest_switch_2
+- switch.rest_switch_3
+
+test:
+- switch.guestroomswitch
+- switch.outdoorswitch
+- switch.bath_small_lights
+- switch.kitchenlightswitch
