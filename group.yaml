@@ -120,6 +120,9 @@ AllaSwitchar:
 - switch.doorbell1
 - switch.doorbell2
 - switch.diningroom_light_switch_14_0 
+- switch.guestroom1
+- switch.guestroom2
+- switch.lounge
 
 Powerusage:
 - sensor.energy_usage
@@ -210,6 +213,7 @@ suncontrol:
 - switch.diningroom_light_switch_14_0
 - switch.den_window_light
 - switch.stairs_switch_switch_3_0
+- switch.guestroom1
 
 outdoors:
 - camera.doorcam
