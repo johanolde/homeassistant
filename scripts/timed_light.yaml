@@ -4,7 +4,7 @@ sequence:
     entity_id: script.light_timer_off
 - service: switch.turn_on
   data:
-    entity_id: switch.entrance_porch_light_switch_2
+    entity_id: switch.entrance_porch_light_switch_2_0
 - service: script.turn_on
   data:
     entity_id: script.light_timer_off

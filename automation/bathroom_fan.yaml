@@ -1,9 +1,0 @@
-alias: "Bathroom fan"
-trigger:
-  platform: state
-  entity_id: binary_sensor.bathroom_multisensor_sensor_10
-  from: 'off'
-  to: 'on'
-action:
-  service: homeassistant.turn_on
-  entity_id: script.timed_fan
