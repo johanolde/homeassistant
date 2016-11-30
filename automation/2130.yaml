@@ -1,0 +1,7 @@
+alias: "bedtime off lights"
+trigger:
+  platform: time
+  after: "21:30:00"
+action:
+  service: homeassistant.turn_off
+  entity_id: group.bedtimeofflights

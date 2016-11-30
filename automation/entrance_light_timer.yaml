@@ -1,0 +1,14 @@
+alias: Entrance Light Timer
+trigger:
+  platform: state
+  entity_id: binary_sensor.entrance_multisensor_sensor_11_0
+  to: 'off'
+  for:
+    minutes: 5
+condition:
+- condition: state
+  entity_id: switch.entrance_porch_light_switch_2_0
+  state: 'on'
+action:
+  service: homeassistant.turn_off
+  entity_id: switch.entrance_porch_light_switch_2_0

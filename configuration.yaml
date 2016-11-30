@@ -15,10 +15,13 @@ frontend:
 http:
   api_password: !secret http_password
 
+emulated_hue:
 updater:
 discovery:
 conversation:
 history:
+recorder:
+  purge_days: 35
 logbook:
 sun:
 mqtt: !include mqtt.yaml
@@ -36,13 +39,17 @@ automation: !include automation.yaml
 script: !include scripts.yaml
 
 light:
-  platform: osramlightify
-  host: !secret lightify_ip
+  - platform: osramlightify
+    host: !secret lightify_ip
+  - platform: yeelight
+    devices:
+      10.11.12.26:
+        name: Den.Ceiling
 
 scene: !include_dir_list scenes
 
 tellstick:
-  signal_repetitions: 2
+  signal_repetitions: 5
 
 switch:
   - platform: tellstick

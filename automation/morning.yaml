@@ -1,0 +1,7 @@
+alias: "morning on lights"
+trigger:
+  platform: time
+  after: "04:30:00"
+action:
+  service: homeassistant.turn_on
+  entity_id: group.morningonlights

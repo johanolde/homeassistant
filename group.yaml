@@ -19,13 +19,21 @@ Upstairs:
     - group.livingroom
     - group.stairs
     - group.den
+    - group.bedroom
+    - group.wilma
+    - group.stairs
 
 Downstairs:
   view: yes
   entities:
     - group.entrance
-    - group.kitchen
     - group.dining
+    - group.guestroom1
+    - group.guestroom2
+    - group.lounge
+    - group.kitchen
+    - group.kitchenlights
+    - group.node0
 
 Basement:
   view: yes
@@ -39,6 +47,7 @@ Outdoors:
 #    - sensor.mower_battery
 #    - sensor.mower_status
     - group.mower
+    - group.outside
 
 Security:
   view: yes
@@ -58,19 +67,39 @@ Admin:
     - group.battery
     - group.test
 
+Automations:
+  view: yes
+  icon: mdi:brightness-auto
+  entities:
+    - automation.sunrise_off_lights
+    - automation.sunset_on_lights
+    - automation.bedtime_off_lights
+    - automation.night_time_off_lights
+    - automation.morning_on_lights
+    - group.sunsetonlights
+    - group.bedtimeofflights
+    - group.nighttimeofflights
+    - group.morningonlights
+    - group.sunriseofflights
+
+
 ###########################################################
 ## Groups
 ###########################################################
 
 entrance:
 - switch.entrance_porch_light_switch_2_0
+- automation.entrance_light
+- automation.entrance_light_timer
 - switch.entrance_porch_light_switch_2_0_2
 - switch.entrance_porch_light_switch_2_0_3
 - sensor.entrance_multisensor_luminance_11_3
 - sensor.entrance_multisensor_temperature_11_1
 - sensor.entrance_multisensor_relative_humidity_11_5
+- switch.porchpluginswitch
 - camera.doorcam
 - sensor.doorbell
+
 family:
   entities:
     - device_tracker.johan_iphone
@@ -90,6 +119,7 @@ Temperature:
     - sensor.entrance_multisensor_temperature_11_1
     - sensor.lounge_smokedetector_temperature_7_1
     - sensor.yr_temperature
+    - sensor.stairs_smokedetector_temperature_15_1
 
 Humidity:
   entities:
@@ -108,25 +138,50 @@ Systemmonitor:
 - sensor.disk_use_home
 
 AllaSwitchar:
+# Z-wave
 - switch.livingroom_tv_switch_12_0
+- switch.bathroom_fan_switch_switch_20_0 
+- switch.entrance_porch_light_switch_2_0_2 
+- switch.entrance_porch_light_switch_2_0_3 
+- switch.kitchen_fridge_switch_13_0 
+- switch.dingingroome_light_switch_14_0 
 - switch.stairs_switch_switch_3_0
-- switch.bathroom_fan_switch_4_0
-- switch.entrance_porch_light_switch_2_0
-- switch.entrance_porch_light_switch_2_0_2
-- switch.entrance_porch_light_switch_2_0_3
-- switch.kitchen_fridge_switch_13_0
+# 433
+# test - switch.bath_small_lights
+- switch.bedroomwindow
 - switch.den_window_light
-- switch.porchpluginswitch
 - switch.doorbell1
 - switch.doorbell2
-- switch.diningroom_light_switch_14_0 
-- switch.guestroom1
-- switch.guestroom2
-- switch.lounge
+- switch.guestroom1windownorth
+- switch.guestroom1windoweast
+- switch.guestroom2window
+- switch.kitchenspotsundercabinets
+- switch.kitchenwindoweast
+- switch.kitchenwindowsouth
+- switch.living_window_light
+- switch.livingroomwindow
+- switch.loungewindowsboth
+- switch.node0lights
+- switch.wilmawindowlight
+- switch.porchpluginswitch
+#test - switch.notused
+#test - switch.notused_2
+#test - switch.notused_3
+#test - switch.notused_4
+#test - swtich.testswitch
+# Lightify
+- light.a60rgbw_01
+- light.flexrgbw_01
+- light.p16tw_01
+- light.p16tw_02
+- light.p16tw_03
+# wifi
+- light.denceiling
+
 
 Powerusage:
 - sensor.energy_usage
-- sensor.bathroom_fan_power_4_8
+- sensor.bathroom_fan_switch_power_20_8
 - sensor.entance_porch_light_power_2_8
 - sensor.entance_porch_light_power_2_8_2
 - sensor.entance_porch_light_power_2_8_3
@@ -158,11 +213,7 @@ Fire:
 kitchen:
   entities:
     - sensor.kitchen_fridge_power_13_8
-    - light.a60rgbw_01
-    - light.p16tw_01
-    - light.p16tw_02
-    - light.p16tw_03
-    - light.flexrgbw_01
+    - switch.kitchenlights
     - scene.cooking
     - scene.eating
 
@@ -170,16 +221,18 @@ livingroom:
   entities:
     - switch.livingroom_tv_switch_12_0
     - sensor.livingroom_tv_power_12_8
-    - switch.stairs_switch_switch_3_0
+    - switch.livingroomwindow
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
   entities:
-    - switch.bathroom_fan_switch_4_0
-    - sensor.bathroom_fan_power_4_8
+    - switch.bathroom_fan_switch_switch_20_0
+    - sensor.bathroom_fan_switch_power_20_8
     - sensor.bathrom_multisensor_luminance_10_3
     - sensor.bathrom_multisensor_realtive_humidity_10_5
     - sensor.bathrom_multisensor_temperature_10_1
+    - automation.bathroom_motion_fan_on
+    - automation.fan_off
 
 Weblinks:
 - weblink.home_assistant
@@ -198,30 +251,40 @@ Cameras:
 - camera.PTZCam
 
 stairs:
-- sensor.stairs_switch_alarm_level_3_1
-- sensor.stairs_switch_alarm_type_3_0
-- sensor.stairs_switch_current_3_20
-- sensor.stairs_switch_energy_3_0
-- sensor.stairs_switch_power_3_8
-- sensor.stairs_switch_power_factor_3_24
-- sensor.stairs_switch_previous_reading_3_1
-- sensor.stairs_switch_voltage_3_16
+- sensor.stairs_smokedetector_temperature_15_1
 - switch.stairs_switch_switch_3_0
+- sensor.stairs_switch_energy_3_0
+- sensor.stairs_switch_voltage_3_16
 
 suncontrol:
 - switch.entrance_porch_light_switch_2_0_2
 - switch.diningroom_light_switch_14_0
 - switch.den_window_light
 - switch.stairs_switch_switch_3_0
-- switch.guestroom1
+- switch.guestroom1window
+- switch.livingroomwindow
+- switch.guestroom2window
+- switch.kitchenwindow
+- switch.loungewindows
+- switch.bedroomwindow
 
-outdoors:
-- camera.doorcam
+#2130:
+#- switch.bedroomwindow
+
+#2300:
+#- switch.guestroom2window
+#- switch.loungewindows
+
+
+outside:
+- switch.porchpluginswitch
 - sensor.yr_symbol
 - sensor.yr_temperature
+- switch.entrance_porch_light_switch_2_0_2
 
 den:
 - switch.den_window_light
+- light.denceiling
 
 battery:
 - binary_sensor.bathroom_multisensor_sensor_10_0_battery
@@ -236,8 +299,94 @@ mower:
 - switch.rest_switch_2
 - switch.rest_switch_3
 
+guestroom1:
+- switch.guestroom1window
+
+guestroom2:
+- switch.guestroom2window
+
+lounge:
+- sensor.lounge_smokedetector_temperature_7_1
+- switch.loungewindowsboth
+
+kitchenlights:
+- switch.kitchenwindow
+- light.a60rgbw_01
+- light.p16tw_01
+- light.p16tw_02
+- light.p16tw_03
+- light.flexrgbw_01
+
+bedroom:
+- switch.bedroomwindow
+- sensor.yr_temperature
+
+sunsetonlights:
+  entities:
+    - switch.dingingroome_light_switch_14_0
+    - switch.stairs_switch_switch_3_0
+    - switch.bedroomwindow
+    - switch.den_window_light
+    - switch.guestroom1windownorth
+    - switch.guestroom1windoweast
+    - switch.guestroom2window
+    - switch.kitchenwindoweast
+    - switch.kitchenwindowsouth
+    - switch.living_window_light
+    - switch.livingoroomwindow
+    - switch.loungewindowsboth
+    - switch.wilmawindowlight
+    - switch.porchpluginswitch
+    - switch.entrance_porch_light_switch_2_0_2
+    - switch.livingroomwindow
+
+
+bedtimeofflights:
+- switch.wilmawindowlight
+- switch.bedroomwindow
+- switch.guestroom2window
+
+nighttimeofflights:
+- switch.guestroom1windownorth
+- switch.guestroom1windoweast
+- switch.kitchenwindoweast
+- switch.stairs_switch_switch_3_0
+- switch.loungewindowsboth
+- switch.porchpluginswitch
+
+morningonlights:
+- switch.kitchenwindoweast
+- switch.stairs_switch_switch_3_0
+- switch.loungewindowsboth
+- switch.porchpluginswitch
+
+sunriseofflights:
+- switch.dingingroome_light_switch_14_0
+- switch.stairs_switch_switch_3_0
+- switch.bedroomwindow
+- switch.den_window_light
+- switch.guestroom1windownorth
+- switch.guestroom1windoweast
+- switch.guestroom2window
+- switch.kitchenwindoweast
+- switch.kitchenwindowsouth
+- switch.livingroomwindow
+- switch.loungewindowsboth
+- switch.wilmawindowlight
+- switch.porchpluginswitch
+- switch.entrance_porch_light_switch_2_0_2
+
+wilma:
+- switch.wilmawindowlight
+
+node0:
+- switch.node0lights
+
 test:
-- switch.guestroomswitch
-- switch.outdoorswitch
 - switch.bath_small_lights
-- switch.kitchenlightswitch
+- switch.testswitch
+- switch.notused
+- switch.notused_2
+- switch.notused_3
+- switch.notused_4
+

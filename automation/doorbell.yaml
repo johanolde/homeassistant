@@ -1,0 +1,10 @@
+alias: 'doorbell'
+trigger:
+  platform: state
+  entity_id: sensor.doorbell
+  from: '0'
+  to: '1'
+action:
+  service: notify.slack
+  data:
+   message: 'Doorbell'

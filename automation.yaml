@@ -1,10 +1,14 @@
-- !include automation/sunset.yaml
+- !include automation/2130.yaml
+- !include automation/2300.yaml
+- !include automation/bathoff.yaml
+- !include automation/bathroom_motion.yaml
+- !include automation/batteries.yaml
+- !include automation/doorbell.yaml
+- !include automation/entrance_light_motion.yaml
+- !include automation/entrance_light_timer.yaml
+- !include automation/kitchenlights.yaml
+- !include automation/kitchenlights_off.yaml
+- !include automation/morning.yaml
 - !include automation/sunrise.yaml
-- !include automation/entrance_light.yaml
-- !include automation/bathroom_fan_on.yaml
-- !include automation/bathroom_fan_off.yaml
-- !include automation/bathroom_motion_off.yaml
-- !include automation/bathroom_motion_on.yaml
-- !include automation/bathroom_fan_off_notification.yaml
-- !include automation/bathroom_fan_on_notification.yaml
-
+- !include automation/sunset.yaml
+- !include automation/updater.yaml

@@ -4,7 +4,7 @@ sequence:
     entity_id: script.timer_off
 - service: switch.turn_on
   data:
-    entity_id: switch.bathroom_fan_switch_4
+    entity_id: switch.bathroom_fan_switch_4_0
 - service: script.turn_on
   data:
     entity_id: script.timer_off

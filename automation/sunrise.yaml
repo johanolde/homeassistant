@@ -1,8 +1,8 @@
-alias: "Sunrise"
+alias: "Sunrise off lights"
 trigger:
   platform: sun
   event: sunrise
   offset: "00:30:00"
 action:
   service: homeassistant.turn_off
-  entity_id: group.suncontrol
+  entity_id: group.sunriseofflights
