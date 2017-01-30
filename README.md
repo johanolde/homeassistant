@@ -5,6 +5,11 @@
 <li>Raspberry Pi 3 with Berryboot / iscsi / Q-nap TS-259
 <li>Aeotec ZW090 Z-stick
 <li>Tellstick Duo 433 Mhz
+<li>Osram Lightify
+<li>Xiaomi Mi Smart Home
+<li>Max2Play Squeezebox server
+<li>Homebridge
+<li>Domoticz
 </UL>
 
 
@@ -30,6 +35,14 @@
 </ul>
 </ul>
 
+<H3>Xiaomi</H3>
+<ul>
+<li>Temp / Humidity
+<li>Switch
+<li>Smartcube
+<li>Doorsensor
+</ul>
+
 <H3>Cameras</H3>
 <ul>
 <li>Axis 125
@@ -48,7 +61,22 @@
 <H3>Control</h3>
 <ul>
 <li>Amazon Echo Dot w Emulated Hue
-<li>
-<li>
+<li>Home kit on iOS devices
 </ul>
+
+<H3>MQTT-devices</h3>
+<ul>
+<li>ESP8266 doorbell
+<li>Loads of NIBE Fighter 1255 values from Domoticz
+</ul>
+
+
+<H3>Mediaplayers</h3>
+<ul>
+<li>Squeezebox Radio
+<li>Squeezebox Boom
+<li>Squeezeplay (MacOS app)
+<li>Squeezelite (on controller)
+</ul>
+
 
