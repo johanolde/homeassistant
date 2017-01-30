@@ -59,7 +59,7 @@ device_tracker:
     consider_home: 1800
   - platform: trackr
     username: !secret email
-    password: !secret tracker_pw
+    password: !secret trackr_pw
 
 weblink: !include weblinks.yaml
 panel_iframe: !include panel_iframe.yaml
