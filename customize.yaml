@@ -153,19 +153,38 @@
       friendly_name: 'Kitchen table'
       icon: mdi:lightbulb
     light.p16tw_01:
-      friendly_name: 'Spot 1'
+      friendly_name: 'Kitchen Spot 1'
       icon: mdi:spotlight
     light.p16tw_02:
-      friendly_name: 'Spot 2'
+      friendly_name: 'Kitchen Spot 2'
       icon: mdi:spotlight
     light.p16tw_03:
-      friendly_name: 'Spot 3'
+      friendly_name: 'Kitchen Spot 3'
       icon: mdi:spotlight
     light.flexrgbw_01:
-      friendly_nae: 'Kitchen Lightstrip'
+      friendly_name: 'Kitchen ledstrip'
       icon: mdi:led-on
 
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:
       hidden: true
+
+# Hiding for Alexa (staying below 50 items)
+    switch.notused:
+      emulated_hue: false
+    switch.notused_2:
+      emulated_hue: false
+    switch.notused_3:
+      emulated_hue: false
+    switch.not_working__bath_small_lights:
+      emulated_hue: false
+    switch.doorchime1:
+      emulated_hue: false
+    switch.doorchime2:
+      emulated_hue: false
+    switch.porchpluginswitch:
+      emulated_hue: false
+    switch.testswitch:
+      emulated_hue: false
+

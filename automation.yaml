@@ -12,3 +12,4 @@
 - !include automation/sunrise.yaml
 - !include automation/sunset.yaml
 - !include automation/updater.yaml
+#- !include test.yaml

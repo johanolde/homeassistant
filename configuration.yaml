@@ -16,21 +16,50 @@ http:
   api_password: !secret http_password
 
 emulated_hue:
+  type: alexa
+  host_ip: !secret ha_ip
+  listen_port: 8300
+  expose_by_default: true
+  exposed_domains:
+    - scene
+    - switch
+    - light
 updater:
 discovery:
 conversation:
 history:
+  include:
+    domains:
+      - sensor
+      - switch
+    entities:
+      - device_tracker.johan_iphone
+  exclude:
+    entities:
+      - sensor.diningroom_light_alarm_type_14_0
 recorder:
-  purge_days: 35
+  db_url: !secret mysql_url
+  purge_days: 30
 logbook:
+  include:
+    domains:
+      - sun
+      - media_player
+      - automation
+      - device_tracker
+    entities:
+      - sensor.doorbell
 sun:
 mqtt: !include mqtt.yaml
 
 device_tracker:
-  platform: nmap_tracker
-  hosts: !secret track_hosts
-  track_new_devices: no
-  consider_home: 1800
+  - platform: nmap_tracker
+    hosts: !secret track_hosts
+    track_new_devices: no
+    consider_home: 1800
+  - platform: trackr
+    username: !secret email
+    password: !secret j0h4ns_RKC
 
 weblink: !include weblinks.yaml
 panel_iframe: !include panel_iframe.yaml
@@ -63,7 +92,27 @@ switch:
 battery_state:
 
 notify:
-  name: slack
-  platform: slack
-  api_key: !secret slack_api
-  default_channel: '#skarsjo'
+  - name: slack
+    platform: slack
+    api_key: !secret slack_api
+    default_channel: '#skarsjo'
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_api
+  - name: telegram
+    platform: telegram
+    api_key: !secret telegram_api
+    chat_id: !secret telegram_chatid
+
+media_player:
+  - platform: squeezebox
+    host: !secret squeezebox_ip
+    port: 9000
+
+zoneminder:
+  host: !secret zm_ip
+  username: admin
+  password: !secret skarsjopass
+
+tts:
+  - platform: google

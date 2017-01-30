@@ -44,6 +44,7 @@ Outdoors:
   view: yes
   entities:
     - camera.doorcam
+    - camera.driveway
 #    - sensor.mower_battery
 #    - sensor.mower_status
     - group.mower
@@ -54,6 +55,7 @@ Security:
   entities:
     - group.Fire
     - group.cameras
+    - group.keys
 
 Admin:
   view: yes
@@ -66,7 +68,7 @@ Admin:
     - group.systemmonitor
     - group.battery
     - group.test
-
+    - configurator.plex_media_server
 Automations:
   view: yes
   icon: mdi:brightness-auto
@@ -131,6 +133,7 @@ Dining:
   entities:
     - camera.dining_room
     - switch.diningroom_light_switch_14_0
+    - media_player.squeezebox_radio
 
 Systemmonitor:
 - sensor.ram_free
@@ -150,8 +153,8 @@ AllaSwitchar:
 # test - switch.bath_small_lights
 - switch.bedroomwindow
 - switch.den_window_light
-- switch.doorbell1
-- switch.doorbell2
+- switch.doorchime1
+- switch.doorchime2
 - switch.guestroom1windownorth
 - switch.guestroom1windoweast
 - switch.guestroom2window
@@ -213,9 +216,8 @@ Fire:
 kitchen:
   entities:
     - sensor.kitchen_fridge_power_13_8
-    - switch.kitchenlights
-    - scene.cooking
-    - scene.eating
+    - switch.kitchenwindoweast
+    - switch.kitchenwindowsouth
 
 livingroom:
   entities:
@@ -249,6 +251,9 @@ Cameras:
 - camera.dining_room
 - camera.pannrums_cam
 - camera.PTZCam
+- camera.driveway
+- camera.housecam
+- camera.nodecam
 
 stairs:
 - sensor.stairs_smokedetector_temperature_15_1
@@ -287,10 +292,12 @@ den:
 - light.denceiling
 
 battery:
+- automation.batteries_low
 - binary_sensor.bathroom_multisensor_sensor_10_0_battery
 - binary_sensor.entrance_multisensor_sensor_11_0_battery
 - binary_sensor.stairs_smokedetector_sensor_15_0_battery
-- sensor.lounge_smokedetector_alarm_level_7_0_battery
+- sensor.lounge_smokedetector_general_7_0_battery
+- sensor.stairs_smokedetector_alarm_level_15_1_battery
 
 mower:
 - sensor.mower_battery
@@ -300,22 +307,26 @@ mower:
 - switch.rest_switch_3
 
 guestroom1:
-- switch.guestroom1window
+- switch.guestroom1windownorth
+- switch.guestroom1windoweast
 
 guestroom2:
 - switch.guestroom2window
+- media_player.squeezebox_boom
 
 lounge:
 - sensor.lounge_smokedetector_temperature_7_1
 - switch.loungewindowsboth
 
 kitchenlights:
-- switch.kitchenwindow
 - light.a60rgbw_01
 - light.p16tw_01
 - light.p16tw_02
 - light.p16tw_03
 - light.flexrgbw_01
+- scene.cooking
+- scene.eating
+- switch.kitchenspotsundercabinets
 
 bedroom:
 - switch.bedroomwindow
@@ -381,6 +392,7 @@ wilma:
 
 node0:
 - switch.node0lights
+- media_player.max2play
 
 test:
 - switch.bath_small_lights
@@ -389,4 +401,17 @@ test:
 - switch.notused_2
 - switch.notused_3
 - switch.notused_4
+
+keys:
+  view: no
+  entities:
+    - device_tracker.planbok
+    - device_tracker.sthlmuppsala
+    - device_tracker.ford
+    - device_tracker.bennstrom
+    - device_tracker.peo
+    - device_tracker.ryggsack
+    - device_tracker.lager
+    - device_tracker.huvudknippa
+
 
