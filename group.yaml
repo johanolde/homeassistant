@@ -130,7 +130,7 @@ Temperature:
     - sensor.stairs_smokedetector_temperature_15_1
     - sensor.temperature_158d00010678df
     - sensor.temperature_158d00012cb38e
-    - sensor.temperature_158d00010678df
+    - sensor.temperature_158d00012cb2f7
 
 Humidity:
   entities:
@@ -139,7 +139,7 @@ Humidity:
     - sensor.yr_humidity
     - sensor.humidity_158d00010678df
     - sensor.humidity_158d00012cb2f7
-    - sensor.humidity_158d00010678df
+    - sensor.humidity_158d00012cb38e
 
 showerroom:
   entities:
