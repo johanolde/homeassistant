@@ -148,6 +148,23 @@
       friendly_name: 'Wind Speed'
       icon: mdi:weather-windy
 
+# Nissan Leaf ----------------------------------------------------- 
+    switch.leaf_climate:
+      icon: mdi:air-conditioner
+    switch.leaf_update:
+      icon: mdi:update
+    sensor.leaf_battery:
+      icon: mdi:car-battery
+    sensor.leaf_charging:
+      icon: mdi:battery-charging-20
+    sensor.leaf_connected:
+      icon: mdi:power-plug
+    sensor.leaf_status:
+      icon: mdi:car-connected
+    group.leaf:
+      friendly_name: 'Nissan Leaf'
+      icon: mdi:car
+
 # Osram Lightify  ------------------------------------------------- 
     light.a60rgbw_01:
       friendly_name: 'Kitchen table'
@@ -165,6 +182,20 @@
       friendly_name: 'Kitchen ledstrip'
       icon: mdi:led-on
 
+# Xiaomi  --------------------------------------------------------- 
+    binary_sensor.cube_158d0001104272:
+      friendly_name: 'Kitchen cube'
+    binary_sensor.switch_158d0001147e8e:
+      friendly_name: 'Bedroom Switch'
+    sensor.temperature_158d00010678df:
+      friendly_name: 'Shower room Temperature'
+    sensor.humidity_158d00010678df:
+      friendly_name: 'Shower room Humidity'
+    binary_sensor.motion_sensor_158d00010a9ef1:
+      friendly_name: 'Den Motion sensor'
+    binary_sensor.door_window_sensor_158d00013fd5b4:
+      friendly_name: 'Kitchen door'
+      sensor_class: opening
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:

@@ -12,4 +12,16 @@
 - !include automation/sunrise.yaml
 - !include automation/sunset.yaml
 - !include automation/updater.yaml
+- !include automation/cube90.yaml
+- !include automation/cube180.yaml
+- !include automation/cubemove.yaml
+- !include automation/cubetaptwice.yaml
+#- !include automation/cubealert.yaml
+- !include automation/cubefreefall.yaml
+- !include automation/cuberotate.yaml
+- !include automation/cubeshakeair.yaml
+- !include automation/cubeswing.yaml
+- !include automation/den_light_motion.yaml
+- !include automation/den_light_timer.yaml
+
 #- !include test.yaml

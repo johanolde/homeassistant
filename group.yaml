@@ -34,6 +34,7 @@ Downstairs:
     - group.kitchen
     - group.kitchenlights
     - group.node0
+    - group.showerroom
 
 Basement:
   view: yes
@@ -49,6 +50,7 @@ Outdoors:
 #    - sensor.mower_status
     - group.mower
     - group.outside
+    - group.leaf
 
 Security:
   view: yes
@@ -69,6 +71,8 @@ Admin:
     - group.battery
     - group.test
     - configurator.plex_media_server
+    - group.skarsjocore 
+
 Automations:
   view: yes
   icon: mdi:brightness-auto
@@ -122,12 +126,19 @@ Temperature:
     - sensor.lounge_smokedetector_temperature_7_1
     - sensor.yr_temperature
     - sensor.stairs_smokedetector_temperature_15_1
+    - sensor.temperature_158d00010678df
 
 Humidity:
   entities:
     - sensor.entrance_multisensor_relative_humidity_11_5
     - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.yr_humidity
+    - sensor.humidity_158d00010678df
+
+showerroom:
+  entities:
+    -  sensor.temperature_158d00010678df
+    -  sensor.humidity_158d00010678df
 
 Dining:
   entities:
@@ -218,6 +229,8 @@ kitchen:
     - sensor.kitchen_fridge_power_13_8
     - switch.kitchenwindoweast
     - switch.kitchenwindowsouth
+    - binary_sensor.door_window_sensor_158d00013fd5b4
+    - binary_sensor.cube_158d0001104272
 
 livingroom:
   entities:
@@ -235,6 +248,7 @@ Upstairs_bath:
     - sensor.bathrom_multisensor_temperature_10_1
     - automation.bathroom_motion_fan_on
     - automation.fan_off
+    - light.qubino_zmnhdd1_flush_dimmer_level_23_0
 
 Weblinks:
 - weblink.home_assistant
@@ -331,10 +345,12 @@ kitchenlights:
 bedroom:
 - switch.bedroomwindow
 - sensor.yr_temperature
+- binary_sensor.switch_158d0001147e8e
+- media_player.bedroom_apple_tv
 
 sunsetonlights:
   entities:
-    - switch.dingingroome_light_switch_14_0
+    - switch.dingingroom_light_switch_14_0
     - switch.stairs_switch_switch_3_0
     - switch.bedroomwindow
     - switch.den_window_light
@@ -372,7 +388,7 @@ morningonlights:
 - switch.porchpluginswitch
 
 sunriseofflights:
-- switch.dingingroome_light_switch_14_0
+- switch.dingingroom_light_switch_14_0
 - switch.stairs_switch_switch_3_0
 - switch.bedroomwindow
 - switch.den_window_light
@@ -415,3 +431,22 @@ keys:
     - device_tracker.huvudknippa
 
 
+leaf:
+- switch.leaf_climate
+- sensor.leaf_battery
+- sensor.leaf_charging
+- sensor.leaf_connected
+- sensor.leaf_status
+- switch.leaf_update
+
+skarsjocore:
+- sensor.skarsjocore_cpu_usage
+- sensor.skarsjocore_memory_usage
+- sensor.skarsjocore_network_up_eth0
+- sensor.skarsjocore_network_up_eth1
+- sensor.skarsjocore_smart_status_drive_1
+- sensor.skarsjocore_smart_status_drive_2
+- sensor.skarsjocore_status
+- sensor.skarsjocore_temperature_drive_1
+- sensor.skarsjocore_temperature_drive_2
+- sensor.skarsjocore_volume_used_volume_1

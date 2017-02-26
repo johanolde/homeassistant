@@ -1,0 +1,4 @@
+- platform: command_line
+  name: Mower battery
+  command: /home/hass/pyhusmow-master/get_mower_status batteryPercent
+  unit_of_measurement: "%"

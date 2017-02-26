@@ -16,7 +16,7 @@ http:
   api_password: !secret http_password
 
 emulated_hue:
-  type: alexa
+#  type: alexa
   host_ip: !secret ha_ip
   listen_port: 8300
   expose_by_default: true
@@ -72,7 +72,7 @@ light:
     host: !secret lightify_ip
   - platform: yeelight
     devices:
-      10.11.12.26:
+      !secret yeelight1_ip:
         name: Den.Ceiling
 
 scene: !include_dir_list scenes
@@ -82,6 +82,19 @@ tellstick:
 
 switch:
   - platform: tellstick
+  - platform: mqtt
+    name: "Leaf Climate"
+    command_topic: "leaf/control/climate"
+    payload_on: "1"
+    payload_off: "0"
+#    icon: mdi:air-conditioner
+  - platform: mqtt
+    name: "Leaf Update"
+    command_topic: "leaf/control/update"
+    payload_on: "1"
+    payload_off: "0"
+#    icon: mdi:update
+#  - platform: rest
 #  - platform: rest
 #    resource: http://127.0.0.1:1234/park
 #  - platform: rest
@@ -108,11 +121,22 @@ media_player:
   - platform: squeezebox
     host: !secret squeezebox_ip
     port: 9000
+  - platform: apple_tv
+    host: !secret bedroom_apple_ip
+    login_id: !secret bedroom_apple_id
 
-zoneminder:
-  host: !secret zm_ip
-  username: admin
-  password: !secret skarsjopass
+#zoneminder:
+#  host: !secret zm_ip
+#  username: admin
+#  password: !secret skarsjopass
 
 tts:
   - platform: google
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+
+xiaomi:
+  gateways:
+    - sid:
+      key: !secret xiaomi_key

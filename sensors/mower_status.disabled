@@ -1,0 +1,3 @@
+- platform: command_line
+  name: Mower status
+  command: /home/hass/pyhusmow-master/get_mower_status mowerStatus

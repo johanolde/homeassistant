@@ -1,0 +1,8 @@
+#- platform: mqtt
+#  name: "Kitchen temp"
+#  state_topic: "domoticz/out"
+#  unit_of_measurement: "C"
+#  value_template: >-
+#    {% if value_json.id=8000 %}Testing
+#    {% else %}Not
+#    {%- endif %}

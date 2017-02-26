@@ -1,0 +1,8 @@
+- platform: mqtt
+  name: "Leaf Charging"
+  state_topic: "leaf/status/charging_status"
+#  command_topic: "/doorbell/gpio/0"
+#  payload_on: "1"
+#  payload_off: "0"
+#  qos:1
+

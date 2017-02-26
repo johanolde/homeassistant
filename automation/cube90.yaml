@@ -1,0 +1,15 @@
+#Available actions are flip90, flip180, move, tap_twice, shake_air, swing, alert, free_fall and rotate 
+
+alias: 'cube flip 90'
+trigger:
+  platform: event
+  event_type: cube_action
+  event_data:
+    entity_id: binary_sensor.cube_158d0001104272
+    action_type: flip90
+action:
+  service: tts.google_say
+  entity_id: media_player.squeezebox_radio
+  data:
+    message: 'Cube Flip 90'
+
