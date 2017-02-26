@@ -41,6 +41,7 @@
 <li>Switch
 <li>Smartcube
 <li>Doorsensor
+<li>Yeelight Wifi lamps
 </ul>
 
 <H3>Cameras</H3>
