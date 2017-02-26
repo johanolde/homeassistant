@@ -243,6 +243,7 @@ livingroom:
     - switch.livingroom_tv_switch_12_0
     - sensor.livingroom_tv_power_12_8
     - switch.livingroomwindow
+    - media_player.apple_tv_i_vardagsrum
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
@@ -352,7 +353,7 @@ bedroom:
 - switch.bedroomwindow
 - sensor.yr_temperature
 - binary_sensor.switch_158d0001147e8e
-- media_player.bedroom_apple_tv
+- media_player.apple_tv
 
 sunsetonlights:
   entities:
