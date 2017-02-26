@@ -26,7 +26,7 @@
 <H3>Misc</H3>
 <ul>
 <li>Efergy Energy monitor
-<li>Husquarna Automower
+<li>Husqvarna Automower
 <li>Osram Lightify
 <ul>
 <li>Osram Classic RGBW
@@ -77,6 +77,7 @@
 <li>Squeezebox Boom
 <li>Squeezeplay (MacOS app)
 <li>Squeezelite (on controller)
+<li>Apple TVs
 </ul>
 
 
