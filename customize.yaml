@@ -196,6 +196,14 @@
     binary_sensor.door_window_sensor_158d00013fd5b4:
       friendly_name: 'Kitchen door'
       sensor_class: opening
+    sensor.humidity_158d00012cb38e:
+      friendly_name: 'Closet humidity'
+    sensor.temperature_158d00012cb2f7:
+      friendly_name: 'Closet tempterature'
+    sensor.humidity_158d00012cb2f7:
+      friendly_name: 'Pantry humidity'
+    sensor.temperature_158d00012cb38e:
+      friendly_name: 'Pantry temperature'
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:

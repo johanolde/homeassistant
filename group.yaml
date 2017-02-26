@@ -22,6 +22,7 @@ Upstairs:
     - group.bedroom
     - group.wilma
     - group.stairs
+    - group.closet
 
 Downstairs:
   view: yes
@@ -40,6 +41,7 @@ Basement:
   view: yes
   entities:
     - camera.pannrums_cam
+    - group.pantry
 
 Outdoors:
   view: yes
@@ -127,12 +129,16 @@ Temperature:
     - sensor.yr_temperature
     - sensor.stairs_smokedetector_temperature_15_1
     - sensor.temperature_158d00010678df
+    - sensor.temperature_158d00012cb38e
+    - sensor.temperature_158d00010678df
 
 Humidity:
   entities:
     - sensor.entrance_multisensor_relative_humidity_11_5
     - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.yr_humidity
+    - sensor.humidity_158d00010678df
+    - sensor.humidity_158d00012cb2f7
     - sensor.humidity_158d00010678df
 
 showerroom:
@@ -450,3 +456,11 @@ skarsjocore:
 - sensor.skarsjocore_temperature_drive_1
 - sensor.skarsjocore_temperature_drive_2
 - sensor.skarsjocore_volume_used_volume_1
+
+pantry:
+- sensor.temperature_158d00012cb38e
+- sensor.humidity_158d00012cb2f7
+
+closet:
+- sensor.temperature_158d00012cb2f7
+- sensor.humidity_158d00012cb38e
