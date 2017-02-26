@@ -7,8 +7,9 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
 
-config:
-group: !include groups.yaml
+#config:
+#group: !include groups.yaml
+group: !include group.yaml
 sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
 zwave: !include zwave.yaml
