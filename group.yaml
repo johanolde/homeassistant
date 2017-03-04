@@ -256,6 +256,8 @@ Upstairs_bath:
     - automation.bathroom_motion_fan_on
     - automation.fan_off
     - light.qubino_zmnhdd1_flush_dimmer_level_23_0
+    - light.bathroom_lights_level_23_0
+    - light.bathroom_shower_lights_level_28_0
 
 Weblinks:
 - weblink.home_assistant
