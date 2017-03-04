@@ -191,6 +191,7 @@
       friendly_name: 'Shower room Temperature'
     sensor.humidity_158d00010678df:
       friendly_name: 'Shower room Humidity'
+      icon: mdi:water-percent
     binary_sensor.motion_sensor_158d00010a9ef1:
       friendly_name: 'Den Motion sensor'
     binary_sensor.door_window_sensor_158d00013fd5b4:
@@ -198,10 +199,12 @@
       sensor_class: opening
     sensor.humidity_158d00012cb38e:
       friendly_name: 'Closet humidity'
+      icon: mdi:water-percent
     sensor.temperature_158d00012cb2f7:
-      friendly_name: 'Closet tempterature'
+      friendly_name: 'Closet temperature'
     sensor.humidity_158d00012cb2f7:
       friendly_name: 'Pantry humidity'
+      icon: mdi:water-percent
     sensor.temperature_158d00012cb38e:
       friendly_name: 'Pantry temperature'
 

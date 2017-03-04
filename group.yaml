@@ -7,10 +7,9 @@ default_view:
   icon: mdi:home-variant
   entities:
     - group.cameras
-    - group.Weather
-    - group.Temperature
-    - group.Humidity
     - group.family
+    - sensor.yr_temperature
+    - sensor.yr_wind_speed
 
 Upstairs:
   view: yes
@@ -90,6 +89,13 @@ Automations:
     - group.morningonlights
     - group.sunriseofflights
 
+Temperature:
+  view: yes
+  icon: mdi:thermometer-lines
+  entities:
+    - group.Temperature
+    - group.Humidity
+    - group.Weather
 
 ###########################################################
 ## Groups
@@ -202,11 +208,14 @@ AllaSwitchar:
 Powerusage:
 - sensor.energy_usage
 - sensor.bathroom_fan_switch_power_20_8
+- sensor.bathroom_lights_power_23_8
+- sensor.bathroom_shower_lights_power_28_8
 - sensor.entance_porch_light_power_2_8
 - sensor.entance_porch_light_power_2_8_2
 - sensor.entance_porch_light_power_2_8_3
 - sensor.kitchen_fridge_power_13_8
 - sensor.livingroom_tv_power_12_8
+- sensor.diningroom_light_power_14_8
 - sensor.stairs_switch_power_3_8
 - sensor.energy_budget
 - sensor.energy_cost
