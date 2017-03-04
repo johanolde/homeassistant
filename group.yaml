@@ -10,6 +10,7 @@ default_view:
     - group.family
     - sensor.yr_temperature
     - sensor.yr_wind_speed
+    - sensor.energy_usage
 
 Upstairs:
   view: yes
@@ -89,7 +90,7 @@ Automations:
     - group.morningonlights
     - group.sunriseofflights
 
-Temperature:
+Climate:
   view: yes
   icon: mdi:thermometer-lines
   entities:
