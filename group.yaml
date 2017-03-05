@@ -73,7 +73,8 @@ Admin:
     - group.battery
     - group.test
     - configurator.plex_media_server
-    - group.skarsjocore 
+    - group.skarsjocore
+    - sensor.pihole
 
 Automations:
   view: yes
