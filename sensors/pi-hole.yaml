@@ -1,0 +1,3 @@
+#  Monitor Pi-hole
+- platform: pi_hole
+  host: !secret pi_hole
