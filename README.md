@@ -19,6 +19,7 @@
 <li>Fibaro FGSS101 Smoke sensors
 <li>Aotec ZW074 Multisensors
 <Li>Qubino ZMNHADx Flush 1 relay
+<li>Qubino Flush dimmers
 <li>Philio Tech Pan-11
 <li>Philio Tech Pan04-1b
 </UL>
@@ -56,7 +57,8 @@
 <ul>
 <li>Anslut Switch
 <li>Luxorparts code switches (Kjell & Co)
-<li>
+<li>Nexa outdoor switch
+<li>Misc built in dimmers
 </ul>
 
 <H3>Control</h3>
@@ -81,4 +83,9 @@
 <li>Apple TVs
 </ul>
 
-
+<h3>Infrastructure</h3
+<ul>
+<li>Pi-hole adblocker
+<li>Qnap sensor
+<li>HA pi system monitor
+</ul>
