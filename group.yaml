@@ -255,6 +255,8 @@ livingroom:
     - sensor.livingroom_tv_power_12_8
     - switch.livingroomwindow
     - media_player.apple_tv_i_vardagsrum
+    - cover.livingroom_blinds_level_32_0
+    - cover.livingroom_blinds_switch_32_0
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
@@ -477,3 +479,4 @@ pantry:
 closet:
 - sensor.temperature_158d00012cb2f7
 - sensor.humidity_158d00012cb38e
+
