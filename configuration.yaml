@@ -89,7 +89,6 @@ switch:
     command_topic: "leaf/control/climate"
     payload_on: "1"
     payload_off: "0"
-#    icon: mdi:air-conditioner
   - platform: mqtt
     name: "Leaf Update"
     command_topic: "leaf/control/update"
