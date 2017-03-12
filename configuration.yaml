@@ -67,7 +67,6 @@ weblink: !include weblinks.yaml
 panel_iframe: !include panel_iframe.yaml
 
 automation: !include_dir_list automation/
-#automation: !include automation.yaml
 script: !include scripts.yaml
 
 light:
