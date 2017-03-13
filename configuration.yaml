@@ -10,11 +10,13 @@ homeassistant:
 config:
 group: !include groups.yaml
 #group: !include group.yaml
-device_config: !include zwave_device_config.yaml
+#zwave: !include zwave.yaml
+zwave:
+  device_config: !include zwave_device_config.yaml
 
 sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
-zwave: !include zwave.yaml
+
 frontend:
 http:
   api_password: !secret http_password
