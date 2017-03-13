@@ -141,7 +141,8 @@ tts:
     cache_dir: /tmp/tts
     time_memory: 300
 
-
+logger:
+  default: critical
 
 xiaomi:
   gateways:
