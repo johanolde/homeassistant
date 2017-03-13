@@ -8,11 +8,11 @@ homeassistant:
   customize: !include customize.yaml
 
 config:
-group: !include groups.yaml
-#group: !include group.yaml
-#zwave: !include zwave.yaml
-zwave:
-  device_config: !include zwave_device_config.yaml
+#group: !include groups.yaml
+group: !include group.yaml
+zwave: !include zwave.yaml
+#zwave:
+#  device_config: !include zwave_device_config.yaml
 
 sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
