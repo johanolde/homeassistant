@@ -1,4 +1,4 @@
-alias: Den Light Timer
+alias: "Den motion light off"
 trigger:
   platform: state
   entity_id: binary_sensor.motion_sensor_158d00010a9ef1

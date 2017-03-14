@@ -1,4 +1,4 @@
-alias: "Den  Light"
+alias: "Den motion light on"
 trigger:
   platform: state
   entity_id: binary_sensor.motion_sensor_158d00010a9ef1
