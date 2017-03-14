@@ -270,6 +270,8 @@ Upstairs_bath:
     - automation.fan_off
     - light.bathroom_lights_level_23_0
     - light.bathroom_shower_lights_level_28_0_2
+    - switch.bathroom_lights_switch_23_0
+    - switch.bathroom_shower_lights_switch_28_0
 
 Weblinks:
 - weblink.home_assistant
