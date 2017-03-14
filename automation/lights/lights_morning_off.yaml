@@ -1,4 +1,4 @@
-alias: "morning on lights"
+alias: "Lights morning on"
 trigger:
   platform: time
   after: "04:30:00"

@@ -1,4 +1,4 @@
-alias: "Night time off lights"
+alias: "Lights nighttime off"
 trigger:
   platform: time
   after: "23:00:00"
