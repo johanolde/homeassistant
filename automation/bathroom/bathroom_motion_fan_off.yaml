@@ -1,4 +1,4 @@
-alias: "FAN OFF"
+alias: "Bathroom motion fan on"
 trigger:
   platform: state
   entity_id: 'binary_sensor.bathroom_multisensor_sensor_10_0'
