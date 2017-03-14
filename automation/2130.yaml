@@ -1,4 +1,4 @@
-alias: "bedtime off lights"
+alias: Bedtime - Lights off
 trigger:
   - platform: time
     after: "21:30:00"
