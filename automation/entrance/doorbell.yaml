@@ -1,0 +1,16 @@
+- alias: 'doorbell'
+  trigger:
+    platform: state
+    entity_id: sensor.doorbell
+    from: '0'
+    to: '1'
+  action:
+    - service: notify.telegram
+      data:
+        title: Doorbell
+        message: 'Ringklockan ringer'
+        data:
+          photo:
+          - url: !secret doorcam_url
+            username: visitor
+            password: !secret doorcam_pw
