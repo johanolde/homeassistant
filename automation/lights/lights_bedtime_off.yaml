@@ -1,4 +1,4 @@
--  alias: "Lights bedtime off"
+- alias: "Lights bedtime off"
   trigger:
     - platform: time
       after: "21:30:00"
