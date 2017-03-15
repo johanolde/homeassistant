@@ -1,0 +1,19 @@
+- alias: "Kitchen ligthswitch"
+  trigger:
+    platform: state
+    entity_id: switch.kitchenlights
+    from: 'off'
+    to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.kitchenlights
+
+- alias: "Kitchen ligthswitch off"
+  trigger:
+    platform: state
+    entity_id: switch.kitchenlights
+    from: 'on'
+    to: 'off'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.kitchenlights
