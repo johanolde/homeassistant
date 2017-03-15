@@ -1,0 +1,27 @@
+- alias: "Den motion light on"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d00010a9ef1
+    state: 'on'
+#condition:
+#  - condition: numeric_state
+#    entity_id: sensor.entrance_multisensor_luminance_11_3
+#    below: 30
+  action:
+    service: homeassistant.turn_on
+    entity_id: light.denceiling
+
+- alias: "Den motion light off"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.motion_sensor_158d00010a9ef1
+    to: 'off'
+    for:
+      minutes: 5
+  condition:
+  - condition: state
+    entity_id: light.denceiling
+    state: 'on'
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.denceiling
