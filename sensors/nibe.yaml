@@ -1,14 +1,46 @@
 - platform: mqtt
   state_topic: "domoticz/out"
-  name: 'Nibe 1255 Time Factor'
-  value_template: '{{ value_json.svalue1 }}'
+  name: 'Nibe 1255 Avg Outdoor Temp'
+  value_template: >
+    {% if value_json.idx == 2 %}
+      {{ value_json.svalue1 }}
+    {% endif %}
 - platform: mqtt
   state_topic: "domoticz/out"
-  name: 'Nibe 1255 Return temp'
+  name: 'Nibe 1255 Outdoor temp'
+  value_template: >
+     {% if value_json.idx == 1 %}
+       {{ value_json.svalue1 }}
+     {% endif %}
+- platform: mqtt
+  state_topic: "domoticz/out"
+  name: 'Nibe 1255 Kitchen temp'
   value_template: >
      {% if value_json.idx == 22 %}
        {{ value_json.svalue1 }}
      {% endif %}
+- platform: mqtt
+  state_topic: "domoticz/out"
+  name: 'Nibe 1255 Return temp'
+  value_template: >
+     {% if value_json.idx == 19 %}
+       {{ value_json.svalue1 }}
+     {% endif %}
+
+
+# Kanske rent av funkar.. Prova att göra fler
+#- platform: mqtt
+#  state_topic: "domoticz/out"
+#  name: 'Nibe 1255 Time Factor'
+#  value_template: '{{ value_json.svalue1 }}'
+#- platform: mqtt
+#  state_topic: "domoticz/out"
+#  name: 'Nibe 1255 Return temp'
+#  value_template: >
+#     {% if value_json.idx == 22 %}
+#       {{ value_json.svalue1 }}
+#     {% endif %}
+
 
 # Fungerar lite: sensor.mqtt_sensor	{ "Battery" : 255, "RSSI" : 12, "ValueQuantity" : "Time", "ValueUnits" : "h", "dtype" : "RFXMeter", "id" : "82026", "idx" : 26, "name" : "F1255 Time Factor", "nvalue" : 0, "stype" : "RFXMeter counter", "svalue1" : "140", "unit" : 1
 #- platform: mqtt
