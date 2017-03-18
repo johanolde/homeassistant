@@ -1,14 +1,19 @@
 - platform: mqtt
   state_topic: "domoticz/out"
-  sensor:
-    Return_temp:
-      Friendly_name: 'Nibe 1255 Time Factor'
-      value_template: >
-        {% if value_json.idx == 26 %}
-          {{ value_json.svalue1 }}
-        {% endif %}
+  name: 'Nibe 1255 Time Factor'
+  value_template: '{{ value_json.svalue1 }}'
 
 
+# Fungerar lite: sensor.mqtt_sensor	{ "Battery" : 255, "RSSI" : 12, "ValueQuantity" : "Time", "ValueUnits" : "h", "dtype" : "RFXMeter", "id" : "82026", "idx" : 26, "name" : "F1255 Time Factor", "nvalue" : 0, "stype" : "RFXMeter counter", "svalue1" : "140", "unit" : 1
+#- platform: mqtt
+#  state_topic: "domoticz/out"
+#  sensor:
+#    Return_temp:
+#      Friendly_name: 'Nibe 1255 Time Factor'
+#      value_template: >
+#        {% if value_json.idx == 26 %}
+#          {{ value_json.svalue1 }}
+#        {% endif %}
 
 #- platform: mqtt
 #  state_topic: "domoticz/out"
