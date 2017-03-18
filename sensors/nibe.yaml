@@ -1,11 +1,22 @@
 - platform: mqtt
   state_topic: "domoticz/out"
-  name: "Kitchen_temp"
-  value_template: >
-    {% if value_json.idx == 22 %}
-      {{ value_json.svalue1 }}
-    {% else %}
-    {% endif %}
+  sensors:
+    Return_temp
+      value_template: >
+        {% if value_json.idx = 22 %}
+          {{ value_json.svalue1 }}
+        {% endif %}
+
+
+
+#- platform: mqtt
+#  state_topic: "domoticz/out"
+#  name: "Kitchen_temp"
+#  value_template: >
+#    {% if value_json.idx = 22 %}
+#      {{ value_json.svalue1 }}
+#    {% else %}
+#    {% endif %}
 
 # behövs en else? varför blir den tom
 
