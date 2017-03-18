@@ -4,7 +4,7 @@
     Return_temp:
       Friendly_name: 'Nibe 1255 Return Tempterature'
       value_template: >
-        {% if value_json.idx = 22 %}
+        {% if value_json.idx == 22 %}
           {{ value_json.svalue1 }}
         {% endif %}
 
