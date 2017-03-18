@@ -6,7 +6,7 @@
   state_topic: "domoticz/out"
   name: 'Nibe 1255 Return temp'
   value_template: >
-     {% if value_json.idx == 26 %}
+     {% if value_json.idx == 22 %}
        {{ value_json.svalue1 }}
      {% endif %}
 
