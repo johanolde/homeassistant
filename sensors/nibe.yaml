@@ -1,0 +1,20 @@
+- platform: mqtt
+  state_topic: "domoticz/out"
+  name: "domoticz_lastmsg"
+  value_template: >
+    {% if value_json.idx == 25 %}
+      {{ value_json.svalue1 }}
+    {% endif %}
+
+# behövs en else? varför blir den tom
+
+#- condition: template
+#  value_template: >
+#    {% if is_state('media_player.tvliving', 'playing') %}
+#      false
+#    {% elif is_state('media_player.tvliving2', 'playing') %}
+#      false
+#    {% else %}
+#      true
+#    {% endif %}
+
