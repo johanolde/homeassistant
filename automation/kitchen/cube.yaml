@@ -74,7 +74,7 @@
       entity_id: binary_sensor.cube_158d0001104272
       action_type: rotate
   action:
-    service: homeassistant.turn_on
+    service: light.turn_on
     entity_id:
       - light.p16tw_01
       - light.a60rgbw_01
