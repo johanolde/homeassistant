@@ -65,6 +65,7 @@
     data:
       message: 'Cube Moved'
 
+
 - alias: 'cube rotate'
   trigger:
     platform: event
@@ -73,10 +74,54 @@
       entity_id: binary_sensor.cube_158d0001104272
       action_type: rotate
   action:
-    service: tts.google_say
-    entity_id: media_player.squeezebox_radio
+    service: homeassistant.turn_on
+    entity_id:
+      - light.p16tw_01
+      - light.a60rgbw_01
     data:
-      message: 'Cube is really rotating'
+      brightness: >
+                  {% set state = states.light.a60rgbw_01.attributes.brightness + (trigger.event.data.action_value|float)/90 -%}
+                  {%-  if state > 1 -%}
+                     {%- set state  = 1 -%}
+                  {%-  elif state < 0 -%}
+                     {%- set state  = 0 -%}
+                  {%- endif %}
+                  {{ state }}
+
+
+#- alias: "Volum stue"
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#        entity_id: binary_sensor.cube_158d0001118a8a
+#        action_type: rotate
+#  action:
+#    - service: media_player.volume_set
+#      data_template:
+#        entity_id: media_player.stue
+#        volume_level: >
+#                      {% set state = states.media_player.stue.attributes.volume_level + (trigger.event.data.action_value|float)/90 -%}
+#                      {%-  if state > 1 -%}
+#                         {%- set state  = 1 -%}
+#                      {%-  elif state < 0 -%}
+#                         {%- set state  = 0 -%}
+#                      {%- endif %}
+#                      {{ state }}
+
+#   - alias: 'cube rotate'
+#     trigger:
+#       platform: event
+#       event_type: cube_action
+#       event_data:
+#         entity_id: binary_sensor.cube_158d0001104272
+#         action_type: rotate
+#     action:
+#       service: tts.google_say
+#       entity_id: media_player.squeezebox_radio
+#       data:
+#         message: 'Cube is really rotating'
+
 
 - alias: 'cube shakeair'
   trigger:
@@ -92,6 +137,10 @@
 #  entity_id: media_player.squeezebox_radio
 #  data:
 #    message: 'Cube Shake air'
+
+
+
+
 
 - alias: 'cube swing'
   trigger:
