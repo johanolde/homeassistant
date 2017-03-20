@@ -75,14 +75,14 @@
       action_type: rotate
   action:
     service: light.turn_on
-    entity_id:
-      - light.p16tw_01
-      - light.a60rgbw_01
     data_template:
+      entity_id:
+        - light.p16tw_01
+        - light.a60rgbw_01
       brightness: >
                   {% set state = states.light.a60rgbw_01.attributes.brightness + (trigger.event.data.action_value|float)/90 -%}
-                  {%-  if state > 1 -%}
-                     {%- set state  = 1 -%}
+                  {%-  if state > 255 -%}
+                     {%- set state = 255 -%}
                   {%-  elif state < 0 -%}
                      {%- set state  = 0 -%}
                   {%- endif %}
