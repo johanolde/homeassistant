@@ -81,7 +81,7 @@
         - light.a60rgbw_01
         - light.flexrgbw_01
       brightness: >
-                  {% set state = states.light.a60rgbw_01.attributes.brightness + (trigger.event.data.action_value|float)/90 -%}
+                  {% set state = states.light.flexrgbw_01.attributes.brightness + (trigger.event.data.action_value|integer) -%}
                   {%-  if state > 255 -%}
                      {%- set state = 255 -%}
                   {%-  elif state < 0 -%}
