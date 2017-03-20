@@ -81,13 +81,13 @@
         - light.a60rgbw_01
         - light.flexrgbw_01
       brightness: >
-                  {% set state = states.light.flexrgbw_01.attributes.brightness + (trigger.event.data.action_value|round) -%}
+                  {% set state = states.light.flexrgbw_01.attributes.brightness + (trigger.event.data.action_value) -%}
                   {%-  if state > 255 -%}
                      {%- set state = 255 -%}
                   {%-  elif state < 0 -%}
                      {%- set state  = 0 -%}
                   {%- endif %}
-                  {{ state }}
+                  {{ state|round }}
 
 
 #- alias: "Volum stue"
