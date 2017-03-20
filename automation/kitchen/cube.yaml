@@ -79,6 +79,7 @@
       entity_id:
         - light.p16tw_01
         - light.a60rgbw_01
+        - light.flexrgbw_01
       brightness: >
                   {% set state = states.light.a60rgbw_01.attributes.brightness + (trigger.event.data.action_value|float)/90 -%}
                   {%-  if state > 255 -%}
