@@ -99,6 +99,17 @@ Climate:
     - group.Humidity
     - group.Weather
 
+Media-players:
+  view: yes
+  icon: mdi:music-circle
+  entities:
+    - media_player.apple_tv
+    - media_player.macbook_squeezeplay
+    - media_player.max2play
+    - media_player.office_squeezeplay
+    - media_player.squeezebox_boom
+    - media_player.squeezebox_radio
+
 ###########################################################
 ## Groups
 ###########################################################
@@ -327,6 +338,8 @@ outside:
 den:
 - switch.den_window_light
 - light.denceiling
+- media_player.macbook_squeezeplay
+- media_player.office_squeezeplay
 
 battery:
 - automation.batteries_low
