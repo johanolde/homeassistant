@@ -268,6 +268,8 @@ livingroom:
     - media_player.apple_tv_i_vardagsrum
     - cover.livingroom_blinds_level_32_0
     - cover.livingroom_blinds_switch_32_0
+    - switch.livingroom_blinds_switch_32_0
+
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
