@@ -9,8 +9,6 @@
   action:
     service: cover.close_cover
     entity_id: cover.livingroom_blinds_switch_32_0
-#     data:
-#      message: 'Cube Flip 90'
 
 - alias: 'Button double click'
   trigger:
@@ -22,18 +20,15 @@
   action:
     service: cover.open_cover
     entity_id: cover.livingroom_blinds_switch_32_0
-#    data:
-#      message: 'Cube Flip 180'
 
-#- alias: 'button hold'
-#  trigger:
-#    platform: event
-#    event_type: click
-#    event_data:
-#      entity_id: binary_sensor.switch_158d0001147e8e
-#      click_type: hold
-#  action:
-#    service: tts.google_say
-#    entity_id: cover.livingroom_blinds_switch_32_0
-#    data:
-#      message: 'Cube Freefallin'
+- alias: 'Button hold'
+  trigger:
+    platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d0001147e8e
+      click_type: hold
+  action:
+    service: cover.set_cover_position
+    entity_id: cover.livingroom_blinds_level_32_0
+    position: 80
