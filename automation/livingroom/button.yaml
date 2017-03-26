@@ -30,5 +30,6 @@
       click_type: hold
   action:
     service: cover.set_cover_position
-    entity_id: cover.livingroom_blinds_level_32_0
-    position: 80
+    data:
+      entity_id: cover.livingroom_blinds_level_32_0
+      position: 80
