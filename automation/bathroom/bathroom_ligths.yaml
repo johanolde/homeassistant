@@ -1,7 +1,7 @@
 - alias: "Shower lights on from bath"
   trigger:
     platform: state
-    entity_id: switch.bathroom_lights_switch_23_0
+    entity_id: binary_sensor.bathroom_lights_sensor_23_0
     state: 'on'
   action:
     - service: homeassistant.turn_on
@@ -12,7 +12,7 @@
 - alias: "shower lights off from bath"
   trigger:
     platform: state
-    entity_id: switch.bathroom_lights_switch_23_0
+    entity_id: binary_sensor.bathroom_lights_sensor_23_0
     state: 'off'
   action:
     - service: homeassistant.turn_off
@@ -23,7 +23,7 @@
 - alias: "bath lights on from shower"
   trigger:
     platform: state
-    entity_id: switch.bathroom_shower_lights_switch_28_0
+    entity_id: binary_sensor.bathroom_shower_lights_sensor_28_0
     state: 'on'
   action:
     - service: homeassistant.turn_on
@@ -34,7 +34,7 @@
 - alias: "bath lights off from shower"
   trigger:
     platform: state
-    entity_id: switch.bathroom_shower_lights_switch_28_0
+    entity_id: binary_sensor.bathroom_shower_lights_sensor_28_0
     state: 'off'
   action:
     - service: homeassistant.turn_off
