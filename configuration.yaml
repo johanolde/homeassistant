@@ -80,6 +80,8 @@ light:
     devices:
       !secret yeelight1_ip:
         name: Den.Ceiling
+      !secret yeelight2_ip:
+        name: Bathroom.shower
 
 scene: !include_dir_list scenes
 
