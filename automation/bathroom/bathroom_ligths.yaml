@@ -2,7 +2,7 @@
   trigger:
     platform: state
     entity_id: switch.bathroom_lights_switch_23_0
-    state: 'on'
+    to: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: bathroom_light
@@ -11,7 +11,7 @@
   trigger:
     platform: state
     entity_id: switch.bathroom_lights_switch_23_0
-    state: 'off'
+    to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: bathroom_light
@@ -20,7 +20,7 @@
   trigger:
     platform: state
     entity_id: switch.bathroom_shower_lights_switch_28_0
-    state: 'on'
+    to: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: bathroom_light
@@ -29,7 +29,7 @@
   trigger:
     platform: state
     entity_id: switch.bathroom_shower_lights_switch_28_0
-    state: 'off'
+    to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: bathroom_light
