@@ -293,7 +293,7 @@ Upstairs_bath:
     - switch.bathroom_shower_lights_switch_28_0
     - light.bathroomshower
 
-bathroom_light:
+bathroom_lamps:
   entities:
     - switch.bathroom_shower_lights_switch_28_0
     - light.bathroomshower
