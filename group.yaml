@@ -115,17 +115,19 @@ Media-players:
 ###########################################################
 
 entrance:
-- switch.entrance_porch_light_switch_2_0
-- automation.entrance_light
-- automation.entrance_light_timer
-- switch.entrance_porch_light_switch_2_0_2
-- switch.entrance_porch_light_switch_2_0_3
-- sensor.entrance_multisensor_luminance_11_3
-- sensor.entrance_multisensor_temperature_11_1
-- sensor.entrance_multisensor_relative_humidity_11_5
-- switch.porchpluginswitch
-- camera.doorcam
-- sensor.doorbell
+  control: hidden
+  entities:
+    - switch.entrance_porch_light_switch_2_0
+    - automation.entrance_light
+    - automation.entrance_light_timer
+    - switch.entrance_porch_light_switch_2_0_2
+    - switch.entrance_porch_light_switch_2_0_3
+    - sensor.entrance_multisensor_luminance_11_3
+    - sensor.entrance_multisensor_temperature_11_1
+    - sensor.entrance_multisensor_relative_humidity_11_5
+    - switch.porchpluginswitch
+    - camera.doorcam
+    - sensor.doorbell
 
 family:
   entities:
@@ -253,6 +255,7 @@ Fire:
     - sensor.lounge_smokedetector_temperature_7_1
 
 kitchen:
+  control: hidden
   entities:
     - sensor.kitchen_fridge_power_13_8
     - switch.kitchenwindoweast
@@ -261,6 +264,7 @@ kitchen:
     - binary_sensor.cube_158d0001104272
 
 livingroom:
+  control: hidden
   entities:
     - switch.livingroom_tv_switch_12_0
     - sensor.livingroom_tv_power_12_8
@@ -274,6 +278,7 @@ livingroom:
 
 Upstairs_bath:
   name: 'Badrum (uppe)'
+  control: hidden
   entities:
     - switch.bathroom_fan_switch_switch_20_0
     - sensor.bathroom_fan_switch_power_20_8
@@ -334,10 +339,12 @@ suncontrol:
 
 
 outside:
-- switch.porchpluginswitch
-- sensor.yr_symbol
-- sensor.yr_temperature
-- switch.entrance_porch_light_switch_2_0_2
+  control: hidden
+  entities:
+    - switch.porchpluginswitch
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - switch.entrance_porch_light_switch_2_0_2
 
 den:
 - switch.den_window_light
@@ -361,8 +368,10 @@ mower:
 - switch.rest_switch_3
 
 guestroom1:
-- switch.guestroom1windownorth
-- switch.guestroom1windoweast
+  control: hidden
+  entities:
+    - switch.guestroom1windownorth
+    - switch.guestroom1windoweast
 
 guestroom2:
 - switch.guestroom2window
@@ -472,12 +481,14 @@ keys:
 
 
 leaf:
-- switch.leaf_climate
-- sensor.leaf_battery
-- sensor.leaf_charging
-- sensor.leaf_connected
-- sensor.leaf_status
-- switch.leaf_update
+  control: hidden
+  entities:
+    - switch.leaf_climate
+    - sensor.leaf_battery
+    - sensor.leaf_charging
+    - sensor.leaf_connected
+    - sensor.leaf_status
+    - switch.leaf_update
 
 skarsjocore:
 - sensor.skarsjocore_cpu_usage
