@@ -80,19 +80,13 @@ Automations:
   view: yes
   icon: mdi:brightness-auto
   entities:
-    - automation.sunrise_off_lights
-    - automation.sunset_on_lights
-    - automation.bedtime_off_lights
-    - automation.night_time_off_lights
-    - automation.morning_on_lights
     - group.sunsetonlights
     - group.bedtimeofflights
     - group.nighttimeofflights
     - group.morningonlights
     - group.sunriseofflights
     - group.bathroom_lamps
-    - automation.bathroom_lights_off
-    - automation.bathroom_lights_on
+    - group.allautomations
 
 Climate:
   view: yes
@@ -131,6 +125,17 @@ entrance:
     - switch.porchpluginswitch
     - camera.doorcam
     - sensor.doorbell
+
+allautomations:
+  control: hidden
+  entities:
+    - automation.bathroom_lights_off
+    - automation.bathroom_lights_on
+    - automation.sunrise_off_lights
+    - automation.sunset_on_lights
+    - automation.bedtime_off_lights
+    - automation.night_time_off_lights
+    - automation.morning_on_lights
 
 family:
   entities:
