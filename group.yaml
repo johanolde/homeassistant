@@ -68,7 +68,6 @@ Admin:
     - group.Networking
     - group.Powerusage
     - group.AllaSwitchar
-    - group.Weblinks
     - group.systemmonitor
     - group.battery
     - group.test
@@ -311,7 +310,7 @@ Upstairs_bath:
     - switch.bathroom_fan_switch_switch_20_0
     - sensor.bathroom_fan_switch_power_20_8
     - sensor.bathrom_multisensor_luminance_10_3
-    - sensor.bathrom_multisensor_realtive_humidity_10_5
+    - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.bathrom_multisensor_temperature_10_1
     - light.bathroom_lights_level_23_0
     - light.bathroom_shower_lights_level_28_0_2
@@ -325,15 +324,6 @@ bathroom_lamps:
     - light.bathroomshower
     - switch.bathroom_lights_switch_23_0
 
-Weblinks:
-- weblink.home_assistant
-- weblink.router
-- weblink.printer_brother
-- weblink.camera_axis_205
-- weblink.camera_sricam
-- weblink.PTZ_camera
-- weblink.HaRunbook
-- weblink.MDI_icons
 
 Cameras:
 - camera.doorcam
