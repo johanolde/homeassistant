@@ -3,7 +3,7 @@
 ###########################################################
 
 default_view:
-  view: yes
+  view: true
   icon: mdi:home-variant
   entities:
     - group.cameras
@@ -70,7 +70,6 @@ Admin:
     - group.AllaSwitchar
     - group.systemmonitor
     - group.battery
-    - group.test
     - configurator.plex_media_server
     - group.skarsjocore
     - sensor.pihole
@@ -215,7 +214,6 @@ AllaSwitchar:
 - switch.dingingroome_light_switch_14_0 
 - switch.stairs_switch_switch_3_0
 # 433
-# test - switch.bath_small_lights
 - switch.bedroomwindow
 - switch.den_window_light
 - switch.doorchime1
@@ -232,11 +230,6 @@ AllaSwitchar:
 - switch.node0lights
 - switch.wilmawindowlight
 - switch.porchpluginswitch
-#test - switch.notused
-#test - switch.notused_2
-#test - switch.notused_3
-#test - switch.notused_4
-#test - swtich.testswitch
 # Lightify
 - light.a60rgbw_01
 - light.flexrgbw_01
@@ -481,13 +474,6 @@ node0:
 - switch.node0lights
 - media_player.max2play
 
-test:
-- switch.bath_small_lights
-- switch.testswitch
-- switch.notused
-- switch.notused_2
-- switch.notused_3
-- switch.notused_4
 
 keys:
   view: no
