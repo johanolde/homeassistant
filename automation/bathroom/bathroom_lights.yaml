@@ -1,4 +1,4 @@
-- alias: "Shower toggle"
+- alias: "bathroom lights toggle"
   trigger:
     platform: state
     entity_id: switch.bathroom_lights_switch_23_0
