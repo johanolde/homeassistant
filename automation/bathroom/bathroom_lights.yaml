@@ -1,6 +1,7 @@
 - alias: "bathroom lights toggle"
   trigger:
-    platform: state
+    platform: event
+    event_type: state_changed
     entity_id: switch.bathroom_lights_switch_23_0
   action:
     - service: homeassistant.toggle
