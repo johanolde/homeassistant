@@ -9,6 +9,8 @@
     - sensor.stairs_smokedetector_alarm_level_15_1_battery
     - zwave.entrance_multisensor_11_battery
     - zwave.bathroom_multisensor_10_battery
+    - zwave.stairs_smokedetector_15_battery
+    - zwave.lounge_smokedetector_7_battery
 
     value_template: '{{ state.attributes.battery }}'
     below: 20
