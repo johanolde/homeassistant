@@ -1,7 +1,7 @@
 - alias: "bathroom lights on"
   trigger:
     platform: state
-    entity_id: switch.bathroom_lights_switch_23_0
+    entity_id: light.bathroom_lights_level_23_0
     from: 'off'
     to: 'on'
   action:
@@ -14,7 +14,7 @@
 - alias: "bathroom lights off"
   trigger:
     platform: state
-    entity_id: switch.bathroom_lights_switch_23_0
+    entity_id: light.bathroom_lights_level_23_0
     from: 'on'
     to: 'off'
   action:

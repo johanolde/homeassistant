@@ -314,9 +314,9 @@ Upstairs_bath:
 
 bathroom_lamps:
   entities:
-    - switch.bathroom_shower_lights_switch_28_0_2
     - light.bathroomshower
-    - switch.bathroom_lights_switch_23_0
+    - light.bathroom_lights_level_23_0
+    - light.bathroom_shower_lights_level_28_0_2
 
 
 Cameras:
