@@ -296,6 +296,7 @@ Upstairs_bath:
 
 bathroom_lamps:
   entities:
+    - automation.bathroom_lights
     - switch.bathroom_shower_lights_switch_28_0
     - light.bathroomshower
     - switch.bathroom_lights_switch_23_0
