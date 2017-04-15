@@ -115,8 +115,6 @@ entrance:
   control: hidden
   entities:
     - switch.entrance_porch_light_switch_2_0
-    - automation.entrance_light
-    - automation.entrance_light_timer
     - switch.entrance_porch_light_switch_2_0_2
     - switch.entrance_porch_light_switch_2_0_3
     - sensor.entrance_multisensor_luminance_11_3
@@ -136,6 +134,10 @@ allautomations:
     - automation.bedtime_off_lights
     - automation.night_time_off_lights
     - automation.morning_on_lights
+    - automation.entrance_light
+    - automation.entrance_light_timer
+    - automation.bathroom_motion_fan_on
+    - automation.fan_off
 
 family:
   entities:
@@ -293,8 +295,6 @@ Upstairs_bath:
     - sensor.bathrom_multisensor_luminance_10_3
     - sensor.bathrom_multisensor_realtive_humidity_10_5
     - sensor.bathrom_multisensor_temperature_10_1
-    - automation.bathroom_motion_fan_on
-    - automation.fan_off
     - light.bathroom_lights_level_23_0
     - light.bathroom_shower_lights_level_28_0_2
     - switch.bathroom_lights_switch_23_0
