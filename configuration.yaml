@@ -43,18 +43,21 @@ history:
   exclude:
     entities:
       - sensor.diningroom_light_alarm_type_14_0
+      - switch.bathroom_lights_switch_23_0
 recorder:
   db_url: !secret mysql_url
   purge_days: 30
 logbook:
   include:
     domains:
+      - switch
       - sun
       - media_player
       - automation
       - device_tracker
     entities:
       - sensor.doorbell
+      - switch.bathroom_lights_switch_23_0
 sun:
 mqtt: !include mqtt.yaml
 
