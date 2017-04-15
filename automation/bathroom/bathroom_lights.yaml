@@ -9,7 +9,7 @@
       entity_id: group.bathroom_lamps
     - service: notify.telegram
       data:
-        title: Badrum på
+        title: Badrum
         message: 'on'
 - alias: "bathroom lights off"
   trigger:
@@ -22,7 +22,7 @@
       entity_id: group.bathroom_lamps
     - service: notify.telegram
       data:
-        title: Badrum av
+        title: Badrum
         message: 'off'
 
 #- alias: "Shower lights on from bath"
