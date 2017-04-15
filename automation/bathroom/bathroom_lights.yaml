@@ -1,10 +1,11 @@
 - alias: "bathroom lights toggle"
   trigger:
-    platform: event
-    event_type: state_changed
+    platform: state
     entity_id: switch.bathroom_lights_switch_23_0
+    from: 'off'
+    to: 'on'
   action:
-    - service: homeassistant.toggle
+    - service: homeassistant.turn_on
       entity_id: group.bathroom_lamps
 
 #- alias: "Shower lights on from bath"
