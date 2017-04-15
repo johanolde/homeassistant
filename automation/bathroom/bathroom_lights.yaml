@@ -11,10 +11,10 @@
   action:
     - service: homeassistant.turn_on
       entity_id: group.bathroom_lamps
-    - service: notify.telegram
-      data:
-        title: Badrum
-        message: 'on'
+#    - service: notify.telegram
+#      data:
+#        title: Badrum
+#        message: 'on'
 - alias: "bathroom lights off"
   trigger:
     - platform: state
@@ -28,10 +28,10 @@
   action:
     - service: homeassistant.turn_off
       entity_id: group.bathroom_lamps
-    - service: notify.telegram
-      data:
-        title: Badrum
-        message: 'off'
+#    - service: notify.telegram
+#      data:
+#        title: Badrum
+#        message: 'off'
 
 #- alias: "Shower lights on from bath"
 #  trigger:
