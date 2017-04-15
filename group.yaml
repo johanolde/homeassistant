@@ -90,6 +90,7 @@ Automations:
     - group.nighttimeofflights
     - group.morningonlights
     - group.sunriseofflights
+    - group.bathroom_lamps
 
 Climate:
   view: yes
