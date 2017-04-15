@@ -1,9 +1,13 @@
 - alias: "bathroom lights on"
   trigger:
-    platform: state
-    entity_id: light.bathroom_lights_level_23_0
-    from: 'off'
-    to: 'on'
+    - platform: state
+      entity_id: light.bathroom_lights_level_23_0
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: light.bathroom_shower_lights_level_28_0_2
+      from: 'off'
+      to: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: group.bathroom_lamps
@@ -13,10 +17,14 @@
         message: 'on'
 - alias: "bathroom lights off"
   trigger:
-    platform: state
-    entity_id: light.bathroom_lights_level_23_0
-    from: 'on'
-    to: 'off'
+    - platform: state
+      entity_id: light.bathroom_lights_level_23_0
+      from: 'on'
+      to: 'off'
+    - platform: state
+      entity_id: light.bathroom_shower_lights_level_28_0_2
+      from: 'on'
+      to: 'off'
   action:
     - service: homeassistant.turn_off
       entity_id: group.bathroom_lamps
