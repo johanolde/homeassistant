@@ -129,15 +129,33 @@ allautomations:
   entities:
     - automation.bathroom_lights_off
     - automation.bathroom_lights_on
-    - automation.sunrise_off_lights
-    - automation.sunset_on_lights
-    - automation.bedtime_off_lights
-    - automation.night_time_off_lights
-    - automation.morning_on_lights
+    - automation.bathroom_motion_fan_off
+    - automation.bathroom_motion_fan_on
+    - automation.batteries_low
+    - automation.button_double_click
+    - automation.button_hold
+    - automation.button_single_click
+    - automation.cube_flip_180
+    - automation.cube_flip_90
+    - automation.cube_freefall
+    - automation.cube_move
+    - automation.cube_rotate
+    - automation.cube_shakeair
+    - automation.cube_swing
+    - automation.cube_tap_twice
+    - automation.den_motion_light_off
+    - automation.den_motion_light_on
+    - automation.doorbell
     - automation.entrance_light
     - automation.entrance_light_timer
-    - automation.bathroom_motion_fan_on
-    - automation.fan_off
+    - automation.kitchen_ligthswitch
+    - automation.kitchen_ligthswitch_off
+    - automation.lights_bedtime_off
+    - automation.lights_morning_on
+    - automation.lights_nighttime_off
+    - automation.lights_sunrise_off
+    - automation.lights_sunset_on
+    - automation.update_available_notifications
 
 family:
   entities:
