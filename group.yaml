@@ -23,6 +23,7 @@ Upstairs:
     - group.wilma
     - group.stairs
     - group.closet
+    - group.bathroom_lamps
 
 Downstairs:
   view: yes
