@@ -1,6 +1,6 @@
 - alias: "Shower toggle"
   trigger:
-    platform: switch.toggle
+    platform: state
     entity_id: switch.bathroom_lights_switch_23_0
   action:
     - service: homeassistant.toggle
