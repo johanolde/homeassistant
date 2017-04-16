@@ -230,3 +230,7 @@
     switch.testswitch:
       emulated_hue: false
 
+
+    zone.home:
+      track_ios: true
+
