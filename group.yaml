@@ -159,9 +159,11 @@ allautomations:
 family:
   entities:
     - device_tracker.johan_iphone
+    - device_tracker.johans_iphone
     - device_tracker.anne_iphone
     - device_tracker.wilma_iphone
     - device_tracker.fanny_iphone
+    - device_tracker.kim
 
 Networking:
   entities:
