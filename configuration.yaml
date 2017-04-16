@@ -149,3 +149,8 @@ xiaomi:
   gateways:
     - sid:
       key: !secret xiaomi_key
+
+ios:
+  - name: iOSApp
+    platform: ios
+    target: !secret ios_token
