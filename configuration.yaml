@@ -154,3 +154,17 @@ xiaomi:
       key: !secret xiaomi_key
 
 ios:
+
+zone:
+  name: Home
+  latitude: !secret my_latitude
+  longitude: !secret my_longitude
+  radius: 250
+  icon: mdi:home
+
+zone 2:
+  name: Work
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: 250
+  icon: mdi:castle
