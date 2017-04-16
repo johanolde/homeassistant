@@ -125,6 +125,9 @@ notify:
     platform: telegram
     api_key: !secret telegram_api
     chat_id: !secret telegram_chatid
+  - name: iOSApp
+    platform: ios
+    target: !secret ios_token
 
 media_player:
   - platform: squeezebox
@@ -151,6 +154,3 @@ xiaomi:
       key: !secret xiaomi_key
 
 ios:
-  - name: iOSApp
-    platform: ios
-    target: !secret ios_token
