@@ -178,13 +178,13 @@ zone 2:
 
 influxdb:
   host: !secret influxip
-  port: 20000
+#  port: 20000
   database: home_assistant
-  username: hass
-  password: !secret influxpw
+#  username: hass
+#  password: !secret influxpw
 #  ssl: true
 #  verify_ssl: true
-  default_measurement: state
+#  default_measurement: state
 #  exclude:
 #    entities:
 #       - entity.id1
@@ -195,6 +195,6 @@ influxdb:
 #    entities:
 #       - entity.id3
 #       - entity.id4
-  tags:
-    instance: prod
-    source: hass
+#  tags:
+#    instance: prod
+#    source: hass
