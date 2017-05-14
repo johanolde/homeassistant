@@ -58,6 +58,13 @@ logbook:
     entities:
       - sensor.doorbell
       - switch.bathroom_lights_switch_23_0
+
+logger:
+  default: critical
+  logs:
+    custom_components.xiaomi: debug
+
+
 sun:
 mqtt: !include mqtt.yaml
 
@@ -168,3 +175,26 @@ zone 2:
   longitude: !secret work_longitude
   radius: 250
   icon: mdi:castle
+
+influxdb:
+  host: !secret influxip
+  port: 20000
+  database: home_assistant
+  username: hass
+  password: !secret influxpw
+#  ssl: true
+#  verify_ssl: true
+  default_measurement: state
+#  exclude:
+#    entities:
+#       - entity.id1
+#       - entity.id2
+#    domains:
+#       - automation
+#  include:
+#    entities:
+#       - entity.id3
+#       - entity.id4
+  tags:
+    instance: prod
+    source: hass
