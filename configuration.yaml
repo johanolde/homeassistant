@@ -34,34 +34,34 @@ updater:
 discovery:
 conversation:
 history:
-#  include:
-#    domains:
-#      - sensor
-#      - switch
-#      - zwave
-#    entities:
-#      - device_tracker.johan_iphone
-#      - switch.bathroom_lights_switch_23_0
-#  exclude:
-#    entities:
-#      - sensor.diningroom_light_alarm_type_14_0
+  include:
+    domains:
+      - sensor
+      - switch
+      - zwave
+    entities:
+      - device_tracker.johan_iphone
+      - switch.bathroom_lights_switch_23_0
+  exclude:
+    entities:
+      - sensor.diningroom_light_alarm_type_14_0
 recorder:
   db_url: !secret mysql_url
   purge_days: 30
 logbook:
-#  include:
-#    domains:
-#      - switch
-#      - sun
-#      - media_player
-#      - automation
-#      - device_tracker
-#    entities:
-#      - sensor.doorbell
-#      - switch.bathroom_lights_switch_23_0
+  include:
+    domains:
+      - switch
+      - sun
+      - media_player
+      - automation
+      - device_tracker
+    entities:
+      - sensor.doorbell
+      - switch.bathroom_lights_switch_23_0
 
 logger:
-#  default: critical
+  default: critical
 #  logs:
 #    custom_components.xiaomi: debug
 
