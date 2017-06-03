@@ -141,6 +141,8 @@ media_player:
   - platform: spotify
     client_id: !secret spot_id
     client_secret: !secret spot_pass
+  - platform: webostv
+    name: Livingroom LG TV
 
 #zoneminder:
 #  host: !secret zm_ip
