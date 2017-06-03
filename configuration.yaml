@@ -138,6 +138,9 @@ media_player:
     host: !secret bedroom_apple_ip
     login_id: !secret bedroom_apple_id
   - platform: plex
+  - platform: spotify
+    client_id: !secret spot_id
+    client_secret: !secret spot_pass
 
 #zoneminder:
 #  host: !secret zm_ip
