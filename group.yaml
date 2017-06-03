@@ -54,6 +54,7 @@ Outdoors:
     - group.mower
     - group.outside
 
+
 Security:
   view: yes
   entities:

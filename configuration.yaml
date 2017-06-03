@@ -97,6 +97,7 @@ tellstick:
 
 switch:
   - platform: tellstick
+
 #  - platform: rest
 #  - platform: rest
 #    resource: http://127.0.0.1:1234/park
