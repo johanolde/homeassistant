@@ -80,8 +80,8 @@ device_tracker:
 
 panel_iframe: !include panel_iframe.yaml
 
-automation: !include_dir_merge_list automation/
-#script: !include scripts.yaml
+#automation: !include_dir_merge_list automation/
+#just testing
 
 light:
   - platform: osramlightify
