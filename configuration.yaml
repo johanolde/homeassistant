@@ -147,6 +147,7 @@ media_player:
   - platform: apple_tv
     host: !secret bedroom_apple_ip
     login_id: !secret bedroom_apple_id
+  - platform: plex
 
 #zoneminder:
 #  host: !secret zm_ip
