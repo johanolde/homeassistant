@@ -8,11 +8,9 @@ homeassistant:
   customize: !include customize.yaml
 
 config:
-#group: !include groups.yaml
 group: !include group.yaml
 zwave: !include zwave.yaml
-#zwave:
-#  device_config: !include zwave_device_config.yaml
+
 
 sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
@@ -81,7 +79,6 @@ device_tracker:
 panel_iframe: !include panel_iframe.yaml
 
 automation: !include_dir_merge_list automation/
-#just testing
 
 light:
   - platform: osramlightify
@@ -136,6 +133,12 @@ notify:
   - name: iOSApp
     platform: ios
     target: !secret ios_token
+
+telegram_bot:
+  platform: webhooks
+  api_key: !secret telegram_api
+  allowed_chat_ids:
+    - !secret telegram_chatid
 
 media_player:
   - platform: squeezebox
