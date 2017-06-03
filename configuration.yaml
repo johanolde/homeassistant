@@ -97,17 +97,6 @@ tellstick:
 
 switch:
   - platform: tellstick
-  - platform: mqtt
-    name: "Leaf Climate"
-    command_topic: "leaf/control/climate"
-    payload_on: "1"
-    payload_off: "0"
-  - platform: mqtt
-    name: "Leaf Update"
-    command_topic: "leaf/control/update"
-    payload_on: "1"
-    payload_off: "0"
-#    icon: mdi:update
 #  - platform: rest
 #  - platform: rest
 #    resource: http://127.0.0.1:1234/park

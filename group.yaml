@@ -53,7 +53,6 @@ Outdoors:
 #    - sensor.mower_status
     - group.mower
     - group.outside
-    - group.leaf
 
 Security:
   view: yes
@@ -491,15 +490,7 @@ keys:
     - device_tracker.huvudknippa
 
 
-leaf:
-  control: hidden
-  entities:
-    - switch.leaf_climate
-    - sensor.leaf_battery
-    - sensor.leaf_charging
-    - sensor.leaf_connected
-    - sensor.leaf_status
-    - switch.leaf_update
+
 
 skarsjocore:
 - sensor.skarsjocore_cpu_usage
