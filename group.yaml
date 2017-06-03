@@ -105,6 +105,9 @@ Media-players:
     - media_player.office_squeezeplay
     - media_player.squeezebox_boom
     - media_player.squeezebox_radio
+    - media_player.johan_s_macbook_pro
+    - media_player.plex_web_vivaldi
+    - media_player.spotify_2
 
 ###########################################################
 ## Groups
