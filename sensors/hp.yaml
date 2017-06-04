@@ -1,0 +1,15 @@
+- platform: hp_ilo
+    host: !secret hpilo_ip
+    username: !secret hpilo_user
+    password: !secret hpilo_pass
+    monitored_variables:
+      - name: CPU fanspeed
+        sensor_type: server_health
+        unit_of_measurement: '%'
+        value_template: ''
+      - name: Inlet temperature
+        sensor_type: server_health
+        unit_of_measurement: '°C'
+        value_template: ''
+      - name: Server Health
+        sensor_type: server_health
