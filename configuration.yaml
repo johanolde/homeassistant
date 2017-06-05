@@ -124,7 +124,7 @@ notify:
   - name: iOSApp
     platform: ios
     target: !secret ios_token
-  - name: webostv
+  - platform: webostv
     host: !secret lg_ip
     name: livingroom_tv
     filename: webostv.conf
