@@ -3,3 +3,6 @@ port: 1883
 client_id: home-assistant
 #username: !secret pi_username
 #password: !secret pi_password
+birth_message:
+  topic: '/entrance/doorbell/state'
+  payload: '0'
