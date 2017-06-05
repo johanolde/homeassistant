@@ -147,7 +147,7 @@ media_player:
     client_id: !secret spot_id
     client_secret: !secret spot_pass
   - platform: webostv
-    host: !secret lg_tv
+    host: !secret lg_ip
     mac: !secret lg_mac
     name: Livingroom LG TV
     filename: webostv.conf
