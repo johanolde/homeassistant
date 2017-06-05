@@ -14,3 +14,6 @@
           - url: !secret doorcam_url
             username: visitor
             password: !secret doorcam_pw
+    - service: notify.livingroom_tv
+      data:
+        message: "Någon ringer på dörren"
