@@ -207,6 +207,10 @@
       icon: mdi:water-percent
     sensor.temperature_158d00012cb38e:
       friendly_name: 'Pantry temperature'
+    binary_sensor.door_window_sensor_158d000111ed95:
+      friendly_name: 'Den Window'
+      sensor_class: opening
+
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:
