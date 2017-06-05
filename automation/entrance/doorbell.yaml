@@ -18,4 +18,4 @@
       data:
         message: "Någon ringer på dörren"
         data:
-          icon: "!secret doorcam_url"
+          icon: !secret doorcam_url
