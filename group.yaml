@@ -109,6 +109,8 @@ Media-players:
     - media_player.johan_s_macbook_pro
     - media_player.plex_web_vivaldi
     - media_player.spotify
+    - media_player.livingroom_lg_tv
+    - media_player.apple_tv_i_vardagsrum
 
 ###########################################################
 ## Groups
@@ -261,6 +263,7 @@ Powerusage:
 - sensor.stairs_switch_power_3_8
 - sensor.energy_budget
 - sensor.energy_cost
+- sensor.livingroom_tv_power_12_8
 
 Weather:
   entities:
