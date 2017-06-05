@@ -17,5 +17,3 @@
     - service: notify.livingroom_tv
       data:
         message: "Någon ringer på dörren"
-        data:
-          icon: !secret doorcam_url
