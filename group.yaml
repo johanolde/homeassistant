@@ -53,6 +53,7 @@ Outdoors:
 #    - sensor.mower_status
     - group.mower
     - group.outside
+    - camera.axis00408cad45972local
 
 
 Security:
