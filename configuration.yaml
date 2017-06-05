@@ -124,6 +124,10 @@ notify:
   - name: iOSApp
     platform: ios
     target: !secret ios_token
+  - name: webostv
+    host: !secret lg_ip
+    name: livingroom_tv
+    filename: webostv.conf
 
 telegram_bot:
   platform: webhooks
