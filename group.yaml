@@ -72,9 +72,8 @@ Admin:
     - group.AllaSwitchar
     - group.systemmonitor
     - group.battery
-    - configurator.plex_media_server
     - group.skarsjocore
-    - sensor.pihole
+
 
 Automations:
   view: yes
@@ -312,9 +311,9 @@ Upstairs_bath:
   entities:
     - switch.bathroom_fan_switch_switch_20_0
     - sensor.bathroom_fan_switch_power_20_8
-    - sensor.bathrom_multisensor_luminance_10_3
+    - sensor.bathroom_multisensor_luminance_10_3
     - sensor.bathroom_multisensor_relative_humidity_10_5
-    - sensor.bathrom_multisensor_temperature_10_1
+    - sensor.bathroom_multisensor_temperature_10_1
     - light.bathroom_lights_level_23_0
     - light.bathroom_shower_lights_level_28_0_2
     - switch.bathroom_lights_switch_23_0
@@ -374,6 +373,7 @@ outside:
 den:
 - switch.den_window_light
 - light.denceiling
+- binary_sensor.door_window_sensor_158d000111ed95
 - media_player.macbook_squeezeplay
 - media_player.office_squeezeplay
 
