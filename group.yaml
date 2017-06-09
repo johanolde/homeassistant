@@ -54,6 +54,8 @@ Outdoors:
     - group.mower
     - group.outside
     - camera.axis00408cad45972local
+    - sensor.nibe_1255_outdoor_temp
+    - sensor.nibe_1255_avg_outdoor_temp
 
 
 Security:
@@ -110,6 +112,19 @@ Media-players:
     - media_player.spotify
     - media_player.livingroom_lg_tv
     - media_player.apple_tv_i_vardagsrum
+
+Heating:
+  view: yes
+  icon: mdi:fan
+  entities:
+    - sensor.nibe_1255_avg_outdoor_temp
+    - sensor.nibe_1255_degree_minutes
+    - sensor.nibe_1255_hot_gas
+    - sensor.nibe_1255_hot_water_charging
+    - sensor.nibe_1255_kitchen_temp
+    - sensor.nibe_1255_liquid_line
+    - sensor.nibe_1255_outdoor_temp
+    - sensor.nibe_1255_return_temp
 
 ###########################################################
 ## Groups
@@ -186,6 +201,10 @@ Temperature:
     - sensor.temperature_158d00010678df
     - sensor.temperature_158d00012cb38e
     - sensor.temperature_158d00012cb2f7
+    - sensor.nibe_1255_kitchen_temp
+    - sensor.nibe_1255_avg_outdoor_temp
+    - sensor.nibe_1255_outdoor_temp
+
 
 Humidity:
   entities:
@@ -291,6 +310,7 @@ kitchen:
     - switch.kitchenwindowsouth
     - binary_sensor.door_window_sensor_158d00013fd5b4
     - binary_sensor.cube_158d0001104272
+    - sensor.nibe_1255_kitchen_temp
 
 livingroom:
   control: hidden
@@ -427,7 +447,7 @@ sunsetonlights:
     - switch.dingingroom_light_switch_14_0
     - switch.stairs_switch_switch_3_0
     - switch.bedroomwindow
-    - switch.den_window_light
+    - switch.   den_window_light
     - switch.guestroom1windownorth
     - switch.guestroom1windoweast
     - switch.guestroom2window
