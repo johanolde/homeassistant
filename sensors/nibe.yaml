@@ -1,78 +1,21 @@
 - platform: mqtt
-  state_topic: "domoticz/out"
-  name: 'Nibe 1255 Avg Outdoor Temp'
-  value_template: >
-    {% if value_json.idx == 2 %}
-      {{ value_json.svalue1 }}
-    {% endif %}
-- platform: mqtt
-  state_topic: "domoticz/out"
+  state_topic: "nibe/outdoortemp"
   name: 'Nibe 1255 Outdoor temp'
-  value_template: >
-     {% if value_json.idx == 1 %}
-       {{ value_json.svalue1 }}
-     {% endif %}
 - platform: mqtt
-  state_topic: "domoticz/out"
-  name: 'Nibe 1255 Kitchen temp'
-  value_template: >
-     {% if value_json.idx == 22 %}
-       {{ value_json.svalue1 }}
-     {% else %}
-     {% endif %}
+  state_topic: "nibe/outdooraverage"
+  name: 'Nibe 1255 Avg Outdoor Temp'
 - platform: mqtt
-  state_topic: "domoticz/out"
+  state_topic: "nibe/degreeminutes"
+  name: 'Nibe 1255 Degree minutes'
+- platform: mqtt
+  state_topic: "nibe/hotgas"
+  name: 'Nibe 1255 Hot Gas'
+- platform: mqtt
+  state_topic: "nibe/hotwatercharging"
+  name: 'Nibe 1255 Hot water charging'
+- platform: mqtt
+  state_topic: "nibe/returntemp"
   name: 'Nibe 1255 Return temp'
-  value_template: >
-     {% if value_json.idx == 19 %}
-       {{ value_json.svalue1 }}
-     {% else %}
-     {% endif %}
-
-
-# Kanske rent av funkar.. Prova att göra fler
-#- platform: mqtt
-#  state_topic: "domoticz/out"
-#  name: 'Nibe 1255 Time Factor'
-#  value_template: '{{ value_json.svalue1 }}'
-#- platform: mqtt
-#  state_topic: "domoticz/out"
-#  name: 'Nibe 1255 Return temp'
-#  value_template: >
-#     {% if value_json.idx == 22 %}
-#       {{ value_json.svalue1 }}
-#     {% endif %}
-
-
-# Fungerar lite: sensor.mqtt_sensor	{ "Battery" : 255, "RSSI" : 12, "ValueQuantity" : "Time", "ValueUnits" : "h", "dtype" : "RFXMeter", "id" : "82026", "idx" : 26, "name" : "F1255 Time Factor", "nvalue" : 0, "stype" : "RFXMeter counter", "svalue1" : "140", "unit" : 1
-#- platform: mqtt
-#  state_topic: "domoticz/out"
-#  sensor:
-#    Return_temp:
-#      Friendly_name: 'Nibe 1255 Time Factor'
-#      value_template: >
-#        {% if value_json.idx == 26 %}
-#          {{ value_json.svalue1 }}
-#        {% endif %}
-
-#- platform: mqtt
-#  state_topic: "domoticz/out"
-#  name: "Kitchen_temp"
-#  value_template: >
-#    {% if value_json.idx = 22 %}
-#      {{ value_json.svalue1 }}
-#    {% else %}
-#    {% endif %}
-
-# behövs en else? varför blir den tom
-
-#- condition: template
-#  value_template: >
-#    {% if is_state('media_player.tvliving', 'playing') %}
-#      false
-#    {% elif is_state('media_player.tvliving2', 'playing') %}
-#      false
-#    {% else %}
-#      true
-#    {% endif %}
-
+- platform: mqtt
+  state_topic: "nibe/liquidline"
+  name: 'Nibe 1255 Liquid Line'
