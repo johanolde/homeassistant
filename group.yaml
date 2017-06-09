@@ -447,7 +447,7 @@ sunsetonlights:
     - switch.dingingroom_light_switch_14_0
     - switch.stairs_switch_switch_3_0
     - switch.bedroomwindow
-    - switch.   den_window_light
+    - switch.den_window_light
     - switch.guestroom1windownorth
     - switch.guestroom1windoweast
     - switch.guestroom2window
