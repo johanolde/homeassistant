@@ -19,3 +19,6 @@
 - platform: mqtt
   state_topic: "nibe/liquidline"
   name: 'Nibe 1255 Liquid Line'
+- platform: mqtt
+  state_topic: "nibe/roomtemp"
+  name: 'Nibe 1255 Kitchen temp'
