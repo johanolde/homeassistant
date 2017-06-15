@@ -90,6 +90,7 @@ light:
         name: Den.Ceiling
       !secret yeelight2_ip:
         name: Bathroom.shower
+  - platform: tellstick
 
 scene: !include_dir_list scenes
 
@@ -98,6 +99,7 @@ tellstick:
 
 switch:
   - platform: tellstick
+
 
 #  - platform: rest
 #  - platform: rest
