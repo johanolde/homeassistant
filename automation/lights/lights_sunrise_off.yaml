@@ -5,4 +5,4 @@
     offset: "00:30:00"
   action:
     service: homeassistant.turn_off
-    entity_id: group.sunriseofflights
+    entity_id: group.sunsetonlights

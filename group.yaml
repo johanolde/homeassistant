@@ -86,7 +86,6 @@ Automations:
     - group.bedtimeofflights
     - group.nighttimeofflights
     - group.morningonlights
-    - group.sunriseofflights
     - group.bathroom_lamps
     - group.allautomations
 
@@ -459,7 +458,7 @@ sunsetonlights:
     - switch.loungewindowsboth
     - switch.porchpluginswitch
     - switch.entrance_porch_light_switch_2_0_2
-    - switch.livingroomwindow
+
 
 bedroomlights:
 - switch.wilmawindowlight
@@ -475,28 +474,12 @@ bedtimeofflights:
 - switch.guestroom1windownorth
 - switch.guestroom1windoweast
 
-nighttimeofflights:
+night_off_morning_on_lights:
 - switch.kitchenwindoweast
 - switch.stairs_switch_switch_3_0
 - switch.loungewindowsboth
 - switch.porchpluginswitch
 
-morningonlights:
-- switch.kitchenwindoweast
-- switch.stairs_switch_switch_3_0
-- switch.loungewindowsboth
-- switch.porchpluginswitch
-
-sunriseofflights:
-- switch.dingingroom_light_switch_14_0
-- switch.stairs_switch_switch_3_0
-- switch.den_window_light
-- switch.kitchenwindoweast
-- switch.kitchenwindowsouth
-- switch.livingroomwindow
-- switch.loungewindowsboth
-- switch.porchpluginswitch
-- switch.entrance_porch_light_switch_2_0_2
 
 ############################################
 #
