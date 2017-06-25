@@ -444,34 +444,38 @@ bedroom:
 - binary_sensor.switch_158d0001147e8e
 - media_player.apple_tv
 
+############################################
+# Light groups for suncontrol
+############################################
+
 sunsetonlights:
   entities:
     - switch.diningroom_light_switch_14_0
     - switch.stairs_switch_switch_3_0
-    - switch.bedroomwindow
     - switch.den_window_light
-    - switch.guestroom1windownorth
-    - switch.guestroom1windoweast
-    - switch.guestroom2window
     - switch.kitchenwindoweast
     - switch.kitchenwindowsouth
-#    - switch.living_window_light
     - switch.livingroomwindow
     - switch.loungewindowsboth
-    - switch.wilmawindowlight
     - switch.porchpluginswitch
     - switch.entrance_porch_light_switch_2_0_2
     - switch.livingroomwindow
 
+bedroomlights:
+- switch.wilmawindowlight
+- switch.bedroomwindow
+- switch.guestroom2window
+- switch.guestroom1windownorth
+- switch.guestroom1windoweast
 
 bedtimeofflights:
 - switch.wilmawindowlight
 - switch.bedroomwindow
 - switch.guestroom2window
-
-nighttimeofflights:
 - switch.guestroom1windownorth
 - switch.guestroom1windoweast
+
+nighttimeofflights:
 - switch.kitchenwindoweast
 - switch.stairs_switch_switch_3_0
 - switch.loungewindowsboth
@@ -486,18 +490,17 @@ morningonlights:
 sunriseofflights:
 - switch.dingingroom_light_switch_14_0
 - switch.stairs_switch_switch_3_0
-- switch.bedroomwindow
 - switch.den_window_light
-- switch.guestroom1windownorth
-- switch.guestroom1windoweast
-- switch.guestroom2window
 - switch.kitchenwindoweast
 - switch.kitchenwindowsouth
 - switch.livingroomwindow
 - switch.loungewindowsboth
-- switch.wilmawindowlight
 - switch.porchpluginswitch
 - switch.entrance_porch_light_switch_2_0_2
+
+############################################
+#
+############################################
 
 wilma:
 - switch.wilmawindowlight
