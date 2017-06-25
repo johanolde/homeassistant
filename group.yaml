@@ -81,6 +81,7 @@ Automations:
   view: yes
   icon: mdi:brightness-auto
   entities:
+    - sun.sun
     - group.sunsetonlights
     - group.bedtimeofflights
     - group.nighttimeofflights
@@ -88,6 +89,7 @@ Automations:
     - group.sunriseofflights
     - group.bathroom_lamps
     - group.allautomations
+
 
 Climate:
   view: yes
