@@ -82,13 +82,14 @@ Automations:
   icon: mdi:brightness-auto
   entities:
     - sun.sun
-    - group.sunsetonlights
     - group.bedtimeofflights
-    - group.nighttimeofflights
     - group.morningonlights
     - group.bathroom_lamps
     - group.allautomations
-
+    - group.suncontrol
+    - group.sunsetonlights
+    - group.bedroomlights
+    - group.night_off_morning_on_lights
 
 Climate:
   view: yes
@@ -131,6 +132,10 @@ Heating:
 ## Groups
 ###########################################################
 
+###########################################################
+## Groups - Rooms
+###########################################################
+
 entrance:
   control: hidden
   entities:
@@ -143,6 +148,108 @@ entrance:
     - switch.porchpluginswitch
     - camera.doorcam
     - sensor.doorbell
+
+showerroom:
+  entities:
+    -  sensor.temperature_158d00010678df
+    -  sensor.humidity_158d00010678df
+
+Dining:
+  entities:
+    - camera.dining_room
+    - switch.diningroom_light_switch_14_0
+    - media_player.squeezebox_radio
+
+kitchen:
+  control: hidden
+  entities:
+    - sensor.kitchen_fridge_power_13_8
+    - switch.kitchenwindoweast
+    - switch.kitchenwindowsouth
+    - binary_sensor.door_window_sensor_158d00013fd5b4
+    - binary_sensor.cube_158d0001104272
+    - sensor.nibe_1255_kitchen_temp
+
+livingroom:
+  control: hidden
+  entities:
+    - switch.livingroom_tv_switch_12_0
+    - sensor.livingroom_tv_power_12_8
+    - switch.livingroomwindow
+    - media_player.apple_tv_i_vardagsrum
+    - cover.livingroom_blinds_level_32_0
+    - cover.livingroom_blinds_switch_32_0
+    - switch.livingroom_blinds_switch_32_0
+    - binary_sensor.switch_158d0001147e8e
+
+
+Upstairs_bath:
+  name: 'Badrum (uppe)'
+  control: hidden
+  entities:
+    - switch.bathroom_fan_switch_switch_20_0
+    - sensor.bathroom_fan_switch_power_20_8
+    - sensor.bathroom_multisensor_luminance_10_3
+    - sensor.bathroom_multisensor_relative_humidity_10_5
+    - sensor.bathroom_multisensor_temperature_10_1
+    - light.bathroom_lights_level_23_0
+    - light.bathroom_shower_lights_level_28_0_2
+    - switch.bathroom_lights_switch_23_0
+    - switch.bathroom_shower_lights_switch_28_0
+    - light.bathroomshower
+
+stairs:
+- sensor.stairs_smokedetector_temperature_15_1
+- switch.stairs_switch_switch_3_0
+- sensor.stairs_switch_energy_3_0
+- sensor.stairs_switch_voltage_3_16
+
+den:
+- switch.den_window_light
+- light.denceiling
+- binary_sensor.door_window_sensor_158d000111ed95
+- media_player.macbook_squeezeplay
+- media_player.office_squeezeplay
+
+guestroom1:
+  control: hidden
+  entities:
+    - switch.guestroom1windownorth
+    - switch.guestroom1windoweast
+
+guestroom2:
+- switch.guestroom2window
+- media_player.squeezebox_boom
+
+lounge:
+- sensor.lounge_smokedetector_temperature_7_1
+- switch.loungewindowsboth
+
+bedroom:
+- switch.bedroomwindow
+- sensor.yr_temperature
+- binary_sensor.switch_158d0001147e8e
+- media_player.apple_tv
+
+wilma:
+- switch.wilmawindowlight
+
+pantry:
+- sensor.temperature_158d00012cb38e
+- sensor.humidity_158d00012cb2f7
+
+closet:
+- sensor.temperature_158d00012cb2f7
+- sensor.humidity_158d00012cb38e
+
+node0:
+- switch.node0lights
+- media_player.max2play
+
+
+###########################################################
+##
+###########################################################
 
 allautomations:
   control: hidden
@@ -206,7 +313,6 @@ Temperature:
     - sensor.nibe_1255_avg_outdoor_temp
     - sensor.nibe_1255_outdoor_temp
 
-
 Humidity:
   entities:
     - sensor.entrance_multisensor_relative_humidity_11_5
@@ -216,16 +322,6 @@ Humidity:
     - sensor.humidity_158d00012cb2f7
     - sensor.humidity_158d00012cb38e
 
-showerroom:
-  entities:
-    -  sensor.temperature_158d00010678df
-    -  sensor.humidity_158d00010678df
-
-Dining:
-  entities:
-    - camera.dining_room
-    - switch.diningroom_light_switch_14_0
-    - media_player.squeezebox_radio
 
 Systemmonitor:
 - sensor.ram_free
@@ -303,50 +399,12 @@ Fire:
     - sensor.lounge_smokedetector_smoke_7_1
     - sensor.lounge_smokedetector_temperature_7_1
 
-kitchen:
-  control: hidden
-  entities:
-    - sensor.kitchen_fridge_power_13_8
-    - switch.kitchenwindoweast
-    - switch.kitchenwindowsouth
-    - binary_sensor.door_window_sensor_158d00013fd5b4
-    - binary_sensor.cube_158d0001104272
-    - sensor.nibe_1255_kitchen_temp
-
-livingroom:
-  control: hidden
-  entities:
-    - switch.livingroom_tv_switch_12_0
-    - sensor.livingroom_tv_power_12_8
-    - switch.livingroomwindow
-    - media_player.apple_tv_i_vardagsrum
-    - cover.livingroom_blinds_level_32_0
-    - cover.livingroom_blinds_switch_32_0
-    - switch.livingroom_blinds_switch_32_0
-    - binary_sensor.switch_158d0001147e8e
-
-
-Upstairs_bath:
-  name: 'Badrum (uppe)'
-  control: hidden
-  entities:
-    - switch.bathroom_fan_switch_switch_20_0
-    - sensor.bathroom_fan_switch_power_20_8
-    - sensor.bathroom_multisensor_luminance_10_3
-    - sensor.bathroom_multisensor_relative_humidity_10_5
-    - sensor.bathroom_multisensor_temperature_10_1
-    - light.bathroom_lights_level_23_0
-    - light.bathroom_shower_lights_level_28_0_2
-    - switch.bathroom_lights_switch_23_0
-    - switch.bathroom_shower_lights_switch_28_0
-    - light.bathroomshower
 
 bathroom_lamps:
   entities:
     - light.bathroomshower
     - light.bathroom_lights_level_23_0
     - light.bathroom_shower_lights_level_28_0_2
-
 
 Cameras:
 - camera.doorcam
@@ -356,12 +414,6 @@ Cameras:
 - camera.driveway
 - camera.housecam
 - camera.nodecam
-
-stairs:
-- sensor.stairs_smokedetector_temperature_15_1
-- switch.stairs_switch_switch_3_0
-- sensor.stairs_switch_energy_3_0
-- sensor.stairs_switch_voltage_3_16
 
 suncontrol:
 - switch.entrance_porch_light_switch_2_0_2
@@ -391,13 +443,6 @@ outside:
     - sensor.yr_temperature
     - switch.entrance_porch_light_switch_2_0_2
 
-den:
-- switch.den_window_light
-- light.denceiling
-- binary_sensor.door_window_sensor_158d000111ed95
-- media_player.macbook_squeezeplay
-- media_player.office_squeezeplay
-
 battery:
 - automation.batteries_low
 - binary_sensor.bathroom_multisensor_sensor_10_0_battery
@@ -413,20 +458,6 @@ mower:
 - switch.rest_switch_2
 - switch.rest_switch_3
 
-guestroom1:
-  control: hidden
-  entities:
-    - switch.guestroom1windownorth
-    - switch.guestroom1windoweast
-
-guestroom2:
-- switch.guestroom2window
-- media_player.squeezebox_boom
-
-lounge:
-- sensor.lounge_smokedetector_temperature_7_1
-- switch.loungewindowsboth
-
 kitchenlights:
 - light.a60rgbw_01
 - light.p16tw_01
@@ -437,11 +468,6 @@ kitchenlights:
 - scene.eating
 - switch.kitchenspotsundercabinets
 
-bedroom:
-- switch.bedroomwindow
-- sensor.yr_temperature
-- binary_sensor.switch_158d0001147e8e
-- media_player.apple_tv
 
 ############################################
 # Light groups for suncontrol
@@ -485,13 +511,6 @@ night_off_morning_on_lights:
 #
 ############################################
 
-wilma:
-- switch.wilmawindowlight
-
-node0:
-- switch.node0lights
-- media_player.max2play
-
 
 keys:
   view: no
@@ -505,9 +524,6 @@ keys:
     - device_tracker.lager
     - device_tracker.huvudknippa
 
-
-
-
 skarsjocore:
 - sensor.skarsjocore_cpu_usage
 - sensor.skarsjocore_memory_usage
@@ -520,11 +536,5 @@ skarsjocore:
 - sensor.skarsjocore_temperature_drive_2
 - sensor.skarsjocore_volume_used_volume_1
 
-pantry:
-- sensor.temperature_158d00012cb38e
-- sensor.humidity_158d00012cb2f7
 
-closet:
-- sensor.temperature_158d00012cb2f7
-- sensor.humidity_158d00012cb38e
 
