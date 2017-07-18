@@ -5,8 +5,8 @@
     offset: "-00:15:00"
   condition:
     condition: sun
-      before: sunset
-      before_offset: "-00:15:00"
+    before: sunset
+    before_offset: "-00:15:00"
   action:
     service: homeassistant.turn_on
     entity_id: group.bedroomlights
