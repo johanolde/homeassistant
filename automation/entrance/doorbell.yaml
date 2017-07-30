@@ -22,7 +22,7 @@
     - service: notify.livingroom_tv
       data:
         message: "Någon ringer på dörren"
-    - delay: 0:05
+    - delay: 0:00:05
     - service: notify.telegram
       data:
         title: Doorbell
@@ -32,7 +32,7 @@
           - url: !secret doorcam_url
             username: visitor
             password: !secret doorcam_pw
-    - delay: 0:05
+    - delay: 0:00:05
     - service: notify.telegram
       data:
         title: Doorbell
