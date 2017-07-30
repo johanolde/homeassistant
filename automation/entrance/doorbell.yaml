@@ -5,6 +5,11 @@
     from: '0'
     to: '1'
   action:
+    - service: xiaomi.play_ringtone
+      data:
+        gw_mac: f0:b4:29:cc:36:60
+        ringtone_id: 8
+        ringtone_vol: 8
     - service: notify.telegram
       data:
         title: Doorbell
@@ -17,8 +22,23 @@
     - service: notify.livingroom_tv
       data:
         message: "Någon ringer på dörren"
-    - service: xiaomi.play_ringtone
+    - delay: 0:05
+    - service: notify.telegram
       data:
-        gw_mac: f0:b4:29:cc:36:60
-        ringtone_id: 8
-        ringtone_vol: 8
+        title: Doorbell
+        message: 'Ringklockan ringer'
+        data:
+          photo:
+          - url: !secret doorcam_url
+            username: visitor
+            password: !secret doorcam_pw
+    - delay: 0:05
+    - service: notify.telegram
+      data:
+        title: Doorbell
+        message: 'Ringklockan ringer'
+        data:
+          photo:
+          - url: !secret doorcam_url
+            username: visitor
+            password: !secret doorcam_pw
