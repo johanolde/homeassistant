@@ -167,7 +167,7 @@ tts:
 
 xiaomi:
   gateways:
-    - sid:
+    - mac:
       key: !secret xiaomi_key
 
 ios:
