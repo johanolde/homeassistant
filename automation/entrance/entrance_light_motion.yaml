@@ -2,7 +2,7 @@
   trigger:
     platform: state
     entity_id: binary_sensor.entrance_multisensor_sensor_11_0
-    state: 'on'
+    to: 'on'
   condition:
     - condition: numeric_state
       entity_id: sensor.entrance_multisensor_luminance_11_3
