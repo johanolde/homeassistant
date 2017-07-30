@@ -1,7 +1,7 @@
 - alias: "Lights nighttime off"
   trigger:
     platform: time
-    after: "23:00:00"
+    at: "23:00:00"
   action:
     service: homeassistant.turn_off
     entity_id: group.night_off_morning_on_lights

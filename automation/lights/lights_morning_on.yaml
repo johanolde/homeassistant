@@ -1,7 +1,7 @@
 - alias: "Lights morning on"
   trigger:
     platform: time
-    after: "04:30:00"
+    at: "04:30:00"
   condition:
     condition: state
     entity_id: sun.sun
