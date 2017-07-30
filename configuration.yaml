@@ -133,7 +133,7 @@ notify:
     filename: webostv.conf
 
 telegram_bot:
-  platform: webhooks
+  platform: polling
   api_key: !secret telegram_api
   allowed_chat_ids:
     - !secret telegram_chatid
@@ -142,9 +142,6 @@ media_player:
   - platform: squeezebox
     host: !secret squeezebox_ip
     port: 9000
-  - platform: apple_tv
-    host: !secret bedroom_apple_ip
-    login_id: !secret bedroom_apple_id
   - platform: plex
   - platform: spotify
     client_id: !secret spot_id
@@ -155,6 +152,7 @@ media_player:
     name: Livingroom LG TV
     filename: webostv.conf
 
+apple_tv: !include apple_tv.yaml
 
 #zoneminder:
 #  host: !secret zm_ip
