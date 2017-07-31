@@ -3,11 +3,11 @@
     platform: state
     entity_id: binary_sensor.motion_sensor_158d00010a9ef1
     to: 'on'
-  condition:
-    platform: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: 3.5
+#  condition:
+#    platform: numeric_state
+#    entity_id: sun.sun
+#    value_template: '{{ state.attributes.elevation }}'
+#    below: 3.5
   action:
     service: homeassistant.turn_on
     entity_id: light.denceiling
