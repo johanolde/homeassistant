@@ -8,10 +8,12 @@
       entity_id: binary_sensor.cube_158d0001104272
       action_type: flip90
   action:
-    service: tts.google_say
-    entity_id: media_player.squeezebox_radio
-    data:
-      message: 'Cube Flip 90'
+    service: scene.turn_on
+    entity_id: scene.eating
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Flip 90'
 
 - alias: 'cube flip 180'
   trigger:
@@ -21,10 +23,12 @@
       entity_id: binary_sensor.cube_158d0001104272
       action_type: flip180
   action:
-    service: tts.google_say
-    entity_id: media_player.squeezebox_radio
-    data:
-      message: 'Cube Flip 180'
+    service: scene.turn_on
+    entity_id: scene.cooking
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Flip 180'
 
 #- alias: 'cube alert'
 #  trigger:
