@@ -3,18 +3,14 @@
     platform: state
     entity_id: binary_sensor.motion_sensor_158d00010a9ef1
     to: 'on'
-#condition:
-#  - condition: numeric_state
-#    entity_id: sensor.entrance_multisensor_luminance_11_3
-#    below: 30
 condition:
     platform: numeric_state
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
     below: 3.5
-  action:
-    service: homeassistant.turn_on
-    entity_id: light.denceiling
+      action:
+        service: homeassistant.turn_on
+        entity_id: light.denceiling
 
 - alias: "Den motion light off"
   trigger:
