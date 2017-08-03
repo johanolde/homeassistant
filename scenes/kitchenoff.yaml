@@ -1,0 +1,12 @@
+name: 'kitchenoff'
+entities:
+  light.a60rgbw_01:
+    state: off
+  light.p16tw_01:
+    state: off
+  light.p16tw_02:
+    state: off
+  light.p16tw_03:
+    state: off
+  light.flexrgbw_01:
+    state: off
