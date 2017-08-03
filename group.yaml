@@ -466,6 +466,7 @@ kitchenlights:
 - light.flexrgbw_01
 - scene.cooking
 - scene.eating
+- scene.kitchenoff
 - switch.kitchenspotsundercabinets
 
 

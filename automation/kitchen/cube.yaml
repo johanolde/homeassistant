@@ -31,7 +31,7 @@
 #      message: 'Cube Flip 180'
 
 #- alias: 'cube alert'
-#  trigger:
+#  trigger:10
 #    platform: event
 #    event_type: cube_action
 #    event_data:
