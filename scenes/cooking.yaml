@@ -3,7 +3,7 @@ name: 'Cooking'
 entities:
   light.a60rgbw_01:
     state: on
-    rgb_color: [254, 254, 254]
+#    rgb_color: [254, 254, 254]
     color_temp: 154
     transistion: 3
     brightness: 254
@@ -21,7 +21,7 @@ entities:
     brightness: 254
   light.flexrgbw_01:
     state: on
-    rgb_color: [54, 54, 54]
+#    rgb_color: [54, 54, 54]
     color_temp: 254
     brightness: 254
   switch.kitchenspotsundercabinets:

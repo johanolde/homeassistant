@@ -2,7 +2,7 @@ name: 'Eating'
 entities:
   light.a60rgbw_01:
     state: on
-    rgb_color: [154, 154, 154]
+#    rgb_color: [154, 154, 154]
     color_temp: 154
     transistion: 3
     brightness: 54
@@ -20,9 +20,8 @@ entities:
     brightness: 54
   light.flexrgbw_01:
     state: on
-    rgb_color: [154, 154, 154]
+#    rgb_color: [154, 154, 154]
     color_temp: 254
     brightness: 254
   switch.kitchenspotsundercabinets:
     state: off
-  
