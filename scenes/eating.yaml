@@ -23,3 +23,6 @@ entities:
     rgb_color: [154, 154, 154]
     color_temp: 254
     brightness: 254
+  switch.kitchenspotsundercabinets:
+    state: off
+  

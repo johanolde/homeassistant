@@ -10,3 +10,5 @@ entities:
     state: off
   light.flexrgbw_01:
     state: off
+  switch.kitchenspotsundercabinets:
+    state: off
