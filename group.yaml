@@ -182,8 +182,8 @@ livingroom:
     - switch.livingroom_blinds_switch_32_0
     - binary_sensor.switch_158d0001147e8e
     - switch.receiver_power
-    - switch.receiver_squeezebox_source
-    - switch.receiver_atv_source
+    - switch.receiver_squeezebox
+    - switch.receiver_atv
     - script.receiver_vol_up
     - script.receiver_vol_down
 
