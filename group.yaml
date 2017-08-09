@@ -181,6 +181,7 @@ livingroom:
     - cover.livingroom_blinds_switch_32_0
     - switch.livingroom_blinds_switch_32_0
     - binary_sensor.switch_158d0001147e8e
+    - switch.livingroom_receiver
 
 
 Upstairs_bath:
