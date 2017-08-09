@@ -138,13 +138,6 @@
   action:
     service: homeassistant.turn_off
     entity_id: group.kitchenlights
-#  service: tts.google_say
-#  entity_id: media_player.squeezebox_radio
-#  data:
-#    message: 'Cube Shake air'
-
-
-
 
 
 - alias: 'cube swing'
