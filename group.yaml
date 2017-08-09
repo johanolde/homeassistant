@@ -186,7 +186,7 @@ livingroom:
     - switch.livingroom_receiver_squeezebox_source
     - switch.livingroom_receiver_atv_source
     - script.receiver_vol_up
-    - script.receiver_vold_down
+    - script.receiver_vol_down
 
 
 Upstairs_bath:
