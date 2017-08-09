@@ -183,7 +183,6 @@ livingroom:
     - binary_sensor.switch_158d0001147e8e
     - switch.receiver_power
     - switch.receiver_squeezebox_source
-    - switch.receiver_squeezebox_source
     - switch.receiver_atv_source
     - script.receiver_vol_up
     - script.receiver_vol_down
