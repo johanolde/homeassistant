@@ -1,3 +1,4 @@
+# migrated to UI
 #- alias: "Bathroom motion fan on"
 #  trigger:
 #    - platform: state
