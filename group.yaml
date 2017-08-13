@@ -9,7 +9,10 @@ default_view:
     - group.cameras
     - group.family
     - sensor.yr_temperature
+    - sensor.nibe_1255_outdoor_temp
+    - sensor.nibe_1255_avg_outdoor_temp
     - sensor.yr_wind_speed
+    - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
 
 Upstairs:
