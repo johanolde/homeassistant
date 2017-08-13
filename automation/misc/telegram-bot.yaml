@@ -29,9 +29,9 @@
           - url: !secret doorcam_url
             username: visitor
             password: !secret doorcam_pw
-        data:
-          keyboard:
-            - '/cam, /home'
+##        data:
+##          keyboard:
+##            - '/cam, /home'
 
 
 
@@ -48,6 +48,6 @@
         message: "{% if is_state('device_tracker.anne_iphone', 'home') %} Anne is at home.\n{% else %} Anne is away.\n{% endif %}
                  {% if is_state('device_tracker.johan_iphone', 'home') %} Johan is at home.\n\n{% else %} Johan is away.\n\n{% endif %}
                  Kitchenlight is {{ states.light.a60rgbw_01.state}} (/kitchenlight)\n"
-        data:
-          keyboard:
-            - '/cam, /home'
+#        data:
+#          keyboard:
+#            - '/cam, /home'
