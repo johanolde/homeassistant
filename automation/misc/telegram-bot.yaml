@@ -30,9 +30,9 @@
           - url: !secret doorcam_url
             username: visitor
             password: !secret doorcam_pw
-##        data:
-##          keyboard:
-##            - '/cam, /home'
+          - url: !secret grantec_url
+            username: visitor             
+            password: !secret grandtec_pw  
 
 
 
