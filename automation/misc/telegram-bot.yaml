@@ -1,0 +1,53 @@
+- alias: 'Telegram bot'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/ping'
+  action:
+    - service: notify.telegram
+      data:
+        message: 'pong'
+        data:
+          keyboard:
+            - '/cam, /home'
+
+- alias: 'Cams'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/cam'
+  action:
+    - service: notify.telegram
+      data:
+        message: 'Doorcam'
+        data:
+          photo:
+          - url: !secret doorcam_url
+            username: visitor
+            password: !secret doorcam_pw
+              data:
+                keyboard:
+                  - '/cam, /home'
+
+
+
+- alias: 'Whos home'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/home'
+  action:
+    - service: notify.telegram
+      data:
+        message: "{% if is_state('device_tracker.anne_iphone', 'home') %} Anne is at home.\n{% else %} Anne is away.\n{% endif %}
+                 {% if is_state('device_tracker.johan_iphone', 'home') %} Johan is at home.\n\n{% else %} Johan is away.\n\n{% endif %}
+                 Kitchenlight is {{ states.light.a60rgbw_01.state}} (/kitchenlight)\n"
+        data:
+          keyboard:
+            - '/cam, /temp'
