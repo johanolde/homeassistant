@@ -29,9 +29,9 @@
           - url: !secret doorcam_url
             username: visitor
             password: !secret doorcam_pw
-              data:
-                keyboard:
-                  - '/cam, /home'
+        data:
+          keyboard:
+            - '/cam, /home'
 
 
 

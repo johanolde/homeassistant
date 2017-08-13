@@ -5,4 +5,3 @@
 #  command_topic: "/doorbell/gpio/0"
 #  payload_on: "1"
 #  payload_off: "0"
-
