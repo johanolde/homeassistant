@@ -1,14 +1,14 @@
-- alias: "Bathroom motion fan on"
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
-      to: 'on'
-  action:
-    - service: homeassistant.turn_on
-      entity_id: switch.bathroom_fan_switch_switch_20_0
-    - service: light.turn_on
-      entity_id: group.bathroom_lamps
-
+#- alias: "Bathroom motion fan on"
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
+#      to: 'on'
+#  action:
+#    - service: homeassistant.turn_on
+#      entity_id: switch.bathroom_fan_switch_switch_20_0
+#    - service: light.turn_on
+#      entity_id: group.bathroom_lamps
+#
 - alias: "Bathroom motion fan off"
   trigger:
     platform: state
