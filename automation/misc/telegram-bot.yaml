@@ -50,4 +50,4 @@
                  Kitchenlight is {{ states.light.a60rgbw_01.state}} (/kitchenlight)\n"
         data:
           keyboard:
-            - '/cam, /temp'
+            - '/cam, /home'
