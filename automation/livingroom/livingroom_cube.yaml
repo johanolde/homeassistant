@@ -1,0 +1,178 @@
+#Available actions are flip90, flip180, move, tap_twice, shake_air, swing, alert, free_fall and rotate 
+
+- alias: 'Watch TV'
+  trigger:
+    platform: event
+    event_type: cube_action
+    event_data:
+      entity_id: binary_sensor.cube_158d00010ae6d9
+      action_type: tap_twice
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.kitchenlights
+
+- alias: 'Shut down TV'
+  trigger:
+    platform: event
+    event_type: cube_action
+    event_data:
+      entity_id: binary_sensor.cube_158d00010ae6d9
+      action_type: shake_air
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.kitchenlights
+
+#- alias: 'cube flip 90'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: flip90
+#  action:
+#    service: scene.turn_on
+#    entity_id: scene.kitchen_eating
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Flip 90'
+#
+#- alias: 'cube flip 180'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: flip180
+#  action:
+#    service: scene.turn_on
+#    entity_id: scene.kitchen_cooking
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Flip 180'
+#
+#- alias: 'cube alert'
+#  trigger:10
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: alert
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Alert'
+#
+#- alias: 'cube freefall'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: free_fall
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Freefallin'
+#
+#- alias: 'cube move'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: move
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Moved'
+#
+#
+#- alias: 'cube rotate'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: rotate
+#  action:
+#    service: light.turn_on
+#    data_template:
+#      entity_id:
+#        - light.p16tw_01
+#        - light.a60rgbw_01
+#        - light.flexrgbw_01
+#      brightness: >
+#                  {% set state = states.light.flexrgbw_01.attributes.brightness + (trigger.event.data.action_value) -%}
+#                  {%-  if state > 255 -%}
+#                     {%- set state = 255 -%}
+#                  {%-  elif state < 0 -%}
+#                     {%- set state  = 0 -%}
+#                  {%- endif %}
+#                  {{ state|round }}
+#
+#
+#- alias: "Volum stue"
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#        entity_id: binary_sensor.cube_158d0001118a8a
+#        action_type: rotate
+#  action:
+#    - service: media_player.volume_set
+#      data_template:
+#        entity_id: media_player.stue
+#        volume_level: >
+#                      {% set state = states.media_player.stue.attributes.volume_level + (trigger.event.data.action_value|float)/90 -%}
+#                      {%-  if state > 1 -%}
+#                         {%- set state  = 1 -%}
+#                      {%-  elif state < 0 -%}
+#                         {%- set state  = 0 -%}
+#                      {%- endif %}
+#                      {{ state }}
+#
+#   - alias: 'cube rotate'
+#     trigger:
+#       platform: event
+#       event_type: cube_action
+#       event_data:
+#         entity_id: binary_sensor.cube_158d00010ae6d9
+#         action_type: rotate
+#     action:
+#       service: tts.google_say
+#       entity_id: media_player.squeezebox_radio
+#       data:
+#         message: 'Cube is really rotating'
+#
+#
+#- alias: 'cube shakeair'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: shake_air
+#  action:
+#    service: homeassistant.turn_off
+#    entity_id: group.kitchenlights
+#
+#
+#- alias: 'cube swing'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d00010ae6d9
+#      action_type: swing
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Swinged'
+#
+#
