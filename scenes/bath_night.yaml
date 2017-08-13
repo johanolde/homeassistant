@@ -1,0 +1,13 @@
+name: 'Bath Night'
+entities:
+  light.bathroomshower:
+    state: on
+    rgb_color: 0,4,116
+    brightness: 112
+    color_temp: 427
+  light.bathroom_lights_level_23_0:
+    state: on
+    brightness: 85
+  light.bathroom_shower_lights_level_28_0:
+    state: on
+    brightness: 85

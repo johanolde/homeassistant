@@ -9,7 +9,7 @@
       action_type: flip90
   action:
     service: scene.turn_on
-    entity_id: scene.eating
+    entity_id: scene.kitchen_eating
 #    service: tts.google_say
 #    entity_id: media_player.squeezebox_radio
 #    data:
@@ -24,7 +24,7 @@
       action_type: flip180
   action:
     service: scene.turn_on
-    entity_id: scene.cooking
+    entity_id: scene.kitchen_cooking
 #    service: tts.google_say
 #    entity_id: media_player.squeezebox_radio
 #    data:

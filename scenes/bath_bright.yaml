@@ -1,0 +1,13 @@
+name: 'Bath Bright'
+entities:
+  light.bathroomshower:
+    state: on
+    rgb_color: 255,67.92041905680745,0
+    brightness: 255
+    color_temp: 154
+  light.bathroom_lights_level_23_0:
+    state: on
+    brightness: 255
+  light.bathroom_shower_lights_level_28_0:
+    state: on
+    brightness: 255
