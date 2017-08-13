@@ -5,11 +5,14 @@
 <li>Raspberry Pi 3 with Berryboot / iscsi / Q-nap TS-259
 <li>Aeotec ZW090 Z-stick
 <li>Tellstick Duo 433 Mhz
-<li>Osram Lightify
-<li>Xiaomi Mi Smart Home
+<li>Osram Lightify Hub
+<li>Xiaomi Mi Smart Home Controller
 <li>Max2Play Squeezebox server
 <li>Homebridge
 <li>Domoticz
+<li>Node Red
+<li>Mosquitto MQTT
+<li>InfluxDB & Grafana
 </UL>
 
 
@@ -32,7 +35,7 @@
 <ul>
 <li>Osram Classic RGBW
 <Li>Osram Flex RGBW
-<li>3 Osram GU10 Spots
+<li>Osram GU10 Spots
 </ul>
 </ul>
 
@@ -78,14 +81,15 @@
 <ul>
 <li>Squeezebox Radio
 <li>Squeezebox Boom
+<li>Squeezebox Classic
 <li>Squeezeplay (MacOS app)
 <li>Squeezelite (on controller)
 <li>Apple TVs
+<li>LG WebOS TV
 </ul>
 
 <h3>Infrastructure</h3
 <ul>
-<li>Pi-hole adblocker
 <li>Qnap sensor
 <li>HA pi system monitor
 </ul>

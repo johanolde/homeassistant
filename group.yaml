@@ -114,6 +114,7 @@ Media-players:
     - media_player.spotify
     - media_player.livingroom_lg_tv
     - media_player.apple_tv_i_vardagsrum
+    - media_player.squeezebox_classic
 
 Heating:
   view: yes
@@ -186,6 +187,7 @@ livingroom:
     - switch.receiver_apple_tv
     - script.receiver_vol_up
     - script.receiver_vol_down
+    - media_player.squeezebox_classic
 
 
 Upstairs_bath:
