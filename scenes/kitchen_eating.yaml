@@ -1,4 +1,4 @@
-name: 'Eating'
+name: 'Kitchen Eating'
 entities:
   light.a60rgbw_01:
     state: on

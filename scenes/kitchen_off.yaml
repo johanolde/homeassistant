@@ -1,4 +1,4 @@
-name: 'kitchenoff'
+name: 'kitchen off'
 entities:
   light.a60rgbw_01:
     state: off

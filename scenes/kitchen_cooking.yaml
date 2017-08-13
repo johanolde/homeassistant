@@ -1,5 +1,4 @@
-#test
-name: 'Cooking'
+name: 'Kitchen Cooking'
 entities:
   light.a60rgbw_01:
     state: on
