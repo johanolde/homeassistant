@@ -2,7 +2,7 @@ name: 'Bath Night'
 entities:
   light.bathroomshower:
     state: on
-#    rgb_color: 0,4,116
+    rgb_color: 0,4,116
     brightness: 60
     color_temp: 427
   light.bathroom_lights_level_23_0:

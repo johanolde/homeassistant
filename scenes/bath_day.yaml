@@ -1,7 +1,7 @@
 name: 'Bath Day'
 entities:
   light.bathroomshower:
-    state: off
+    state: on
     rgb_color: 0,4,116
     brightness: 112
     color_temp: 427
