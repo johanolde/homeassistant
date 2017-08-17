@@ -58,6 +58,8 @@ logbook:
     entities:
       - sensor.doorbell
       - switch.bathroom_lights_switch_23_0
+      - binary_sensor.bathroom_multisensor_sensor_10_0
+
 
 logger:
   default: critical
@@ -225,4 +227,6 @@ influxdb:
 #    source: hass
 
 script: !include_dir_merge_named script
+
+wake_on_lan:
 
