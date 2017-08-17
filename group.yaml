@@ -78,6 +78,7 @@ Admin:
     - group.systemmonitor
     - group.battery
     - group.skarsjocore
+    - switch.wake_on_lan
 
 
 Automations:
