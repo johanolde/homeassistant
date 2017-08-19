@@ -239,3 +239,7 @@
     zone.home:
       track_ios: true
 
+### Floorplan testing ---------
+    binary_sensor.floorplan:
+      custom_ui_state_card: floorplan
+      config: !include floorplan.yaml
