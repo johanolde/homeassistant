@@ -61,10 +61,7 @@ logbook:
       - binary_sensor.bathroom_multisensor_sensor_10_0
 
 
-logger:
-  default: critical
-#  logs:
-#    custom_components.xiaomi: debug
+logger: !include logger.yaml
 
 
 sun:
