@@ -226,3 +226,8 @@ influxdb:
 #    source: hass
 
 script: !include_dir_merge_named script
+
+binary_sensor:
+  - platform: mqtt
+    state_topic: dummy/floorplan/sensor
+    name: Floorplan
