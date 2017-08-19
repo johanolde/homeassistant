@@ -8,8 +8,8 @@
       # hide_app_toolbar:          # hide the application toolbar (when used as a custom panel)
       # date_format: DD-MMM-YYYY   # Date format to use in hover-over text
 
-      last_motion_entity: sensor.template_last_motion
-      last_motion_class: last-motion
+      #last_motion_entity: sensor.template_last_motion
+      #last_motion_class: last-motion
 
       groups:
 
@@ -54,43 +54,43 @@
             - state: 'off'
               class: 'doorbell-off'
 
-        - name: NVR
-          entities:
-             - binary_sensor.blue_iris_nvr
-          text_template: '${(entity.state === "on") ? "online" : "offline"}'
-          states:
-            - state: 'off'
-              class: 'danger-text'
-            - state: 'on'
-              class: 'success-text'
+##        - name: NVR
+##          entities:
+##             - binary_sensor.blue_iris_nvr
+##          text_template: '${(entity.state === "on") ? "online" : "offline"}'
+##          states:
+##            - state: 'off'
+##              class: 'danger-text'
+##            - state: 'on'
+##              class: 'success-text'
 
-        - name: Alarm Panel
-          entities:
-             - alarm_control_panel.alarm
-          states:
-            - state: 'armed_away'
-              class: 'alarm-armed'
-            - state: 'armed_home'
-              class: 'alarm-armed'
-            - state: 'disarmed'
-              class: 'alarm-disarmed'
-
-        - name: Binary sensors
-          entities:
-            - binary_sensor.front_hallway
-            - binary_sensor.kitchen
-            - binary_sensor.master_bedroom
-            - binary_sensor.theatre_room
-          states:
-            - state: 'off'
-              class: 'info-background'
-            - state: 'on'
-              class: 'warning-background'
-          state_transitions:
-            - name: On to off
-              from_state: 'on'
-              to_state: 'off'
-              duration: 10
+#        - name: Alarm Panel
+#          entities:
+#             - alarm_control_panel.alarm
+#          states:
+#            - state: 'armed_away'
+#              class: 'alarm-armed'
+#            - state: 'armed_home'
+#              class: 'alarm-armed'
+#            - state: 'disarmed'
+#              class: 'alarm-disarmed'
+#
+#        - name: Binary sensors
+#          entities:
+#            - binary_sensor.front_hallway
+#            - binary_sensor.kitchen
+#            - binary_sensor.master_bedroom
+#            - binary_sensor.theatre_room
+#          states:
+#            - state: 'off'
+#              class: 'info-background'
+#            - state: 'on'
+#              class: 'warning-background'
+#          state_transitions:
+#            - name: On to off
+#              from_state: 'on'
+#              to_state: 'off'
+#              duration: 10
 
         - name: Cameras
           entities:
