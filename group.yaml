@@ -46,6 +46,7 @@ Basement:
   entities:
     - camera.pannrums_cam
     - group.pantry
+    - binary_sensor.floorplan
 
 Outdoors:
   view: yes
