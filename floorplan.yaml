@@ -118,15 +118,3 @@
 #          text_template: '${entity.state ? entity.state.replace(/\s{2,}/g,"") : "undefined"}'
 #
 # The above text_template uses jQuery syntax to search and replace any instance of 2 consecutive (or more) spaces in a string of text.
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
