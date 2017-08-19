@@ -230,3 +230,9 @@ influxdb:
 
 script: !include_dir_merge_named script
 
+panel_custom:
+  - name: floorplan
+    sidebar_title: Alarm Panel
+    sidebar_icon: mdi:security-home
+    url_path: floorplan
+    config: !include floorplan.yaml
