@@ -47,7 +47,7 @@
 
         - name: Switches
           entities:
-             - switch.doorbell
+             - sensor.doorbell
           states:
             - state: 'on'
               class: 'doorbell-on'
