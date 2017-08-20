@@ -1,0 +1,71 @@
+- action:
+  - data:
+      entity_id: switch.bathroom_fan_switch_switch_20_0
+    service: homeassistant.turn_on
+  - data:
+      entity_id: scene.bath_night
+    service: scene.turn_on
+  alias: Bathroom motion night
+  condition:
+  - after: '23:59'
+    before: 04:00
+    condition: time
+  id: '1502619491737'
+  trigger:
+  - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: cover.livingroom_blinds_level_32_0
+    service: cover.open_cover
+  alias: Open Blinds - Sun below horizon
+  condition:
+  - condition: state
+    entity_id: cover.livingroom_blinds_level_32_0
+    state: closed
+  id: '1502630013284'
+  trigger:
+  - entity_id: sun.sun
+    from: above_horizon
+    platform: state
+    to: below_horizon
+- action:
+  - data:
+      entity_id: switch.bathroom_fan_switch_switch_20_0
+    service: homeassistant.turn_on
+  - data:
+      entity_id: scene.bath_bright
+    service: scene.turn_on
+  alias: Bathroom motion dark
+  condition:
+  - after: 04:00
+    before: '23:59'
+    condition: time
+  id: '1502631695144'
+  trigger:
+  - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: switch.bathroom_fan_switch_switch_20_0
+    service: homeassistant.turn_on
+  - data:
+      entity_id: scene.bath_day
+    service: scene.turn_on
+  alias: Bathroom motion light
+  condition:
+  - after: 04:00
+    before: '23:59'
+    condition: time
+  - above: '70'
+    below: '10000'
+    condition: numeric_state
+    entity_id: sensor.bathroom_multisensor_luminance_10_3
+    value_template: ''
+  id: '1502631862387'
+  trigger:
+  - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
+    platform: state
+    to: 'on'
