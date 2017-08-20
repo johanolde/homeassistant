@@ -75,10 +75,6 @@ device_tracker:
   - platform: trackr
     username: !secret email
     password: !secret trackr_pw
-  - platform: unifi
-    host: !secret ubnt_ip
-    username: !secret ubnt_user
-    password: !secret ubnt_pass
 
 panel_iframe: !include panel_iframe.yaml
 
