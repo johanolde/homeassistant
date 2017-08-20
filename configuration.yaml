@@ -199,11 +199,6 @@ zone 2:
   radius: 250
   icon: mdi:castle
 
-zones:
-  name: Zones
-  entities:
-    - binary_sensor.floorplan
-
 influxdb:
   host: !secret influxip
 #  port: 20000
