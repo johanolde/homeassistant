@@ -212,6 +212,10 @@
       sensor_class: opening
     binary_sensor.cube_158d00010ae6d9:
       friendly_name: 'Livingroom Cube'
+    binary_sensor.motion_sensor_158d00012682d3:
+      friendly_name: 'Motion shower'
+    sensor.temperature_158d000155ca89:
+      friendly_name: 'Guestroom 1 temp'
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:

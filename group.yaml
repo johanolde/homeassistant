@@ -157,8 +157,9 @@ entrance:
 
 showerroom:
   entities:
-    -  sensor.temperature_158d00010678df
-    -  sensor.humidity_158d00010678df
+    - sensor.temperature_158d00010678df
+    - sensor.humidity_158d00010678df
+    - binary_sensor.motion_sensor_158d00012682d3
 
 Dining:
   entities:
@@ -228,6 +229,7 @@ guestroom1:
   entities:
     - switch.guestroom1windownorth
     - switch.guestroom1windoweast
+    - sensor.temperature_158d000155ca89
 
 guestroom2:
 - switch.guestroom2window
