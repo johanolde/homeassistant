@@ -252,15 +252,15 @@
 
     sensor.nibe_1255_avg_outdoor_temp:
       unit_of_measurement: °C
-    sensor.nibe_1255_kitchen_temp
+    sensor.nibe_1255_kitchen_temp:
       unit_of_measurement: °C
-    sensor.nibe_1255_hot_gas
+    sensor.nibe_1255_hot_gas:
       unit_of_measurement: °C
-    sensor.nibe_1255_hot_water_charging
+    sensor.nibe_1255_hot_water_charging:
       unit_of_measurement: °C
-    sensor.nibe_1255_liquid_line
+    sensor.nibe_1255_liquid_line:
       unit_of_measurement: °C
-    sensor.nibe_1255_outdoor_temp
+    sensor.nibe_1255_outdoor_temp:
       unit_of_measurement: °C
-    sensor.nibe_1255_return_temp
+    sensor.nibe_1255_return_temp:
       unit_of_measurement: °C
