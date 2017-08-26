@@ -216,6 +216,8 @@
       friendly_name: 'Motion shower'
     sensor.temperature_158d000155ca89:
       friendly_name: 'Guestroom 1 temp'
+    sensor.temperature_158d000155c9cc:
+      friendly_name: 'Consvervatory_temp'
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:

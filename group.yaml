@@ -10,6 +10,7 @@ default_view:
     - group.family
     - sensor.yr_temperature
     - sensor.nibe_1255_outdoor_temp
+    - sensor.temperature_158d000155c9cc
     - sensor.nibe_1255_avg_outdoor_temp
     - sensor.yr_wind_speed
     - sensor.nibe_1255_kitchen_temp
@@ -60,6 +61,7 @@ Outdoors:
     - camera.axis00408cad45972local
     - sensor.nibe_1255_outdoor_temp
     - sensor.nibe_1255_avg_outdoor_temp
+    - sensor.temperature_158d000155c9cc
 
 
 Security:
