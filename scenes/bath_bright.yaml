@@ -2,7 +2,7 @@ name: 'Bath Bright'
 entities:
   light.bathroomshower:
     state: on
-    rgb_color: 255,67,0
+    rgb_color: [255, 67, 0]
     brightness: 255
     color_temp: 154
   light.bathroom_lights_level_23_0:
