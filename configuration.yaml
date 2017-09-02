@@ -72,6 +72,7 @@ device_tracker:
     hosts: !secret track_hosts
     track_new_devices: no
     consider_home: 1800
+    interval_seconds: 30
   - platform: trackr
     username: !secret email
     password: !secret trackr_pw
