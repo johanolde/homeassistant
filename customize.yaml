@@ -218,6 +218,8 @@
       friendly_name: 'Guestroom 1 temp'
     sensor.temperature_158d000155c9cc:
       friendly_name: 'Consvervatory_temp'
+    binary_sensor.switch_158d000186e5cd:
+      friendly_name: 'Bathroom Switch"
 
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:
