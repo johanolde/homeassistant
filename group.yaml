@@ -16,8 +16,8 @@ default_view:
     - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
 
-Cameras:
-  name: Kameror
+Cams:
+  icon: mdi:camcorder
   view: yes
   entities:
     - group.cameras
