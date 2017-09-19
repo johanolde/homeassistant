@@ -445,6 +445,10 @@ Cameras:
 - camera.driveway
 - camera.housecam
 - camera.nodecam
+- camera.trafik_solvarbo
+- camera.romme_1
+- camera.romme_2
+- camera.romme_3
 
 suncontrol:
 - switch.entrance_porch_light_switch_2_0_2
