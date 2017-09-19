@@ -6,7 +6,7 @@ default_view:
   view: true
   icon: mdi:home-variant
   entities:
-    - group.cameras
+    - group.cameras_home
     - group.family
     - sensor.yr_temperature
     - sensor.nibe_1255_outdoor_temp
@@ -15,6 +15,12 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
+
+Cameras:
+  name: Kameror
+  view: yes
+  entities:
+    - group.cameras
 
 Upstairs:
   view: yes
@@ -421,6 +427,15 @@ bathroom_lamps:
     - light.bathroomshower
     - light.bathroom_lights_level_23_0
     - light.bathroom_shower_lights_level_28_0_2
+
+Cameras_home:
+- camera.doorcam
+- camera.dining_room
+- camera.pannrums_cam
+#- camera.PTZCam
+- camera.driveway
+- camera.housecam
+#- camera.nodecam
 
 Cameras:
 - camera.doorcam
