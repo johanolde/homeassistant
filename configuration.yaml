@@ -49,17 +49,17 @@ history:
 recorder:
   db_url: !secret mysql_url
 logbook:
-  include:
-    domains:
-      - switch
-      - sun
-      - media_player
-      - automation
-      - device_tracker
-    entities:
-      - sensor.doorbell
-      - switch.bathroom_lights_switch_23_0
-      - binary_sensor.bathroom_multisensor_sensor_10_0
+#  include:
+#    domains:
+#      - switch
+#      - sun
+#      - media_player
+#      - automation
+#      - device_tracker
+#    entities:
+#      - sensor.doorbell
+#      - switch.bathroom_lights_switch_23_0
+#      - binary_sensor.bathroom_multisensor_sensor_10_0
 
 
 logger: !include logger.yaml
