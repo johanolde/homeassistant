@@ -181,7 +181,7 @@ tts:
     cache_dir: /tmp/tts
     time_memory: 300
 
-xiaomi:
+xiaomi_aqara:
   gateways:
     - mac:
       key: !secret xiaomi_key
