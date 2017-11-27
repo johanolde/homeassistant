@@ -94,7 +94,7 @@
     sensor.bathroom_multisensor_relative_humidity_10_5:
       friendly_name: 'Badrum-Luftfuktighet'
       icon: mdi:water-percent    
-    sensor.entrance_multisensor_relative_humidity_11_5:
+    sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5:
       friendly_name: 'Hall-Luftfuktighet'
       icon: mdi:water-percent
 
