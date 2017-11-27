@@ -13,28 +13,29 @@
       friendly_name: "Bathroom fan"
       icon: mdi:fan
 
-    switch.entrance_porch_light_switch_2_0:
+    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0:
       friendly_name: "Entrance Light"
       icon: mdi:lightbulb
 
-    switch.entrance_porch_light_switch_2_0_2:
+    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_2:
       friendly_name: "Porch Light"
       icon: mdi:lightbulb
 
-    switch.entrance_porch_light_switch_2_0_3:
+
+    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_3:
       friendly_name: "Entrance & Porch Light"
       icon: mdi:lightbulb
       hidden: true
 
-    switch.kitchen_fridge_switch_13_0:
+    sswitch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_13_0:
       friendly_name: "Kitchen Fridge"
       icon: mdi:fridge-filled
 
-    switch.livingroom_tv_switch_12_0:
+    switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_12_0:
       friendly_name: "Livingroom TV"
       icon: mdi:television
 
-    switch.stairs_switch_switch_3_0:
+    switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_3_0:
       friendly_name: "Stairs Switch"
       icon: mdi:lightbulb
 
