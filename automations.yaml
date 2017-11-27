@@ -1,6 +1,6 @@
 - action:
   - data:
-      entity_id: switch.bathroom_fan_switch_switch_20_0
+      entity_id: switch.qubino_zmnhadx_flush_1_relay_switch_20_0
     service: homeassistant.turn_on
   - data:
       entity_id: scene.bath_night
@@ -17,12 +17,12 @@
     to: 'on'
 - action:
   - data:
-      entity_id: cover.livingroom_blinds_level_32_0
+      entity_id: cover.qubino_zmnhod1_flush_shutter_dc_level_32_0
     service: cover.open_cover
   alias: Open Blinds - Sun below horizon
   condition:
   - condition: state
-    entity_id: cover.livingroom_blinds_level_32_0
+    entity_id: cover.qubino_zmnhod1_flush_shutter_dc_level_32_0
     state: closed
   id: '1502630013284'
   trigger:
@@ -32,7 +32,7 @@
     to: below_horizon
 - action:
   - data:
-      entity_id: switch.bathroom_fan_switch_switch_20_0
+      entity_id: switch.qubino_zmnhadx_flush_1_relay_switch_20_0
     service: homeassistant.turn_on
   - data:
       entity_id: scene.bath_bright
@@ -49,7 +49,7 @@
     to: 'on'
 - action:
   - data:
-      entity_id: switch.bathroom_fan_switch_switch_20_0
+      entity_id: switch.qubino_zmnhadx_flush_1_relay_switch_20_0
     service: homeassistant.turn_on
   - data:
       entity_id: scene.bath_day
