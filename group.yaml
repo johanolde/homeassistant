@@ -158,7 +158,7 @@ entrance:
     - switch.entrance_porch_light_switch_2_0_3
     - sensor.entrance_multisensor_luminance_11_3
     - sensor.entrance_multisensor_temperature_11_1
-    - sensor.entrance_multisensor_relative_humidity_11_5
+    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5
     - switch.porchpluginswitch
     - camera.doorcam
     - sensor.doorbell
