@@ -153,11 +153,11 @@ Heating:
 entrance:
   control: hidden
   entities:
-    - switch.entrance_porch_light_switch_2_0
-    - switch.entrance_porch_light_switch_2_0_2
-    - switch.entrance_porch_light_switch_2_0_3
-    - sensor.entrance_multisensor_luminance_11_3
-    - sensor.entrance_multisensor_temperature_11_1
+    - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0
+    - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_
+    - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_3
+    - sensor.aeotec_zw074_multisensor_gen5_luminance_11_3
+    - sensor.aeotec_zw074_multisensor_gen5_temperature_11_1
     - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5
     - switch.porchpluginswitch
     - camera.doorcam
@@ -172,13 +172,13 @@ showerroom:
 Dining:
   entities:
     - camera.dining_room
-    - switch.diningroom_light_switch_14_0
+    - switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_14_0
     - media_player.squeezebox_radio
 
 kitchen:
   control: hidden
   entities:
-    - sensor.kitchen_fridge_power_13_8
+    - sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_13_8
     - switch.kitchenwindoweast
     - switch.kitchenwindowsouth
     - binary_sensor.door_window_sensor_158d00013fd5b4
@@ -188,13 +188,13 @@ kitchen:
 livingroom:
   control: hidden
   entities:
-    - switch.livingroom_tv_switch_12_0
-    - sensor.livingroom_tv_power_12_8
+    - switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_12_0
+    - sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_12_8
     - switch.livingroomwindow
     - media_player.apple_tv_i_vardagsrum
-    - cover.livingroom_blinds_level_32_0
-    - cover.livingroom_blinds_switch_32_0
-    - switch.livingroom_blinds_switch_32_0
+    - cover.qubino_zmnhod1_flush_shutter_dc_level_32_0
+    - cover.qubino_zmnhod1_flush_shutter_dc_switch_32_0
+    - switch.qubino_zmnhod1_flush_shutter_dc_switch_32_0
     - binary_sensor.switch_158d0001147e8e
     - switch.receiver_power
     - switch.receiver_squeezebox
@@ -208,22 +208,24 @@ Upstairs_bath:
   name: 'Badrum (uppe)'
   control: hidden
   entities:
-    - switch.bathroom_fan_switch_switch_20_0
-    - sensor.bathroom_fan_switch_power_20_8
+    - switch.qubino_zmnhadx_flush_1_relay_switch_20_0
+    - sensor.qubino_zmnhadx_flush_1_relay_power_20_8
+    #saknas
     - sensor.bathroom_multisensor_luminance_10_3
     - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.bathroom_multisensor_temperature_10_1
-    - light.bathroom_lights_level_23_0
-    - light.bathroom_shower_lights_level_28_0_2
-    - switch.bathroom_lights_switch_23_0
-    - switch.bathroom_shower_lights_switch_28_0
+    - light.qubino_zmnhdd1_flush_dimmer_level_23_0
+    - binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_28_0_2
+    - switch.qubino_zmnhdd1_flush_dimmer_switch_23_0
+    - switch.qubino_zmnhdd1_flush_dimmer_switch_28_0
     - light.bathroomshower
 
 stairs:
+#saknas
 - sensor.stairs_smokedetector_temperature_15_1
-- switch.stairs_switch_switch_3_0
-- sensor.stairs_switch_energy_3_0
-- sensor.stairs_switch_voltage_3_16
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_3_0
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_energy_3_0
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_voltage_3_16
 
 den:
 - switch.den_window_light
@@ -323,10 +325,13 @@ Networking:
 
 Temperature:
   entities:
+  #saknas
     - sensor.bathroom_multisensor_temperature_10_1
-    - sensor.entrance_multisensor_temperature_11_1
+    - sensor.aeotec_zw074_multisensor_gen5_temperature_11_1
+    #sakans
     - sensor.lounge_smokedetector_temperature_7_1
     - sensor.yr_temperature
+    #saknas
     - sensor.stairs_smokedetector_temperature_15_1
     - sensor.temperature_158d00010678df
     - sensor.temperature_158d00012cb38e
@@ -337,7 +342,8 @@ Temperature:
 
 Humidity:
   entities:
-    - sensor.entrance_multisensor_relative_humidity_11_5
+    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5
+    #saknas
     - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.yr_humidity
     - sensor.humidity_158d00010678df
@@ -352,13 +358,13 @@ Systemmonitor:
 
 AllaSwitchar:
 # Z-wave
-- switch.livingroom_tv_switch_12_0
-- switch.bathroom_fan_switch_switch_20_0 
-- switch.entrance_porch_light_switch_2_0_2 
-- switch.entrance_porch_light_switch_2_0_3 
-- switch.kitchen_fridge_switch_13_0 
-- switch.dingingroome_light_switch_14_0 
-- switch.stairs_switch_switch_3_0
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_12_0
+- switch.qubino_zmnhadx_flush_1_relay_switch_20_0
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_2
+- switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_3
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_13_0
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_14_0
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_3_0
 # 433
 - switch.bedroomwindow
 - switch.den_window_light
@@ -388,19 +394,19 @@ AllaSwitchar:
 
 Powerusage:
 - sensor.energy_usage
-- sensor.bathroom_fan_switch_power_20_8
-- sensor.bathroom_lights_power_23_8
-- sensor.bathroom_shower_lights_power_28_8
-- sensor.entance_porch_light_power_2_8
-- sensor.entance_porch_light_power_2_8_2
-- sensor.entance_porch_light_power_2_8_3
-- sensor.kitchen_fridge_power_13_8
-- sensor.livingroom_tv_power_12_8
-- sensor.diningroom_light_power_14_8
-- sensor.stairs_switch_power_3_8
+- sensor.qubino_zmnhadx_flush_1_relay_power_20_8
+- sensor.qubino_zmnhdd1_flush_dimmer_power_23_8
+- sensor.qubino_zmnhdd1_flush_dimmer_power_28_8
+- sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_2_8
+- sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_2_8_2
+- sensor.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_power_2_8_3
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_13_8
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_12_8
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_14_8
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_3_8
 - sensor.energy_budget
 - sensor.energy_cost
-- sensor.livingroom_tv_power_12_8
+- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_12_8
 
 Weather:
   entities:
@@ -425,8 +431,9 @@ Fire:
 bathroom_lamps:
   entities:
     - light.bathroomshower
-    - light.bathroom_lights_level_23_0
-    - light.bathroom_shower_lights_level_28_0_2
+    - light.qubino_zmnhdd1_flush_dimmer_level_23_0
+#    - light.bathroom_shower_lights_level_28_0_2
+    - binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_28_0_2
 
 Cameras_home:
 - camera.doorcam
@@ -450,6 +457,7 @@ Cameras:
 - camera.romme_2
 - camera.romme_3
 
+#klart hit
 suncontrol:
 - switch.entrance_porch_light_switch_2_0_2
 - switch.diningroom_light_switch_14_0
