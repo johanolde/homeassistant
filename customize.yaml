@@ -7,11 +7,10 @@
 # Switches
 #################################################################
 
-### Z-wave ------------------------------------------------------
+### Z-wave -----------------------------------------------------
 
 
-    switch.bathroom_fan_switch_4_0:
-    #Saknas?
+    switch.bathroom_fan_switch:
       friendly_name: "Bathroom fan"
       icon: mdi:fan
 
@@ -22,7 +21,6 @@
     switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_2:
       friendly_name: "Porch Light"
       icon: mdi:lightbulb
-
 
     switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_3:
       friendly_name: "Entrance & Porch Light"
@@ -132,7 +130,7 @@
     sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_13_8:
       friendly_name: 'Energi Kylskap'
       icon: mdi:gauge
-    sensor.bathroom_fan_power_4_8:
+    sensor.bathroom_lights_power:
     #Saknas
       friendly_name: 'Energiforbrukning Badrumsflakt'
       icon: mdi:gaugue
