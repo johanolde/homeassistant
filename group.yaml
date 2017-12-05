@@ -358,6 +358,19 @@ Systemmonitor:
 
 AllaSwitchar:
 # Z-wave
+
+- switch.bathroom_fan_switch
+- switch.bathroom_lights_switch
+- switch.entrance_lights_switch
+- switch.entrance_lights_switch_2
+- switch.entrance_lights_switch_3
+- switch.livingroom_blinds_switch
+- switch.livingroomwindow
+- switch.qubino_zmnhdd1_flush_dimmer_switch
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_2
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_3
+- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_4
 - switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_12_0
 - switch.qubino_zmnhadx_flush_1_relay_switch_20_0
 - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_2
