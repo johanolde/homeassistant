@@ -512,7 +512,7 @@ outside:
     - switch.entrance_lights_porch
 
 battery:
-- automation.batteries_low-
+- automation.batteries_low
 - binary_sensor.cube_158d00010ae6d9_battery
 - binary_sensor.cube_158d0001104272_battery
 - binary_sensor.door_window_sensor_158d000111ed95_battery
