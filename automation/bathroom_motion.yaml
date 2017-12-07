@@ -5,4 +5,4 @@ trigger:
   state: 'on'
 action:
   service: homeassistant.turn_on
-  entity_id: switch.bathroom_fan_switch_switch_20_0
+  entity_id: switch.bathroom_fan_switch
