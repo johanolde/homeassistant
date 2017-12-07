@@ -2,15 +2,26 @@
   trigger:
     platform: numeric_state
     entity_id:
-    - binary_sensor.bathroom_multisensor_sensor_10_0_battery
-    - binary_sensor.entrance_multisensor_sensor_11_0_battery
-    - binary_sensor.stairs_smokedetector_sensor_15_0_battery
-    - sensor.lounge_smokedetector_general_7_0_battery
-    - sensor.stairs_smokedetector_alarm_level_15_1_battery
-    - zwave.entrance_multisensor_11_battery
-    - zwave.bathroom_multisensor_10_battery
-    - zwave.stairs_smokedetector_15_battery
-    - zwave.lounge_smokedetector_7_battery
+      - binary_sensor.cube_158d00010ae6d9_battery
+      - binary_sensor.cube_158d0001104272_battery
+      - binary_sensor.door_window_sensor_158d000111ed95_battery
+      - binary_sensor.door_window_sensor_158d00013fd5b4_battery
+      - binary_sensor.motion_sensor_158d00010a9ef1_battery
+      - binary_sensor.motion_sensor_158d00012682d3_battery
+      - binary_sensor.switch_158d0001147e8e_battery
+      - binary_sensor.switch_158d000186e5cd_battery
+      - sensor.humidity_158d00010678df_battery
+      - sensor.humidity_158d00012cb2f7_battery
+      - sensor.humidity_158d00012cb38e_battery
+      - sensor.humidity_158d000155c9cc_battery
+      - sensor.humidity_158d000155ca89_battery
+      - sensor.temperature_158d00010678df_battery
+      - sensor.temperature_158d00012cb2f7_battery
+      - sensor.temperature_158d00012cb38e_battery
+      - sensor.temperature_158d000155c9cc_battery
+      - sensor.temperature_158d000155ca89_battery
+      - zwave.entrance_multisensor_battery
+      - zwave.fibaro_system_fgsd002_smoke_sensor_battery
 
     value_template: '{{ state.attributes.battery }}'
     below: 20
