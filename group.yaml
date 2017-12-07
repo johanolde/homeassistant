@@ -228,9 +228,10 @@ Upstairs_bath:
 stairs:
 #saknas
 - sensor.stairs_smokedetector_temperature_15_1
-- switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_3_0
-- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_energy_3_0
-- sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_voltage_3_16
+- switch.stairs_window_light_switch
+- sensor.stairs_window_light_power
+- sensor.stairs_window_light_energy
+- sensor.stairs_window_light_voltage
 
 den:
 - switch.den_window_light
@@ -332,7 +333,7 @@ Temperature:
   entities:
   #saknas
     - sensor.bathroom_multisensor_temperature_10_1
-    - sensor.aeotec_zw074_multisensor_gen5_temperature_11_1
+    - sensor.entrance_multisensor_temperature
     #sakans
     - sensor.lounge_smokedetector_temperature_7_1
     - sensor.yr_temperature
@@ -347,7 +348,7 @@ Temperature:
 
 Humidity:
   entities:
-    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5
+    - sensor.entrance_multisensor_relative_humidity
     #saknas
     - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.yr_humidity
@@ -366,9 +367,9 @@ AllaSwitchar:
 
 - switch.bathroom_fan_switch
 - switch.bathroom_lights_switch
-- switch.entrance_lights_switch
-- switch.entrance_lights_switch_2
-- switch.entrance_lights_switch_3
+- switch.entrance_lights_entrance
+- switch.entrance_lights_entranceporch
+- switch.entrance_lights_porch
 - switch.livingroom_blinds_switch
 - switch.livingroomwindow
 - switch.qubino_zmnhdd1_flush_dimmer_switch
@@ -448,10 +449,16 @@ Fire:
 
 bathroom_lamps:
   entities:
+    - light.bathroom_lights_level	off
+    - light.bathroom_showerroom_lights_level	off
     - light.bathroomshower
-    - light.qubino_zmnhdd1_flush_dimmer_level_23_0
-#    - light.bathroom_shower_lights_level_28_0_2
-    - binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_28_0_2
+    - binary_sensor.bathroom_lights_sensor	off
+    - binary_sensor.bathroom_lights_sensor_2	off
+    - binary_sensor.bathroom_showerroom_lights_sensor	off
+    - binary_sensor.bathroom_showerroom_lights_sensor_2
+    - switch.bathroom_lights_switch	off
+    - switch.bathroom_showerroom_lights_switch
+
 
 Cameras_home:
 - camera.doorcam
@@ -477,10 +484,10 @@ Cameras:
 
 #klart hit
 suncontrol:
-- switch.entrance_porch_light_switch_2_0_2
-- switch.diningroom_light_switch_14_0
+- switch.entrance_lights_porch
+- switch.diningroom_window_light_switch
 - switch.den_window_light
-- switch.stairs_switch_switch_3_0
+- switch.stairs_window_light_switch
 - switch.guestroom1window
 - switch.livingroomwindow
 - switch.guestroom2window
@@ -502,22 +509,38 @@ outside:
     - switch.porchpluginswitch
     - sensor.yr_symbol
     - sensor.yr_temperature
-    - switch.entrance_porch_light_switch_2_0_2
+    - switch.entrance_lights_porch
 
 battery:
-- automation.batteries_low
-- binary_sensor.bathroom_multisensor_sensor_10_0_battery
-- binary_sensor.entrance_multisensor_sensor_11_0_battery
-- binary_sensor.stairs_smokedetector_sensor_15_0_battery
-- sensor.lounge_smokedetector_general_7_0_battery
-- sensor.stairs_smokedetector_alarm_level_15_1_battery
+- automation.batteries_low-
+- binary_sensor.cube_158d00010ae6d9_battery
+- binary_sensor.cube_158d0001104272_battery
+- binary_sensor.door_window_sensor_158d000111ed95_battery
+- binary_sensor.door_window_sensor_158d00013fd5b4_battery
+- binary_sensor.motion_sensor_158d00010a9ef1_battery
+- binary_sensor.motion_sensor_158d00012682d3_battery
+- binary_sensor.switch_158d0001147e8e_battery
+- binary_sensor.switch_158d000186e5cd_battery
+- sensor.humidity_158d00010678df_battery
+- sensor.humidity_158d00012cb2f7_battery
+- sensor.humidity_158d00012cb38e_battery
+- sensor.humidity_158d000155c9cc_battery
+- sensor.humidity_158d000155ca89_battery
+- sensor.temperature_158d00010678df_battery
+- sensor.temperature_158d00012cb2f7_battery
+- sensor.temperature_158d00012cb38e_battery
+- sensor.temperature_158d000155c9cc_battery
+- sensor.temperature_158d000155ca89_battery
+- zwave.entrance_multisensor_battery
+- zwave.fibaro_system_fgsd002_smoke_sensor_battery
 
-mower:
-- sensor.mower_battery
-- sensor.mower_status
-- switch.rest_switch
-- switch.rest_switch_2
-- switch.rest_switch_3
+
+# mower:
+# - sensor.mower_battery
+# - sensor.mower_status
+# - switch.rest_switch
+# - switch.rest_switch_2
+# - switch.rest_switch_3
 
 kitchenlights:
 - light.a60rgbw_01
@@ -536,16 +559,15 @@ kitchenlights:
 ############################################
 
 sunsetonlights:
-  entities:
-    - switch.diningroom_light_switch_14_0
-    - switch.stairs_switch_switch_3_0
-    - switch.den_window_light
-    - switch.kitchenwindoweast
-    - switch.kitchenwindowsouth
-    - switch.livingroomwindow
-    - switch.loungewindowsboth
-    - switch.porchpluginswitch
-    - switch.entrance_porch_light_switch_2_0_2
+- switch.diningroom_window_light_switch
+- switch.stairs_window_light_switch
+- switch.den_window_light
+- switch.kitchenwindoweast
+- switch.kitchenwindowsouth
+- switch.livingroomwindow
+- switch.loungewindowsboth
+- switch.porchpluginswitch
+- switch.entrance_lights_porch
 
 
 bedroomlights:
@@ -564,7 +586,7 @@ bedtimeofflights:
 
 night_off_morning_on_lights:
 - switch.kitchenwindoweast
-- switch.stairs_switch_switch_3_0
+- switch.stairs_window_light_switch
 - switch.loungewindowsboth
 - switch.porchpluginswitch
 
