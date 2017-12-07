@@ -8,7 +8,7 @@
       click_type: single
   action:
     service: cover.close_cover
-    entity_id: cover.livingroom_blinds_switch_32_0
+    entity_id: cover.livingroom_blinds_switch
 
 - alias: 'Button double click'
   trigger:
@@ -19,7 +19,7 @@
       click_type: double
   action:
     service: cover.open_cover
-    entity_id: cover.livingroom_blinds_switch_32_0
+    entity_id: cover.livingroom_blinds_switch
 
 - alias: 'Button hold'
   trigger:
@@ -31,5 +31,5 @@
   action:
     service: cover.set_cover_position
     data:
-      entity_id: cover.livingroom_blinds_level_32_0
+      entity_id: ccover.livingroom_blinds_switch
       position: 75
