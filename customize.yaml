@@ -14,50 +14,50 @@
       friendly_name: "Bathroom fan"
       icon: mdi:fan
 
-    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0:
+    switch.entrance_lights_entrance:
       friendly_name: "Entrance Light"
       icon: mdi:lightbulb
 
-    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_2:
+    switch.entrance_lights_porch:
       friendly_name: "Porch Light"
       icon: mdi:lightbulb
 
-    switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_3:
+    switch.entrance_lights_entranceporch:
       friendly_name: "Entrance & Porch Light"
       icon: mdi:lightbulb
       hidden: true
 
-    switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_13_0:
+    switch.fridge_power_switch:
       friendly_name: "Kitchen Fridge"
       icon: mdi:fridge-filled
 
-    switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_12_0:
+    switch.tv_power_switch_switch:
       friendly_name: "Livingroom TV"
       icon: mdi:television
 
-    switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_3_0:
+    switch.stairs_window_light_switch:
       friendly_name: "Stairs Switch"
       icon: mdi:lightbulb
 
 ### Mower ------------------------------------------------------
 
-    switch.rest_switch:
-      friendly_name: "Park Kenny"
-      icon: mdi:parking
+#   switch.rest_switch:
+#     friendly_name: "Park Kenny"
+#     icon: mdi:parking
 
-    switch.rest_switch_2:
-      friendly_name: "Stop Kenny"
-      icon: mdi:stop-circle-outline
+#   switch.rest_switch_2:
+#     friendly_name: "Stop Kenny"
+#     icon: mdi:stop-circle-outline
 
-    switch.rest_switch_3:
-      friendly_name: "Start Kenny"
-      icon: mdi:arrow-right-drop-circle-outline
+#   switch.rest_switch_3:
+#     friendly_name: "Start Kenny"
+#     icon: mdi:arrow-right-drop-circle-outline
 
-    sensor.mower_battery:
-      icon: mdi:car-battery  
+#   sensor.mower_battery:
+#     icon: mdi:car-battery
 
-    sensor.mower_status:
-      icon: mdi:pulse
+#   sensor.mower_status:
+#     icon: mdi:pulse
 
 #################################################################
 # Sensors
@@ -85,7 +85,7 @@
     #Saknas - inte addad
       friendly_name: 'Badrum-Temperature'
       icon: mdi:temperature-celsius    
-    sensor.aeotec_zw074_multisensor_gen5_temperature_11_1:
+    sensor.entrance_multisensor_temperature:
       friendly_name: 'Hall-Temperature'
       icon: mdi:temperature-celsius
     sensor.lounge_smokedetector_temperature_7_1:
@@ -98,7 +98,7 @@
     #saknas inte addad
       friendly_name: 'Badrum-Luftfuktighet'
       icon: mdi:water-percent    
-    sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5:
+    sensor.entrance_multisensor_relative_humidity:
       friendly_name: 'Hall-Luftfuktighet'
       icon: mdi:water-percent
 
@@ -121,13 +121,13 @@
 
 
 # Z-wave - Energy -----------------------------------------------
-    sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_12_8:
+    sensor.tv_power_switch_power:
       friendly_name: 'Energi TV'
       icon: mdi:gauge
-    sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_3_8:
+    sensor.stairs_window_light_power:
       friendly_name: 'Energi Hall-Uppe-golvlampa'
       icon: mdi:gauge
-    sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_13_8:
+    sensor.fridge_power_power:
       friendly_name: 'Energi Kylskap'
       icon: mdi:gauge
     sensor.bathroom_lights_power:
