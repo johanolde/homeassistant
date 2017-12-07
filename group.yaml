@@ -153,12 +153,12 @@ Heating:
 entrance:
   control: hidden
   entities:
-    - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0
-    - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_
-    - switch.philio_technology_corporation_pan041_double_relay_switch_2x15kw_with_power_measurement_switch_2_0_3
-    - sensor.aeotec_zw074_multisensor_gen5_luminance_11_3
-    - sensor.aeotec_zw074_multisensor_gen5_temperature_11_1
-    - sensor.aeotec_zw074_multisensor_gen5_relative_humidity_11_5
+    - switch.entrance_lights_entrance
+    - switch.entrance_lights_entranceporch
+    - switch.entrance_lights_porch
+    - sensor.entrance_multisensor_luminance
+    - sensor.entrance_multisensor_relative_humidity
+    - sensor.entrance_multisensor_temperature
     - switch.porchpluginswitch
     - camera.doorcam
     - sensor.doorbell
@@ -172,13 +172,13 @@ showerroom:
 Dining:
   entities:
     - camera.dining_room
-    - switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_14_0
+    - switch.diningroom_window_light_switch
     - media_player.squeezebox_radio
 
 kitchen:
   control: hidden
   entities:
-    - sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_13_8
+    - sensor.fridge_power_power
     - switch.kitchenwindoweast
     - switch.kitchenwindowsouth
     - binary_sensor.door_window_sensor_158d00013fd5b4
@@ -188,13 +188,13 @@ kitchen:
 livingroom:
   control: hidden
   entities:
-    - switch.philio_technology_corporation_pan11_smart_energy_plug_in_switch_switch_12_0
-    - sensor.philio_technology_corporation_pan11_smart_energy_plug_in_switch_power_12_8
+    - switch.tv_power_switch_switch
+    - sensor.tv_power_switch_power
     - switch.livingroomwindow
     - media_player.apple_tv_i_vardagsrum
-    - cover.qubino_zmnhod1_flush_shutter_dc_level_32_0
-    - cover.qubino_zmnhod1_flush_shutter_dc_switch_32_0
-    - switch.qubino_zmnhod1_flush_shutter_dc_switch_32_0
+    - cover.livingroom_blinds_level
+    - cover.livingroom_blinds_switch
+    - switch.livingroom_blinds_switch
     - binary_sensor.switch_158d0001147e8e
     - switch.receiver_power
     - switch.receiver_squeezebox
