@@ -1,27 +1,27 @@
 - alias: "Entrance Light"
   trigger:
     platform: state
-    entity_id: binary_sensor.entrance_multisensor_sensor_11_0
+    entity_id: binary_sensor.entrance_multisensor_sensor
     to: 'on'
   condition:
     - condition: numeric_state
-      entity_id: sensor.entrance_multisensor_luminance_11_3
+      entity_id: sensor.entrance_multisensor_luminance
       below: 30
   action:
     service: homeassistant.turn_on
-    entity_id: switch.entrance_porch_light_switch_2_0
+    entity_id: switch.entrance_lights_entrance
 
 - alias: Entrance Light Timer
   trigger:
     platform: state
-    entity_id: binary_sensor.entrance_multisensor_sensor_11_0
+    entity_id: binary_sensor.entrance_multisensor_sensor
     to: 'off'
     for:
       minutes: 5
   condition:
     - condition: state
-      entity_id: switch.entrance_porch_light_switch_2_0
+      entity_id: switch.entrance_lights_entrance
       state: 'on'
   action:
     service: homeassistant.turn_off
-    entity_id: switch.entrance_porch_light_switch_2_0
+    entity_id: switch.entrance_lights_entrance
