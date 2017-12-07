@@ -208,16 +208,21 @@ Upstairs_bath:
   name: 'Badrum (uppe)'
   control: hidden
   entities:
-    - switch.qubino_zmnhadx_flush_1_relay_switch_20_0
-    - sensor.qubino_zmnhadx_flush_1_relay_power_20_8
+    - switch.bathroom_fan_switch
+    - sensor.bathroom_fan_power
     #saknas
     - sensor.bathroom_multisensor_luminance_10_3
     - sensor.bathroom_multisensor_relative_humidity_10_5
     - sensor.bathroom_multisensor_temperature_10_1
-    - light.qubino_zmnhdd1_flush_dimmer_level_23_0
-    - binary_sensor.qubino_zmnhdd1_flush_dimmer_sensor_28_0_2
-    - switch.qubino_zmnhdd1_flush_dimmer_switch_23_0
-    - switch.qubino_zmnhdd1_flush_dimmer_switch_28_0
+
+    - light.bathroom_lights_level
+    - light.bathroom_showerroom_lights_level
+    - binary_sensor.bathroom_lights_sensor
+    - binary_sensor.bathroom_lights_sensor_2
+    - binary_sensor.bathroom_showerroom_lights_sensor
+    - binary_sensor.bathroom_showerroom_lights_sensor_2
+    - switch.bathroom_lights_switch
+    - switch.bathroom_showerroom_lights_switch
     - light.bathroomshower
 
 stairs:
