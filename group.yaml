@@ -449,14 +449,14 @@ Fire:
 
 bathroom_lamps:
   entities:
-    - light.bathroom_lights_level	off
-    - light.bathroom_showerroom_lights_level	off
+    - light.bathroom_lights_level
+    - light.bathroom_showerroom_lights_level
     - light.bathroomshower
-    - binary_sensor.bathroom_lights_sensor	off
-    - binary_sensor.bathroom_lights_sensor_2	off
-    - binary_sensor.bathroom_showerroom_lights_sensor	off
+    - binary_sensor.bathroom_lights_sensor
+    - binary_sensor.bathroom_lights_sensor_2
+    - binary_sensor.bathroom_showerroom_lights_sensor
     - binary_sensor.bathroom_showerroom_lights_sensor_2
-    - switch.bathroom_lights_switch	off
+    - switch.bathroom_lights_switch
     - switch.bathroom_showerroom_lights_switch
 
 
