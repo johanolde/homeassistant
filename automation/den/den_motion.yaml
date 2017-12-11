@@ -9,8 +9,11 @@
       value_template: '{{ state.attributes.elevation }}'
       below: 3.5
   action:
-    service: homeassistant.turn_on
-    entity_id: light.denceiling
+    - service: homeassistant.turn_on
+      entity_id: light.denceiling
+    - service: media_player.media_play
+      data:
+        entity_id: media_player.office_squeezeplay
 
 - alias: "Den motion light off"
   trigger:
@@ -24,5 +27,8 @@
     entity_id: light.denceiling
     state: 'on'
   action:
-    service: homeassistant.turn_off
-    entity_id: light.denceiling
+    - service: homeassistant.turn_off
+      entity_id: light.denceiling
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.office_squeezeplay
