@@ -101,3 +101,12 @@
       entity_id: binary_sensor.switch_158d000186e5cd
     event_type: click
     platform: event
+- id: 'updates123'
+  alias: 'Update Available Notifications'
+  trigger:
+  -  platform: state
+     entity_id: updater.updater
+  action:
+  - service: notify.slack
+    data:
+      message: '@johan - Update for Home Assistant is available.'      
