@@ -1,6 +1,6 @@
 - action:
   - data:
-      entity_id: switch.qubino_zmnhadx_flush_1_relay_switch_20_0
+      entity_id: switch.bathroom_lights_switch
     service: homeassistant.turn_on
   - data:
       entity_id: scene.bath_night
@@ -17,12 +17,12 @@
     to: 'on'
 - action:
   - data:
-      entity_id: cover.qubino_zmnhod1_flush_shutter_dc_level_32_0
+      entity_id: cover.livingroom_blinds_level
     service: cover.open_cover
   alias: Open Blinds - Sun below horizon
   condition:
   - condition: state
-    entity_id: cover.qubino_zmnhod1_flush_shutter_dc_level_32_0
+    entity_id: cover.livingroom_blinds_level
     state: closed
   id: '1502630013284'
   trigger:
@@ -32,7 +32,7 @@
     to: below_horizon
 - action:
   - data:
-      entity_id: switch.qubino_zmnhadx_flush_1_relay_switch_20_0
+      entity_id: switch.bathroom_lights_switch
     service: homeassistant.turn_on
   - data:
       entity_id: scene.bath_bright
@@ -49,7 +49,7 @@
     to: 'on'
 - action:
   - data:
-      entity_id: switch.qubino_zmnhadx_flush_1_relay_switch_20_0
+      entity_id: switch.bathroom_lights_switch
     service: homeassistant.turn_on
   - data:
       entity_id: scene.bath_day
@@ -69,3 +69,35 @@
   - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
     platform: state
     to: 'on'
+- action:
+  - data:
+      entity_id: scene.bath_bright
+    service: scene.turn_on
+  - data:
+      entity_id: switch.bathroom_fan_switch
+    service: homeassistant.turn_on
+  alias: Bathroom_button_singleclick
+  condition: []
+  id: '1504594657350'
+  trigger:
+  - event_data:
+      click_type: single
+      entity_id: binary_sensor.switch_158d000186e5cd
+    event_type: click
+    platform: event
+- action:
+  - data:
+      entity_id: switch.bathroom_fan_switch
+    service: homeassistant.turn_off
+  - data:
+      entity_id: group.bathroom_lamps
+    service: light.turn_off
+  alias: Bathroom_button_longclick
+  condition: []
+  id: '1504594841729'
+  trigger:
+  - event_data:
+      click_type: hold
+      entity_id: binary_sensor.switch_158d000186e5cd
+    event_type: click
+    platform: event
