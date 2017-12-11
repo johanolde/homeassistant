@@ -40,7 +40,7 @@
       data:
         entity_id: media_player.office_squeezeplay
 
-- alias: "Den music  off"
+- alias: "Den music off"
   trigger:
     platform: state
     entity_id: binary_sensor.motion_sensor_158d00010a9ef1
