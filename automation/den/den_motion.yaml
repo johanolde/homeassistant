@@ -46,7 +46,7 @@
     entity_id: binary_sensor.motion_sensor_158d00010a9ef1
     to: 'off'
     for:
-      minutes: 1
+      minutes: 5
   action:
     - service: media_player.media_play_pause
       data:
