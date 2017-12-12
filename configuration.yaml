@@ -239,5 +239,4 @@ panel_custom:
     config: !include floorplan.yaml
 
 timer:
-  - bath-timer:
-  - test-timer:
+  timer:
