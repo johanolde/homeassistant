@@ -139,9 +139,9 @@ notify:
     platform: telegram
     api_key: !secret telegram_api
     chat_id: !secret telegram_chatid
-#  - name: iOSApp
-#    platform: ios
-#    target: !secret ios_token
+  - name: iOSApp
+    platform: ios
+    target: !secret ios_token
   - platform: webostv
     host: !secret lg_ip
     name: livingroom_tv
