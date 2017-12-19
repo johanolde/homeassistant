@@ -20,5 +20,6 @@ logs:
   homeassistant.components.zwave: warn
   homeassistant.helpers.script: info
   homeassistant.exceptions: info
+  homeassistant.components.camera: error
   py.warnings: error
   root: warn
