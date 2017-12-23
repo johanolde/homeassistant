@@ -130,10 +130,10 @@
     sensor.fridge_power_power:
       friendly_name: 'Energi Kylskap'
       icon: mdi:gauge
-    sensor.bathroom_lights_power:
+#    sensor.bathroom_lights_power:
     #Saknas
-      friendly_name: 'Energiforbrukning Badrumsflakt'
-      icon: mdi:gaugue
+ #     friendly_name: 'Energiforbrukning Badrumsflakt'
+ #     icon: mdi:gaugue
 
 # Weather - sensors  -----------------------------------------------
     sensor.yr_symbol:
