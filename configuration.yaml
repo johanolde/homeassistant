@@ -224,7 +224,7 @@ influxdb:
 #    instance: prod
 #    source: hass
 
-script: !include_dir_merge_named script
+script: !include scripts.yaml
 
 binary_sensor:
   - platform: mqtt
