@@ -15,7 +15,7 @@
 alias: 'Bathroom off delayed fan'
 sequence:
   - service: light.turn_off
-      entity_id: light.bathroomshower
+      entity_id: 'light.bathroomshower'
   - service: light.turn_off
       entity_id: light.bathroom_lights_level
   - service: light.turn_off
