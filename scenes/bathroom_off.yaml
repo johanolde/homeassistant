@@ -1,14 +1,14 @@
-#name: 'Bathroom Scene off'
-#entities:
-#  light.bathroomshower: off
+name: 'Bathroom Scene off'
+entities:
+  light.bathroomshower: off
 #    state: on
 #    rgb_color: [255, 67, 0]
 #    brightness: 255
 #    color_temp: 154
-#  light.bathroom_lights_level: off
+  light.bathroom_lights_level: off
 #    state: on
 #    brightness: 255
-#  light.bathroom_showerroom_lights_level: off
+  light.bathroom_showerroom_lights_level: off
 #    state: on
 #    brightness: 255
 #
