@@ -1,4 +1,0 @@
-timed_fan: !include scripts/timed_fan.yaml
-timer_off: !include scripts/timer_off.yaml
-timed_light: !include scripts/timed_light.yaml
-light_timer_off: !include scripts/light_timer_off.yaml
