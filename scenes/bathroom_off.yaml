@@ -11,7 +11,7 @@
 #  light.bathroom_showerroom_lights_level: off
 #    state: on
 #    brightness: 255
-
+#
 alias: 'Bathroom off delayed fan'
 sequence:
   - service: light.turn_off
