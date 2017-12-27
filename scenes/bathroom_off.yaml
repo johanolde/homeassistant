@@ -12,7 +12,7 @@
 #    state: on
 #    brightness: 255
 #
-alias: 'Bathroom off delayed fan'
+name: 'Bathroom off delayed fan'
 sequence:
   - service: light.turn_off
     entity_id:
