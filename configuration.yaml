@@ -7,6 +7,8 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
 
+cloud:
+
 config:
 group: !include group.yaml
 zwave: !include zwave.yaml
