@@ -166,7 +166,7 @@ media_player:
   - platform: webostv
     host: !secret lg_ip
     mac: !secret lg_mac
-    name: Livingroom LG TV
+    name: Livingroom TV
     filename: webostv.conf
 
 apple_tv: !include apple_tv.yaml
