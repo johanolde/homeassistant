@@ -339,6 +339,12 @@ allautomations:
     - automation.lights_sunrise_off
     - automation.lights_sunset_on
     - automation.update_available_notifications
+    - automation.bathroom_2018__turn_off_lights
+    - automation.bathroom_2018__turn_on_scene
+    - automation.bathroom_button_longclick
+    - automation.den_music_off
+    - automation.den_music_on
+    - automation.open_blinds__sun_below_horizon
 
 family:
   entities:
