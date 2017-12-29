@@ -313,7 +313,7 @@ node0:
 ###########################################################
 
 allautomations:
-  control: hidden
+#  control: hidden
   entities:
     - automation.bathroom_lights_off
     - automation.bathroom_lights_on
