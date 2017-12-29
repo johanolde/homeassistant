@@ -1,4 +1,5 @@
 - alias: 'Telegram bot'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     platform: event
@@ -14,6 +15,7 @@
             - '/cam, /home, /kitchenlight'
 
 - alias: 'Cams'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     platform: event
@@ -37,6 +39,7 @@
 
 
 - alias: 'Whos home'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     platform: event
@@ -49,11 +52,9 @@
         message: "{% if is_state('device_tracker.anne_iphone', 'home') %} Anne is at home.\n{% else %} Anne is away.\n{% endif %}
                  {% if is_state('device_tracker.johan_iphone', 'home') %} Johan is at home.\n\n{% else %} Johan is away.\n\n{% endif %}
                  Kitchenlight is {{ states.light.a60rgbw_01.state}} (/kitchenlight)\n"
-#        data:
-#          keyboard:
-#            - '/cam, /home'
 
 - alias: 'Kitchenlight'
+  initial_state: 'on'
   hide_entity: true
   trigger:
     platform: event

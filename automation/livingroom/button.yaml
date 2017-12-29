@@ -1,5 +1,6 @@
 
 - alias: 'Button single click'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: click
@@ -11,6 +12,7 @@
     entity_id: cover.livingroom_blinds_switch
 
 - alias: 'Button double click'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: click
@@ -22,6 +24,7 @@
     entity_id: cover.livingroom_blinds_switch
 
 - alias: 'Button hold'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: click
@@ -31,5 +34,5 @@
   action:
     service: cover.set_cover_position
     data:
-      entity_id: ccover.livingroom_blinds_switch
+      entity_id: cover.livingroom_blinds_switch
       position: 75

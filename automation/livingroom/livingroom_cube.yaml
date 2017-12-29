@@ -1,6 +1,7 @@
 #Available actions are flip90, flip180, move, tap_twice, shake_air, swing, alert, free_fall and rotate 
 
 - alias: 'Watch TV'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -12,6 +13,7 @@
     entity_id: group.kitchenlights
 
 - alias: 'Shut down TV'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action

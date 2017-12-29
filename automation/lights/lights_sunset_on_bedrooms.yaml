@@ -1,4 +1,5 @@
 - alias: "Bedroom lights - Sunset on"
+  initial_state: 'on'
   trigger:
     platform: sun
     event: sunset

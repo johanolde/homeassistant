@@ -1,6 +1,7 @@
 #Available actions are flip90, flip180, move, tap_twice, shake_air, swing, alert, free_fall and rotate 
 
 - alias: 'cube flip 90'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -16,6 +17,7 @@
 #      message: 'Cube Flip 90'
 
 - alias: 'cube flip 180'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -44,6 +46,7 @@
 #      message: 'Cube Alert'
 
 - alias: 'cube freefall'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -57,6 +60,7 @@
       message: 'Cube Freefallin'
 
 - alias: 'cube move'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -71,6 +75,7 @@
 
 
 - alias: 'cube rotate'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -129,6 +134,7 @@
 
 
 - alias: 'cube shakeair'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -141,6 +147,7 @@
 
 
 - alias: 'cube swing'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
@@ -154,6 +161,7 @@
       message: 'Cube Swinged'
 
 - alias: 'cube tap_twice'
+  initial_state: 'on'
   trigger:
     platform: event
     event_type: cube_action
