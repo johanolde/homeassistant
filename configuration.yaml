@@ -242,8 +242,3 @@ panel_custom:
 
 timer:
   timer:
-
-nibe:
-    client_id: !secret nibe_id
-    client_secret: !secret nibe_secret
-    redirect_uri: http://hassbian.local:8123
