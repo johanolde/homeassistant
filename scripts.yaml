@@ -1,0 +1,20 @@
+'1514374924721':
+  alias: Bathroom off
+  sequence:
+  - data:
+      entity_id: group.bathroom_lamps
+    service: homeassistant.turn_off
+  - delay: 00:00:30
+  - alias: ''
+    data:
+      entity_id: switch.bathroom_fan_switch
+    service: switch.turn_off
+'1514546606333':
+  alias: Bathroom on
+  sequence:
+  - data:
+      entity_id: group.bathroom_lamps
+    service: homeassistant.turn_on
+  - data:
+      entity_id: switch.bathroom_fan_switch
+    service: switch.turn_on

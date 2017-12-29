@@ -5,16 +5,13 @@
   - data:
       entity_id: scene.bath_night
     service: scene.turn_on
-  alias: Bathroom motion night
+  alias: Disabled Bathroom motion night
   condition:
   - after: '23:59'
     before: 04:00
     condition: time
   id: '1502619491737'
-  trigger:
-  - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
-    platform: state
-    to: 'on'
+  trigger: []
 - action:
   - data:
       entity_id: cover.livingroom_blinds_level
@@ -37,16 +34,13 @@
   - data:
       entity_id: scene.bath_bright
     service: scene.turn_on
-  alias: Bathroom motion dark
+  alias: Disabled Bathroom motion dark
   condition:
   - after: 04:00
     before: '23:59'
     condition: time
   id: '1502631695144'
-  trigger:
-  - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
-    platform: state
-    to: 'on'
+  trigger: []
 - action:
   - data:
       entity_id: switch.bathroom_lights_switch
@@ -54,7 +48,7 @@
   - data:
       entity_id: scene.bath_day
     service: scene.turn_on
-  alias: Bathroom motion light
+  alias: Disabled Bathroom motion light
   condition:
   - after: 04:00
     before: '23:59'
@@ -65,26 +59,12 @@
     entity_id: sensor.bathroom_multisensor_luminance_10_3
     value_template: ''
   id: '1502631862387'
-  trigger:
-  - entity_id: binary_sensor.bathroom_multisensor_sensor_10_0
-    platform: state
-    to: 'on'
-- action:
-  - data:
-      entity_id: scene.bath_bright
-    service: scene.turn_on
-  - data:
-      entity_id: switch.bathroom_fan_switch
-    service: homeassistant.turn_on
-  alias: Bathroom_button_singleclick
+  trigger: []
+- action: []
+  alias: temp1
   condition: []
   id: '1504594657350'
-  trigger:
-  - event_data:
-      click_type: single
-      entity_id: binary_sensor.switch_158d000186e5cd
-    event_type: click
-    platform: event
+  trigger: []
 - action:
   - data:
       entity_id: switch.bathroom_fan_switch
@@ -101,12 +81,43 @@
       entity_id: binary_sensor.switch_158d000186e5cd
     event_type: click
     platform: event
-- id: 'updates123'
-  alias: 'Update Available Notifications'
+- id: updates123
+  alias: Update Available Notifications
   trigger:
-  -  platform: state
-     entity_id: updater.updater
+  - platform: state
+    entity_id: updater.updater
   action:
   - service: notify.slack
     data:
-      message: '@johan - Update for Home Assistant is available.'      
+      message: '@johan - Update for Home Assistant is available.'
+- action:
+  - data:
+      entity_id: script.1514546606333
+    service: script.turn_on
+  - data:
+      entity_id: switch.bathroom_fan_switch
+    service: homeassistant.turn_on
+  alias: Bathroom 2018 - turn on scene
+  condition: []
+  id: '1514304584346'
+  trigger:
+  - entity_id: binary_sensor.bathroom_multisensor_sensor
+    platform: state
+    to: 'on'
+  - event_data:
+      click_type: single
+      entity_id: binary_sensor.switch_158d000186e5cd
+    event_type: click
+    platform: event
+- action:
+  - data:
+      entity_id: script.1514374924721
+    service: script.turn_on
+  alias: Bathroom 2018 - Turn off lights
+  condition: []
+  id: '1514359438847'
+  trigger:
+  - entity_id: binary_sensor.bathroom_multisensor_sensor
+    from: 'on'
+    platform: state
+    to: 'off'
