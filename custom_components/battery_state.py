@@ -1,4 +1,4 @@
-# put this in a file named custom_components/battery_state.py
+## put this in a file named custom_components/battery_state.py
 # https://community.home-assistant.io/t/script-to-track-all-devices-with-a-battery-level/2596
 
 import logging
