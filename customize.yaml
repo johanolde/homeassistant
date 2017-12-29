@@ -255,3 +255,8 @@
       unit_of_measurement: °C
     sensor.nibe_1255_return_temp:
       unit_of_measurement: °C
+
+# Customize all entities in a domain
+    customize_domain:
+    automation:
+       initial_state: 'on'
