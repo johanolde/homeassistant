@@ -11,6 +11,7 @@
 #      entity_id: group.bathroom_lamps
 #
 - alias: "Bathroom motion fan off"
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: 'binary_sensor.bathroom_multisensor_sensor_10_0'
@@ -19,13 +20,13 @@
       minutes: 5
   condition:
     - condition: state
-      entity_id: 'switch.bathroom_fan_switch_switch_20_0'
+      entity_id: 'switch.bathroom_fan_switch'
       state: 'on'
     - condition: numeric_state
       entity_id: 'sensor.bathroom_multisensor_relative_humidity_10_5'
       below: '60'
   action:
     - service: homeassistant.turn_off
-      entity_id: switch.bathroom_fan_switch_switch_20_0
+      entity_id: switch.bathroom_fan_switch
     - service: light.turn_off
       entity_id: group.bathroom_lamps
