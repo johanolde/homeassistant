@@ -246,4 +246,4 @@ timer:
 nibe:
     client_id: !secret nibe_id
     client_secret: !secret nibe_secret
-    redirect_uri: http://localhost:8123
+    redirect_uri: http://hassbian.local:8123
