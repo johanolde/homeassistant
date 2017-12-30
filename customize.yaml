@@ -246,7 +246,7 @@
     sensor.nibe_1255_kitchen_temp:
       unit_of_measurement: °C
     sensor.nibe_1255_hot_gas:
-      unit_of_measurement: °C
+      unit_of_measurement: °Cf
     sensor.nibe_1255_hot_water_charging:
       unit_of_measurement: °C
     sensor.nibe_1255_liquid_line:
@@ -258,5 +258,5 @@
 
 # Customize all entities in a domain
     customize_domain:
-    automation:
-       initial_state: 'on'
+      automation:
+         initial_state: 'on'
