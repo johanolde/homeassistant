@@ -4,7 +4,7 @@ homeassistant:
   longitude: !secret my_longitude
   elevation: 142
   unit_system: metric
- ime_zone: Europe/Stockholm
+  time_zone: Europe/Stockholm
   customize: !include customize.yaml
   customize_domain:
     automation:
