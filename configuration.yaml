@@ -101,7 +101,6 @@ light:
         name: Showerroom.shower
       !secret yeelight4_ip:
         name: Showerroom
-
   - platform: tellstick
 
 scene: !include_dir_list scenes
