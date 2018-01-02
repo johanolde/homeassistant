@@ -88,6 +88,7 @@ Admin:
     - group.battery
     - group.skarsjocore
     - switch.wake_on_lan
+    - group.g1
 
 
 Automations:
