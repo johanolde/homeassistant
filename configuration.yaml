@@ -13,7 +13,7 @@ homeassistant:
       initial_state: 'on'
 
   customize_glob:
-    "automation.disabled_*":
+    "automation.disabled*":
       hidden: true
 #    "light.kitchen_*":
 #      icon: mdi:description
