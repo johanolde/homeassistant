@@ -99,7 +99,7 @@ Automations:
     - group.morningonlights
     - group.bathroom_lamps
     - group.allautomations
-     - group.all_automations
+    - group.all_automations
     - group.suncontrol
     - group.sunsetonlights
     - group.bedroomlights
