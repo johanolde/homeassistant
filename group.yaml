@@ -352,7 +352,7 @@ node0:
 #
 all_automations:
   view: yes
-  assumed_state: false
+#  assumed_state: false
 
 family:
   entities:
