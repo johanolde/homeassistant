@@ -351,10 +351,10 @@ allautomations:
     - automation.den_music_on
     - automation.open_blinds__sun_below_horizon
 
-all_automations:
-  view: yes
-  hidden: false
-  assumed_state: false
+#all_automations:
+#  view: yes
+# # hidden: false
+#  assumed_state: false
 
 family:
   entities:
