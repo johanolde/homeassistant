@@ -107,11 +107,11 @@ light:
     host: !secret lightify_ip
   - platform: yeelight
     devices:
-      !secret yeelight4_ip:
+      !secret yeelight3_ip:
         name: Den.Ceiling
       !secret yeelight2_ip:
         name: Bathroom.shower
-      !secret yeelight3_ip:
+      !secret yeelight4_ip:
         name: Showerroom.shower
       !secret yeelight1_ip:
         name: Showerroom
