@@ -631,4 +631,6 @@ skarsjocore:
 evilautomations:
 - automation.bathroom_2018__turn_off_lights
 - automation.bathroom_2018__turn_on_scene
-
+- automation.bathroom_button_longclick
+- automation.open_blinds__sun_below_horizon
+- automation.update_available_notifications

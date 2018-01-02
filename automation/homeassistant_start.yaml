@@ -1,0 +1,10 @@
+alias: "Home-Assistant Start"
+trigger:
+  event: start
+  platform: homeassistant
+action:
+  - delay: 00:00:10
+  - alias: ''
+    data:
+      entity_id: group.evilautomations
+    service: homeassistant.turn_on
