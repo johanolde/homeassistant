@@ -352,7 +352,6 @@ node0:
 #
 all_automations:
   view: yes
-  hidden: false
   assumed_state: false
 
 family:
