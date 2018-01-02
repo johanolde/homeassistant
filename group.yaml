@@ -200,6 +200,9 @@ showerroom:
     - sensor.temperature_158d00010678df
     - sensor.humidity_158d00010678df
     - binary_sensor.motion_sensor_158d00012682d3
+    - light.showerroom
+    - light.showerroomshower
+
 
 Dining:
   entities:
