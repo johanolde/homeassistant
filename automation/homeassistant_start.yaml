@@ -7,4 +7,4 @@
     - alias: ''
       data:
         entity_id: group.evilautomations
-      service: homeassistant.turn_on-
+      service: homeassistant.turn_on
