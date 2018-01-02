@@ -9,7 +9,7 @@
       click_type: single
   action:
     service: script.turn_on
-    entity_id: script.good_morning
+    entity_id: script.1514910043431
 
 - alias: '2-Click - good night'
   initial_state: 'on'
@@ -21,7 +21,7 @@
       click_type: double
   action:
     service: script.turn_on
-    entity_id: script.good_night
+    entity_id: script.1514910007642
 
 - alias: 'Hold - future'
   initial_state: 'on'
@@ -33,4 +33,4 @@
       click_type: hold
   action:
     service: script.turn_on
-    entity_id: script.bedroom_long
+    entity_id: script.1514910330734
