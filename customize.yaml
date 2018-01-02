@@ -272,8 +272,8 @@
     group.all_switches:
       hidden: false
 
-  customize_domain:
-#    light:
-#      icon: mdi:home
-    automation:
-      initial_state: 'on'
+    customize_domain:
+  #    light:
+  #      icon: mdi:home
+      automation:
+        initial_state: 'on'
