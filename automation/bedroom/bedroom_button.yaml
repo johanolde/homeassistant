@@ -1,0 +1,36 @@
+
+- alias: 'Click - good morning'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d000187064f
+      click_type: single
+  action:
+    service: script.turn_on
+    entity_id: script.good_morning
+
+- alias: '2-Click - good night'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d000187064f
+      click_type: double
+  action:
+    service: script.turn_on
+    entity_id: script.good_night
+
+- alias: 'Hold - future'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: click
+    event_data:
+      entity_id: binary_sensor.switch_158d000187064f
+      click_type: hold
+  action:
+    service: script.turn_on
+    entity_id: script.bedroom_long
