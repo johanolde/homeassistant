@@ -263,3 +263,13 @@ panel_custom:
 
 timer:
   timer:
+
+input_boolean:
+  switch1:
+  switch2:
+
+input_text:
+  command:
+    name: Button
+  dummy_tiles:
+    name: dummy
