@@ -259,6 +259,7 @@
     group.all_automations:
       hidden: false
       assumed_state: true
+      initial_state: 'on'
     group.all_covers:
       hidden: false
     group.all_devices:
