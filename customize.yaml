@@ -256,3 +256,12 @@
     sensor.nibe_1255_return_temp:
       unit_of_measurement: °C
 
+    group.all_automations:
+      hidden: false
+      assumed_state: true
+#    - group.all_covers
+#    - group.all_devices
+#    - group.all_lights
+#    - group.all_remotes
+#    - group.all_scripts
+#    - group.all_switches
