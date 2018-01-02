@@ -259,10 +259,15 @@
     group.all_automations:
       hidden: false
       assumed_state: true
-
-#    - group.all_covers
-#    - group.all_devices
-#    - group.all_lights
-#    - group.all_remotes
-#    - group.all_scripts
-#    - group.all_switches
+    group.all_covers:
+      hidden: false
+    group.all_devices:
+      hidden: false
+    group.all_lights:
+      hidden: false
+    group.all_remotes:
+      hidden: false
+    group.all_scripts:
+      hidden: false
+    group.all_switches:
+      hidden: false
