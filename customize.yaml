@@ -259,6 +259,7 @@
     group.all_automations:
       hidden: false
       assumed_state: true
+
 #    - group.all_covers
 #    - group.all_devices
 #    - group.all_lights
