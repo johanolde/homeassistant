@@ -68,6 +68,8 @@ Outdoors:
     - sensor.nibe_1255_outdoor_temp
     - sensor.nibe_1255_avg_outdoor_temp
     - sensor.temperature_158d000155c9cc
+    - group.conservatory
+    - group.bbqhut
 
 
 Security:
@@ -640,3 +642,8 @@ g1:
   name: Tiles showcase
   entities:
     - input_text.dummy_tile
+
+conservatory:
+- sensor.temperature_158d000155c9cc
+
+bbqhut:
