@@ -205,8 +205,12 @@
       friendly_name: 'Motion shower'
     sensor.temperature_158d000155ca89:
       friendly_name: 'Guestroom 1 temp'
+    sensor.humidity_158d000155ca89:
+      friendly_name: 'Guestroom 1 Humidity'
     sensor.temperature_158d000155c9cc:
       friendly_name: 'Consvervatory_temp'
+    sensor.humidity_158d000155c9cc:
+      friendly_name: 'Consvervatory Humidity'
     binary_sensor.switch_158d000186e5cd:
       friendly_name: 'Bathroom Button'
     binary_sensor.switch_158d000187064f:
