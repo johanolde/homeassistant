@@ -215,7 +215,10 @@
       friendly_name: 'Bathroom Button'
     binary_sensor.switch_158d000187064f:
       friendly_name: 'Bedroom button'
-
+    sensor.temperature_158d000155cb1c:
+      friendly_name: 'BBQ-Hut Temp'
+    sensor.humidity_158d000155cb1c:
+      friendly_name: 'BBQ-Hut Humidity'
 # Test to hide stuff --------------------------------------------
     sensor.bathroom_fan_clock_4_14:
       hidden: true
@@ -237,8 +240,6 @@
       emulated_hue: false
     switch.testswitch:
       emulated_hue: false
-
-
     zone.home:
       track_ios: true
 
