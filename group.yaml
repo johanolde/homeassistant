@@ -543,6 +543,7 @@ battery:
 - sensor.temperature_158d000155ca89_battery
 - zwave.entrance_multisensor_battery
 - zwave.fibaro_system_fgsd002_smoke_sensor_battery
+- *.*battery
 
 
 # mower:
