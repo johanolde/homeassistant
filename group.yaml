@@ -531,19 +531,27 @@ battery:
 - binary_sensor.motion_sensor_158d00012682d3_battery
 - binary_sensor.switch_158d0001147e8e_battery
 - binary_sensor.switch_158d000186e5cd_battery
-- sensor.humidity_158d00010678df_battery
-- sensor.humidity_158d00012cb2f7_battery
-- sensor.humidity_158d00012cb38e_battery
-- sensor.humidity_158d000155c9cc_battery
-- sensor.humidity_158d000155ca89_battery
+- binary_sensor.switch_158d000187064f_battery
+- sensor.humidity_158d00010678df_batt
+- sensor.humidity_158d00012cb2f7_batt
+- sensor.humidity_158d00012cb38e_batt
+- sensor.humidity_158d000155c9cc_batt
+- sensor.humidity_158d000155ca89_batt
+- sensor.humidity_158d000155cb1c_batt
+- sensor.iphone_battery_level
+- sensor.iphone_battery_level_2
+- sensor.iphone_battery_state
+- sensor.iphone_battery_state_2
 - sensor.temperature_158d00010678df_battery
 - sensor.temperature_158d00012cb2f7_battery
 - sensor.temperature_158d00012cb38e_battery
 - sensor.temperature_158d000155c9cc_battery
 - sensor.temperature_158d000155ca89_battery
+- sensor.temperature_158d000155cb1c_battery
+- sensor.tradfri_remote_control_battery
+- zwave.bathroom_multisensor_battery
 - zwave.entrance_multisensor_battery
 - zwave.fibaro_system_fgsd002_smoke_sensor_battery
-- *.*battery
 
 
 # mower:
