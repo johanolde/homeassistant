@@ -645,5 +645,6 @@ g1:
 
 conservatory:
 - sensor.temperature_158d000155c9cc
+- sensor.humidity_158d000155c9cc
 
 bbqhut:
