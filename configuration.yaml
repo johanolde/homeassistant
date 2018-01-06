@@ -19,7 +19,7 @@ homeassistant:
 #      icon: mdi:description
 #    "scene.month_*_colors":
 #      hidden: true
-#      emulated_hue_hidden: false
+#       emulated_hue_hidden: false
 #      homebridge_hidden: true
 
 
@@ -40,15 +40,15 @@ frontend:
 http:
   api_password: !secret http_password
 
-emulated_hue_hidden:
+#emulated_hue:
 #  type: alexa
-  host_ip: !secret ha_ip
-  listen_port: 8300
-  expose_by_default: true
-  exposed_domains:
-    - scene
-    - switch
-    - light
+#  host_ip: !secret ha_ip
+#  listen_port: 8300
+#  expose_by_default: true
+#  exposed_domains:
+#    - scene
+#    - switch
+#    - light
 updater:
   include_used_components: true
 discovery:
