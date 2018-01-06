@@ -45,33 +45,33 @@
 #    data:
 #      message: 'Cube Alert'
 
-- alias: 'cube freefall'
-  initial_state: 'on'
-  trigger:
-    platform: event
-    event_type: cube_action
-    event_data:
-      entity_id: binary_sensor.cube_158d0001104272
-      action_type: free_fall
-  action:
-    service: tts.google_say
-    entity_id: media_player.squeezebox_radio
-    data:
-      message: 'Cube Freefallin'
-
-- alias: 'cube move'
-  initial_state: 'on'
-  trigger:
-    platform: event
-    event_type: cube_action
-    event_data:
-      entity_id: binary_sensor.cube_158d0001104272
-      action_type: move
-  action:
-    service: tts.google_say
-    entity_id: media_player.squeezebox_radio
-    data:
-      message: 'Cube Moved'
+#- alias: 'cube freefall'
+#  initial_state: 'on'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d0001104272
+#      action_type: free_fall
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Freefallin'
+#
+#- alias: 'cube move'
+#  initial_state: 'on'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d0001104272
+#      action_type: move
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Moved'
 
 
 - alias: 'cube rotate'
@@ -146,19 +146,19 @@
     entity_id: group.kitchenlights
 
 
-- alias: 'cube swing'
-  initial_state: 'on'
-  trigger:
-    platform: event
-    event_type: cube_action
-    event_data:
-      entity_id: binary_sensor.cube_158d0001104272
-      action_type: swing
-  action:
-    service: tts.google_say
-    entity_id: media_player.squeezebox_radio
-    data:
-      message: 'Cube Swinged'
+#- alias: 'cube swing'
+#  initial_state: 'on'
+#  trigger:
+#    platform: event
+#    event_type: cube_action
+#    event_data:
+#      entity_id: binary_sensor.cube_158d0001104272
+#      action_type: swing
+#  action:
+#    service: tts.google_say
+#    entity_id: media_player.squeezebox_radio
+#    data:
+#      message: 'Cube Swinged'
 
 - alias: 'cube tap_twice'
   initial_state: 'on'
