@@ -222,6 +222,7 @@ kitchen:
     - binary_sensor.door_window_sensor_158d00013fd5b4
     - binary_sensor.cube_158d0001104272
     - sensor.nibe_1255_kitchen_temp
+    - binary_sensor.water_leak_sensor_158d0001d76674
 
 livingroom:
   control: hidden
@@ -532,6 +533,7 @@ battery:
 - binary_sensor.switch_158d0001147e8e_battery
 - binary_sensor.switch_158d000186e5cd_battery
 - binary_sensor.switch_158d000187064f_battery
+- binary_sensor.water_leak_sensor_158d0001d76674_battery
 - sensor.humidity_158d00010678df_batt
 - sensor.humidity_158d00012cb2f7_batt
 - sensor.humidity_158d00012cb38e_batt

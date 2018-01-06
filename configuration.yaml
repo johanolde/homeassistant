@@ -40,7 +40,7 @@ frontend:
 http:
   api_password: !secret http_password
 
-emulated_hue:
+emulated_hue_hidden:
 #  type: alexa
   host_ip: !secret ha_ip
   listen_port: 8300
