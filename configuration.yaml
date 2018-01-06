@@ -228,6 +228,8 @@ influxdb:
   host: !secret influxip
 #  port: 20000
   database: home_assistant
+  max_retries: 10
+  retry_queue_limit: 100
 #  username: hass
 #  password: !secret influxpw
 #  ssl: true
