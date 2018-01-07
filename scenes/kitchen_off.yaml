@@ -1,6 +1,6 @@
 name: 'kitchen off'
 entities:
-  light.a60rgbw_01:
+  light.hue_white_lamp_1:
     state: off
   light.p16tw_01:
     state: off

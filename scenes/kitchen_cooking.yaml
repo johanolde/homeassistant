@@ -1,6 +1,6 @@
 name: 'Kitchen Cooking'
 entities:
-  light.a60rgbw_01:
+  light.hue_white_lamp_1:
     state: on
 #    rgb_color: [254, 254, 254]
     color_temp: 154

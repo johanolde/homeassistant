@@ -413,7 +413,6 @@ AllaSwitchar:
 - switch.wilmawindowlight
 - switch.porchpluginswitch
 # Lightify
-- light.a60rgbw_01
 - light.flexrgbw_01
 - light.p16tw_01
 - light.p16tw_02
@@ -564,7 +563,7 @@ battery:
 # - switch.rest_switch_3
 
 kitchenlights:
-- light.a60rgbw_01
+- light.hue_white_lamp_1
 - light.p16tw_01
 - light.p16tw_02
 - light.p16tw_03
