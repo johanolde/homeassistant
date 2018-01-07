@@ -479,6 +479,7 @@ Cameras_home:
 - camera.driveway
 - camera.housecam
 #- camera.nodecam
+- camera.overwatch_cam
 
 Cameras:
 - camera.doorcam
@@ -492,6 +493,7 @@ Cameras:
 - camera.romme_1
 - camera.romme_2
 - camera.romme_3
+- camera.overwatch_cam
 
 #klart hit
 suncontrol:
