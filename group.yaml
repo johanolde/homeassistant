@@ -33,6 +33,7 @@ Upstairs:
     - group.wilma
     - group.stairs
     - group.closet
+    - group.dressingroom
 
 
 Downstairs:
@@ -661,3 +662,6 @@ conservatory:
 bbqhut:
 - sensor.temperature_158d000155cb1c
 - sensor.humidity_158d000155cb1c
+
+dressingroom:
+- light.hue_white_lamp_2
