@@ -6,6 +6,8 @@
 <li>Aeotec ZW090 Z-stick
 <li>Tellstick Duo 433 Mhz
 <li>Osram Lightify Hub
+<li>Philips Hue hub
+<li>Ikea Tradfri hub
 <li>Xiaomi Mi Smart Home Controller
 <li>Max2Play Squeezebox server
 <li>Homebridge
@@ -31,12 +33,13 @@
 <ul>
 <li>Efergy Energy monitor
 <li>Husqvarna Automower
-<li>Osram Lightify
+</ul>
+
+<h3>Osram Lightify</h3>
 <ul>
 <li>Osram Classic RGBW
 <Li>Osram Flex RGBW
 <li>Osram GU10 Spots
-</ul>
 </ul>
 
 <H3>Xiaomi</H3>
@@ -45,6 +48,7 @@
 <li>Switch
 <li>Smartcube
 <li>Doorsensor
+<li>Flood sensors
 <li>Yeelight Wifi lamps
 </ul>
 
@@ -53,7 +57,8 @@
 <li>Axis 125
 <li>SRIcam
 <li>Edimax PTZ
-<li>Grandtec 
+<li>Grandtec
+<li>Xiaomi Xiaofang
 </ul>
 
 <H3>RF-devices</h3>
@@ -79,6 +84,7 @@
 
 <H3>Mediaplayers</h3>
 <ul>
+<li>Plex
 <li>Squeezebox Radio
 <li>Squeezebox Boom
 <li>Squeezebox Classic
