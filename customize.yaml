@@ -40,25 +40,6 @@
       friendly_name: "Stairs Switch"
       icon: mdi:lightbulb
 
-### Mower ------------------------------------------------------
-
-#   switch.rest_switch:
-#     friendly_name: "Park Kenny"
-#     icon: mdi:parking
-
-#   switch.rest_switch_2:
-#     friendly_name: "Stop Kenny"
-#     icon: mdi:stop-circle-outline
-
-#   switch.rest_switch_3:
-#     friendly_name: "Start Kenny"
-#     icon: mdi:arrow-right-drop-circle-outline
-
-#   sensor.mower_battery:
-#     icon: mdi:car-battery
-
-#   sensor.mower_status:
-#     icon: mdi:pulse
 
 #################################################################
 # Sensors
@@ -187,6 +168,7 @@
     binary_sensor.door_window_sensor_158d00013fd5b4:
       friendly_name: 'Kitchen door'
       sensor_class: opening
+      show_last_changed: true
     sensor.humidity_158d00012cb38e:
       friendly_name: 'Closet humidity'
       icon: mdi:water-percent
@@ -200,9 +182,11 @@
     binary_sensor.door_window_sensor_158d000111ed95:
       friendly_name: 'Den Window'
       sensor_class: opening
+      show_last_changed: true
     binary_sensor.door_window_sensor_158d000111edf3:
       friendly_name: 'Pantry door'
       sensor_class: opening
+      show_last_changed: true
     binary_sensor.cube_158d00010ae6d9:
       friendly_name: 'Livingroom Cube'
     binary_sensor.motion_sensor_158d00012682d3:
@@ -290,3 +274,8 @@
       custom_ui_state_card: state-card-custom-ui
       state_card_mode: break-slider
       stretch_slider: true
+
+    binary_sensor.bathroom_multisensor_sensor:
+      show_last_changed: true
+    binary_sensor.entrance_multisensor_sensor:
+      show_last_changed: true

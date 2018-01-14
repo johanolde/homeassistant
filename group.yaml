@@ -230,7 +230,7 @@ livingroom:
   control: hidden
   entities:
     - switch.tv_power_switch_switch
-    - sensor.tv_power_switch_power
+#    - sensor.tv_power_switch_power
     - switch.livingroomwindow
     - media_player.apple_tv_i_vardagsrum
     - cover.livingroom_blinds_level
