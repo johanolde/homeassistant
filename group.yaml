@@ -71,6 +71,7 @@ Outdoors:
     - sensor.temperature_158d000155c9cc
     - group.conservatory
     - group.bbqhut
+    - camera.cam2
 
 
 Security:
@@ -284,6 +285,7 @@ den:
 - binary_sensor.door_window_sensor_158d000111ed95
 - media_player.macbook_squeezeplay
 - media_player.office_squeezeplay
+- camera.cam1
 
 guestroom1:
   control: hidden
@@ -473,20 +475,24 @@ bathroom_lamps:
 #    - switch.bathroom_showerroom_lights_switch
 
 
-Cameras_home:
+cameras_home:
 - camera.doorcam
 - camera.dining_room
-- camera.pannrums_cam
+#- camera.pannrums_cam
 #- camera.PTZCam
 - camera.driveway
 - camera.housecam
 #- camera.nodecam
 - camera.overwatch_cam
+- camera.cam1
+- camera.cam2
 
 Cameras:
 - camera.doorcam
 - camera.dining_room
 - camera.pannrums_cam
+- camera.cam1
+- camera.cam2
 - camera.PTZCam
 - camera.driveway
 - camera.housecam
@@ -495,8 +501,7 @@ Cameras:
 - camera.romme_1
 - camera.romme_2
 - camera.romme_3
-- camera.cam1
-- camera.cam2
+
 
 #klart hit
 suncontrol:
