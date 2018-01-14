@@ -34,6 +34,7 @@
     switch.tv_power_switch_switch:
       friendly_name: "Livingroom TV"
       icon: mdi:television
+      extra_data_template: ${attributes.power_consumption}W
 
     switch.stairs_window_light_switch:
       friendly_name: "Stairs Switch"

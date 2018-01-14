@@ -143,13 +143,6 @@ switch:
   - platform: wake_on_lan
     mac_address: "00:17:f2:46:77:cc"
 
-#  - platform: rest
-#  - platform: rest
-#    resource: http://127.0.0.1:1234/park
-#  - platform: rest
-#    resource: http://127.0.0.1:1234/stop
-#  - platform: rest
-#    resource: http://127.0.0.1:1234/start
 
 battery_state:
 
@@ -195,11 +188,6 @@ media_player:
 
 apple_tv: !include apple_tv.yaml
 
-#zoneminder:
-#  host: !secret zm_ip
-#  username: admin
-#  password: !secret skarsjopass
-
 tts:
   - platform: google
     cache: true
@@ -233,24 +221,7 @@ influxdb:
   database: home_assistant
   max_retries: 10
   retry_queue_limit: 100
-#  username: hass
-#  password: !secret influxpw
-#  ssl: true
-#  verify_ssl: true
-#  default_measurement: state
-#  exclude:
-#    entities:
-#       - entity.id1
-#       - entity.id2
-#    domains:
-#       - automation
-#  include:
-#    entities:
-#       - entity.id3
-#       - entity.id4
-#  tags:
-#    instance: prod
-#    source: hass
+
 
 script: !include scripts.yaml
 

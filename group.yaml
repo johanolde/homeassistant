@@ -234,8 +234,8 @@ livingroom:
     - switch.livingroomwindow
     - media_player.apple_tv_i_vardagsrum
     - cover.livingroom_blinds_level
-    - cover.livingroom_blinds_switch
-    - switch.livingroom_blinds_switch
+#    - cover.livingroom_blinds_switch
+#    - switch.livingroom_blinds_switch
     - binary_sensor.switch_158d0001147e8e
     - switch.receiver_power
     - switch.receiver_squeezebox
