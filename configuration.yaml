@@ -35,10 +35,7 @@ camera: !include cameras.yaml
 
 frontend:
   javascript_version: latest
-  extra_html_url:
-    - /local/custom_ui/state-card-tiles.html
-  extra_html_url_es5:
-    - /local/custom_ui/state-card-tiles.html
+
 http:
   api_password: !secret http_password
 
@@ -270,15 +267,7 @@ panel_custom:
 timer:
   timer:
 
-input_boolean:
-  switch1:
-  switch2:
 
-input_text:
-  command:
-    name: Button
-  dummy_tiles:
-    name: dummy
 
 hue:
   bridges:

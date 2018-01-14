@@ -660,11 +660,6 @@ evilautomations:
 - automation.open_blinds__sun_below_horizon
 - automation.update_available_notifications
 
-g1:
-  view: true
-  name: Tiles showcase
-  entities:
-    - input_text.dummy_tile
 
 conservatory:
 - sensor.temperature_158d000155c9cc
