@@ -661,6 +661,7 @@ evilautomations:
 - automation.update_available_notifications
 
 g1:
+  view: true
   name: Tiles showcase
   entities:
     - input_text.dummy_tile
