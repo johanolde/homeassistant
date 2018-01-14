@@ -191,12 +191,14 @@
       friendly_name: 'Livingroom Cube'
     binary_sensor.motion_sensor_158d00012682d3:
       friendly_name: 'Motion shower'
+      show_last_changed: true
     sensor.temperature_158d000155ca89:
       friendly_name: 'Guestroom 1 temp'
     sensor.humidity_158d000155ca89:
       friendly_name: 'Guestroom 1 Humidity'
     sensor.temperature_158d000155c9cc:
       friendly_name: 'Consvervatory_temp'
+      extra_data_template: ${attributes.humidity}%
     sensor.humidity_158d000155c9cc:
       friendly_name: 'Consvervatory Humidity'
     binary_sensor.switch_158d000186e5cd:
