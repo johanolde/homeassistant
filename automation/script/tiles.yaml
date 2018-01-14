@@ -1,0 +1,10 @@
+switches_off:
+  sequence:
+    service: input_boolean.turn_off
+press_button:
+  sequence:
+    service: input_text.set_value
+    data:
+      entity_id: input_text.command
+    data_template:
+      value: "{{ value }}"
