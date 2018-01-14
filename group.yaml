@@ -493,7 +493,8 @@ Cameras:
 - camera.romme_1
 - camera.romme_2
 - camera.romme_3
-- camera.overwatch_cam
+- camera.cam1
+- camera.cam2
 
 #klart hit
 suncontrol:
