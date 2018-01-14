@@ -268,7 +268,7 @@ timer:
   timer:
 
 customizer:
-  custom_ui: hosted
+  custom_ui: local
 
 customize_glob:
   "*.*":
