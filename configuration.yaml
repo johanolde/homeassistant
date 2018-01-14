@@ -270,9 +270,6 @@ timer:
 customizer:
   custom_ui: local
 
-customize_glob:
-  "*.*":
-    custom_ui_state_card: state-card-custom-ui
 hue:
   bridges:
     - host: !secret hue_ip
