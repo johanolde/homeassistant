@@ -312,6 +312,8 @@ wilma:
 pantry:
 - sensor.temperature_158d00012cb38e
 - sensor.humidity_158d00012cb2f7
+- light.pantry
+- binary_sensor.door_window_sensor_158d000111edf3
 
 closet:
 - sensor.temperature_158d00012cb2f7
