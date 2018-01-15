@@ -63,8 +63,7 @@
       friendly_name: 'Energiforbrukning totalt'
 
 ### Z-wave - Temperature ----------------------------------------
-    sensor.bathroom_multisensor_temperature_10_1:
-    #Saknas - inte addad
+    sensor.bathroom_multisensor_temperature:
       friendly_name: 'Badrum-Temperature'
       icon: mdi:temperature-celsius    
     sensor.entrance_multisensor_temperature:
@@ -76,7 +75,7 @@
       icon: mdi:temperature-celsius
 
 ### Z-wave - Humidity ----------------------------------------
-    sensor.bathroom_multisensor_relative_humidity_10_5:
+    sensor.bathroom_multisensor_relative_humidity:
     #saknas inte addad
       friendly_name: 'Badrum-Luftfuktighet'
       icon: mdi:water-percent    
@@ -279,6 +278,8 @@
 
     binary_sensor.bathroom_multisensor_sensor:
       show_last_changed: true
+      extra_badge:
+        entity_id: sensor.bathroom_multisensor_temperature
     binary_sensor.entrance_multisensor_sensor:
       show_last_changed: true
 
