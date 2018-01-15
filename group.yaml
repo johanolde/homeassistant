@@ -656,6 +656,8 @@ evilautomations:
 - automation.bathroom_button_longclick
 - automation.open_blinds__sun_below_horizon
 - automation.update_available_notifications
+- automation.pantry_turn_off
+- automation.pantry_turn_on
 
 
 conservatory:
