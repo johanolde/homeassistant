@@ -282,6 +282,3 @@
     binary_sensor.entrance_multisensor_sensor:
       show_last_changed: true
 
-    #turn device trackers into badges in groups
-    "device_tracker.*":
-      state_card_mode: badges

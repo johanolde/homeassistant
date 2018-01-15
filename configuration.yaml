@@ -17,6 +17,9 @@ homeassistant:
       hidden: true
     "*.*":
       custom_ui_state_card: state-card-custom-ui
+        #turn device trackers into badges in groups
+    "device_tracker.*":
+      state_card_mode: badges
 #    "light.kitchen_*":
 #      icon: mdi:description
 #    "scene.month_*_colors":
