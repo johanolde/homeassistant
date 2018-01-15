@@ -283,5 +283,5 @@
       show_last_changed: true
 
     #turn device trackers into badges in groups
-    device_tracker.*:
+    "device_tracker.*":
       state_card_mode: badges
