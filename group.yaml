@@ -258,14 +258,10 @@ Upstairs_bath:
     - light.bathroom_showerroom_lights_level
     - sensor.bathroom_showerroom_lights_power
 
-    - sensor.bathroom_multisensor_luminance
-    - sensor.bathroom_multisensor_relative_humidity
-    - sensor.bathroom_multisensor_temperature
+#    - sensor.bathroom_multisensor_luminance
+#    - sensor.bathroom_multisensor_relative_humidity
+#    - sensor.bathroom_multisensor_temperature
     - binary_sensor.bathroom_multisensor_sensor
-#    - binary_sensor.bathroom_lights_sensor
-#    - binary_sensor.bathroom_lights_sensor_2
-#    - binary_sensor.bathroom_showerroom_lights_sensor
-#    - binary_sensor.bathroom_showerroom_lights_sensor_2
     - switch.bathroom_fan_switch
     - switch.bathroom_lights_switch
     - switch.bathroom_showerroom_lights_switch
