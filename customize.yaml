@@ -279,7 +279,11 @@
     binary_sensor.bathroom_multisensor_sensor:
       show_last_changed: true
       extra_badge:
-        entity_id: sensor.bathroom_multisensor_temperature
+        entity_id:
+          sensor.bathroom_multisensor_temperature
+          sensor.bathroom_multisensor_relative_humidity
+          sensor.bathroom_multisensor_luminance
+
     binary_sensor.entrance_multisensor_sensor:
       show_last_changed: true
 
