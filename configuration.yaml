@@ -29,7 +29,7 @@ homeassistant:
 
 
 cloud:
-
+shell_command: !include_dir_merge_named shell_commands/
 config:
 group: !include group.yaml
 zwave: !include zwave.yaml
