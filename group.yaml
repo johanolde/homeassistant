@@ -658,7 +658,7 @@ evilautomations:
 - automation.update_available_notifications
 - automation.pantry_turn_off
 - automation.pantry_turn_on
-
+- automation.generate_zwave_graph
 
 conservatory:
 - sensor.temperature_158d000155c9cc
