@@ -55,6 +55,7 @@ Basement:
     - camera.pannrums_cam
     - group.pantry
     - binary_sensor.floorplan
+    - light.basementhallway
 
 Outdoors:
   view: yes
