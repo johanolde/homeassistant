@@ -4,4 +4,7 @@
       arg: /home
     - type: memory_free
     - type: processor_use
+    - type: memory_use_percent
+    - type: swap_use
+    - type: last_boot
 
