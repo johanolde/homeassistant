@@ -91,6 +91,7 @@ Admin:
     - group.systemmonitor
     - group.battery
     - group.skarsjocore
+    - group.hassbian_server
     - switch.wake_on_lan
     - group.g1
 
