@@ -11,6 +11,7 @@
   action:
     service: homeassistant.turn_on
     entity_id: switch.entrance_lights_entrance
+    entity_id: light.basementhallway
 
 - alias: Entrance Light Timer
   initial_state: 'on'
@@ -27,3 +28,4 @@
   action:
     service: homeassistant.turn_off
     entity_id: switch.entrance_lights_entrance
+    entity_id: light.basementhallway
