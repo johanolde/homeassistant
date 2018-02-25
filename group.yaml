@@ -280,14 +280,14 @@ stairs:
 - sensor.stairs_window_light_energy
 - sensor.stairs_window_light_voltage
 - group.lights-stairs-upstairs
-- light.hall_uppe_1
-- light.hall_uppe_2
-- light.hall_uppe_3
-
-lights_stairs_upstairs:
-- light.hall_uppe_1
-- light.hall_uppe_2
-- light.hall_uppe_3
+#- light.hall_uppe_1
+#- light.hall_uppe_2
+#- light.hall_uppe_3
+#
+#lights_stairs_upstairs:
+#- light.hall_uppe_1
+#- light.hall_uppe_2
+#- light.hall_uppe_3
 
 den:
 - switch.den_window_light
