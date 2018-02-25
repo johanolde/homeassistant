@@ -649,6 +649,8 @@ skarsjocore:
 - sensor.skarsjocore_temperature_drive_2
 - sensor.skarsjocore_volume_used_volume_1
 
+hassbian_server:
+- group.systemmonitor
 
 evilautomations:
 - automation.bathroom_2018__turn_off_lights
