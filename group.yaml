@@ -245,9 +245,9 @@ livingroom:
     - script.receiver_vol_up
     - script.receiver_vol_down
     - media_player.squeezebox_classic
-#    - light.living_room_tak1
-#    - light.living_room_tak2
-#    - light.living_room_tak3
+    - light.living_room_tak1
+    - light.living_room_tak2
+    - light.living_room_tak3
 
 
 Upstairs_bath:
@@ -284,7 +284,7 @@ stairs:
 - light.hall_uppe_2
 - light.hall_uppe_3
 
-lights-stirs-upstairs:
+lights-stairs-upstairs:
 - light.hall_uppe_1
 - light.hall_uppe_2
 - light.hall_uppe_3
