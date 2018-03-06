@@ -1,0 +1,22 @@
+homeassistant:
+
+counter:
+  warning_counter:
+    name: Warnings
+    icon: mdi:alert
+
+automation:
+  - alias: Count warnings
+    trigger:
+      platform: event
+      event_type: system_log_event
+      event_data:
+        level: WARNING
+    action:
+      service: counter.increment
+      entity_id: counter.warning_counter
+
+group:
+  default_view:
+    entitites:
+      - counter.warning_counter
