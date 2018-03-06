@@ -15,7 +15,7 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
-    - counter.warning_counter
+
 
 Cams:
   icon: mdi:camcorder
@@ -97,6 +97,7 @@ Admin:
     - group.hassbian_server
     - switch.wake_on_lan
     - group.g1
+    - counter.warning_counter
 
 
 
