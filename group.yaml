@@ -15,6 +15,7 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
+    - counter.warning_counter
 
 Cams:
   icon: mdi:camcorder
@@ -86,7 +87,7 @@ Admin:
   view: yes
   icon: mdi:settings
   entities:
-#    - input_select.log_level
+    - input_select.log_level
     - group.Networking
     - group.Powerusage
     - group.AllaSwitchar

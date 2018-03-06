@@ -29,8 +29,9 @@ automation:
       data_template:
         homeassistant.components: "{{ trigger.to_state.state }}"
 
-group:
-  Admin:
-    name: Set log level
-    entitites:
-      - input_select.log_level
+# doesn't work to reuse groups.. Howto get this into an existing?
+#group:
+#  Admin:
+#    name: Set log level
+#    entitites:
+#      - input_select.log_level

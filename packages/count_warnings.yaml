@@ -16,7 +16,7 @@ automation:
       service: counter.increment
       entity_id: counter.warning_counter
 
-group:
-  default_view:
-    entitites:
-      - counter.warning_counter
+#group:
+#  default_view:
+#    entitites:
+#      - counter.warning_counter
