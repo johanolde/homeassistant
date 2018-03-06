@@ -1,5 +1,10 @@
 homeassistant:
 
+customize:
+  input_select.log_level:
+    icon: mdi:console
+    friendly_name: Set log level
+
 input_select:
   log_level:
     name: Log Level
