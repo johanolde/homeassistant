@@ -49,6 +49,8 @@ updater:
   include_used_components: true
 discovery:
 conversation:
+
+######################### LOGGING #########################
 history:
   include:
     domains:
@@ -61,8 +63,10 @@ history:
   exclude:
     entities:
       - sensor.diningroom_light_alarm_type_14_0
+
 recorder:
   db_url: !secret mysql_url
+
 logbook:
 #  include:
 #    domains:
@@ -76,9 +80,13 @@ logbook:
 #      - switch.bathroom_lights_switch_23_0
 #      - binary_sensor.bathroom_multisensor_sensor_10_0
 
-
 logger: !include logger.yaml
 
+influxdb:
+  host: !secret influxip
+  database: home_assistant
+  max_retries: 10
+######################### /LOGGING ########################
 
 sun:
 mqtt: !include mqtt.yaml
@@ -213,10 +221,6 @@ zone 2:
   radius: 250
   icon: mdi:castle
 
-influxdb:
-  host: !secret influxip
-  database: home_assistant
-  max_retries: 10
 
 script: !include scripts.yaml
 
