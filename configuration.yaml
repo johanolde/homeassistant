@@ -17,7 +17,7 @@ homeassistant:
         #turn device trackers into badges in groups
     "device_tracker.*":
       state_card_mode: badges
-    packages: !include_dir_named packages
+  packages: !include_dir_named packages
 
 
 cloud:
