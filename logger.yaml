@@ -8,18 +8,18 @@
 
 default: error
 logs:
-  homeassistant.core: error
+  homeassistant.core: debug
   homeassistant.components.automation: warn
-  homeassistant.components.climate.nest: warn
-  homeassistant.components.device_tracker: warn
+  homeassistant.components.device_tracker: debug
   homeassistant.components.discovery: warn
   homeassistant.components.http: warn
   homeassistant.components.media_player: warn
   homeassistant.components.recorder: error
-#  homeassistant.components.sensor.darksky: warn
+  homeassistant.components.sensor.darksky: warn
   homeassistant.components.zwave: warn
   homeassistant.helpers.script: info
   homeassistant.exceptions: info
   homeassistant.components.camera: critical
+  homeassistant.components.telldusd: debug
   py.warnings: error
   root: warn
