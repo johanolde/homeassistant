@@ -96,6 +96,7 @@ Admin:
     - switch.wake_on_lan
     - group.g1
     - automation.log_level
+    - input_select.log_level
 
 
 Automations:
