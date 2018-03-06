@@ -95,6 +95,7 @@ Admin:
     - group.hassbian_server
     - switch.wake_on_lan
     - group.g1
+    - automation.log_level
 
 
 Automations:
