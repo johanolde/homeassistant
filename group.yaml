@@ -86,6 +86,7 @@ Admin:
   view: yes
   icon: mdi:settings
   entities:
+    - input_select.log_level
     - group.Networking
     - group.Powerusage
     - group.AllaSwitchar
@@ -95,8 +96,7 @@ Admin:
     - group.hassbian_server
     - switch.wake_on_lan
     - group.g1
-    - automation.log_level
-    - input_select.log_level
+
 
 
 Automations:
