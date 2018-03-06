@@ -28,3 +28,9 @@ automation:
       service: logger.set_level
       data_template:
         homeassistant.components: "{{ trigger.to_state.state }}"
+
+group:
+  Admin:
+    name: Set log level
+    entitites:
+      - input_select.log_level
