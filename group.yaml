@@ -128,6 +128,7 @@ Climate:
     - group.Temperature
     - group.Humidity
     - group.Weather
+    - group.smhi
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_cloud_coverage
     - sensor.dark_sky_daily_high_apparent_temperature
