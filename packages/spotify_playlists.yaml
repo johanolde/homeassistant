@@ -46,7 +46,7 @@ input_select:
       - Downstairs
       - Upstairs
       - Whole House
-    initial: All Home Speakers
+    initial: Downstairs
     icon: mdi:speaker-wireless
 
 script:
