@@ -16,6 +16,7 @@ default_view:
     - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
     - media_player.spotify
+    - group.music_spotify
 
 
 Cams:
