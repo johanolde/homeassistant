@@ -1,0 +1,63 @@
+homeassistant:
+  customize:
+    binary_sensor.motion_sensor_158d00010a9ef1:
+      friendly_name: Den Motion Sensor
+
+automation:
+  - alias: "Den motion light on"
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d00010a9ef1
+      to: 'on'
+    condition:
+      - condition: numeric_state
+        entity_id: sun.sun
+        value_template: '{{ state.attributes.elevation }}'
+        below: 3.5
+    action:
+      - service: homeassistant.turn_on
+        entity_id: light.denceiling
+
+  #- alias: "Den music on"
+  #  initial_state: 'on'
+  #  trigger:
+  #    platform: state
+  #    entity_id: binary_sensor.motion_sensor_158d00010a9ef1
+  #    to: 'on'
+  #  action:
+  #    - service: media_player.media_play_pause
+  #      data:
+  #        entity_id: media_player.office_squeezeplay
+
+  - alias: "Den motion light off"
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_158d00010a9ef1
+      to: 'off'
+      for:
+        minutes: 5
+    condition:
+    - condition: state
+      entity_id: light.denceiling
+      state: 'on'
+    action:
+      - service: homeassistant.turn_off
+        entity_id: light.denceiling
+      - service: media_player.media_stop
+        data:
+          entity_id: media_player.office_squeezeplay
+
+  #- alias: "Den music off"
+  #  initial_state: 'on'
+  #  trigger:
+  #    platform: state
+  #    entity_id: binary_sensor.motion_sensor_158d00010a9ef1
+  #    to: 'off'
+  #    for:
+  #      minutes: 5
+  #  action:
+  #    - service: media_player.media_play_pause
+  #      data:
+  #        entity_id: media_player.office_squeezeplay

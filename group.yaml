@@ -15,6 +15,7 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.nibe_1255_kitchen_temp
     - sensor.energy_usage
+    - media_player.spotify
 
 
 Cams:

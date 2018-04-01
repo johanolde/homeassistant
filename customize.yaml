@@ -162,8 +162,6 @@
     sensor.humidity_158d00010678df:
       friendly_name: 'Shower room Humidity'
       icon: mdi:water-percent
-    binary_sensor.motion_sensor_158d00010a9ef1:
-      friendly_name: 'Den Motion sensor'
     binary_sensor.door_window_sensor_158d00013fd5b4:
       friendly_name: 'Kitchen door'
       sensor_class: opening
