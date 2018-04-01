@@ -1,0 +1,96 @@
+group:
+    music_spotify:
+      name: Music
+      entities:
+      - input_select.spotify_playlist
+      - input_select.spotify_source
+      - script.spotify_music
+      - input_number.spotify_volume
+
+#Use this to find aliases for your spotify media_player component (in your configuration.yaml file).  Look at home-assistant.log to find the aliases of your components.  Enter these aliases into that component in configuration.yaml.
+# https://home-assistant.io/components/media_player.spotify/
+logger:
+    default: warning
+    logs:
+        homeassistant.components.media_player.spotify: info
+
+homeassistant:
+  customize:
+    script.spotify_music:
+      friendly_name: 'Play'
+      icon: mdi:play
+
+input_number:
+  spotify_volume:
+    name: Volume
+    icon: mdi:volume-high
+    min: 0
+    max: 1
+    step: 0.05
+
+input_select:
+  spotify_playlist:
+    name: 'Playlist:'
+    options:
+      - Your Favorite Coffehouse
+      - Morning Commute
+      - Cinematic Chill-Out
+      - FUTURESYNTH
+      - From a Smokey Bar
+      - Piano in the Background
+    initial: Your Favorite Coffehouse
+    icon: mdi:spotify
+  spotify_source:
+    name: 'Source:'
+    options:
+      - All Home Speakers
+      - Bedroom Speakers
+      - Livingroom Speakers
+      - Kitchen Speakers
+      - Bathroom Speakers
+      - PS4-353
+    initial: All Home Speakers
+    icon: mdi:speaker-wireless
+
+script:
+    spotify_music:
+    #alias: Play selected spotify playlist
+        sequence:
+          - service: media_player.volume_set
+            data:
+              entity_id: media_player.spotify
+              volume_level: '0.40'
+          -  service: media_player.select_source
+             data_template:
+               entity_id: media_player.spotify
+               source: >
+                {% if is_state("input_select.spotify_source", "All Home Speakers") %} All Home Speakers
+                {% elif is_state("input_select.spotify_source", "Bedroom Speakers") %} Bedroom Speakers
+                {% elif is_state("input_select.spotify_source", "Livingroom Speakers") %} Livingroom Speakers
+                {% elif is_state("input_select.spotify_source", "Kitchen Speakers") %} Kitchen Speakers
+                {% elif is_state("input_select.spotify_source", "Bathroom Speakers") %} Bathroom Speakers
+                {% elif is_state("input_select.spotify_source", "PS4-353") %} PS4-353
+                {% endif %}
+          -  service: media_player.play_media
+             data_template:
+               entity_id: media_player.spotify
+               media_content_type: playlist
+               media_content_id: >
+                {% if is_state("input_select.spotify_playlist", "Morning Commute") %} spotify:user:spotify:playlist:37i9dQZF1DX2MyUCsl25eb
+                {% elif is_state("input_select.spotify_playlist", "Cinematic Chill-Out") %} spotify:user:spotify:playlist:37i9dQZF1DWVFJtzvDHN4L
+                {% elif is_state("input_select.spotify_playlist", "FUTURESYNTH") %} spotify:user:12131571557:playlist:2JgjNysZhksrtRjuGbbWns
+                {% elif is_state("input_select.spotify_playlist", "From a Smokey Bar") %} spotify:user:spotify:playlist:37i9dQZF1DWTlzJXLRpd4a
+                {% elif is_state("input_select.spotify_playlist", "Piano in the Background") %} spotify:user:spotify:playlist:37i9dQZF1DX7K31D69s4M1
+                {% elif is_state("input_select.spotify_playlist", "Your Favorite Coffehouse") %} spotify:user:spotify:playlist:37i9dQZF1DX6ziVCJnEm59
+                {% endif %}
+
+automation:
+  - alias: 'Set Spotify Volume'
+    trigger:
+        platform: state
+        entity_id: input_number.spotify_volume
+    action:
+        service: media_player.volume_set
+        data_template:
+          entity_id: media_player.spotify
+          volume_level: '{{  states.input_number.spotify_volume.state  }}'
