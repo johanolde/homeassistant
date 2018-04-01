@@ -76,6 +76,9 @@ script:
                 {% elif is_state("input_select.spotify_playlist", "From a Smokey Bar") %} spotify:user:spotify:playlist:37i9dQZF1DWTlzJXLRpd4a
                 {% elif is_state("input_select.spotify_playlist", "Piano in the Background") %} spotify:user:spotify:playlist:37i9dQZF1DX7K31D69s4M1
                 {% elif is_state("input_select.spotify_playlist", "Your Favorite Coffehouse") %} spotify:user:spotify:playlist:37i9dQZF1DX6ziVCJnEm59
+                {% elif is_state("input_select.spotify_playlist", "Dalecarlia Music Festival") %} spotify:user:johanolde:playlist:7jqslSYSRArxHe3a2HPbiu
+                {% elif is_state("input_select.spotify_playlist", "Country 2017") %} spotify:user:lizoft:playlist:4RQ9oVtQ68VCGWN6z0jkoC
+                {% elif is_state("input_select.spotify_playlist", "Country 2017") %} spotify:user:johanolde:playlist:3m39dvJcTIIJoVIFrOddfV
                 {% endif %}
 
 automation:
