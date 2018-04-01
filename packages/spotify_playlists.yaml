@@ -43,12 +43,9 @@ input_select:
   spotify_source:
     name: 'Source:'
     options:
-      - All Home Speakers
-      - Bedroom Speakers
-      - Livingroom Speakers
-      - Kitchen Speakers
-      - Bathroom Speakers
-      - PS4-353
+      - Downstairs
+      - Upstairs
+      - Whole House
     initial: All Home Speakers
     icon: mdi:speaker-wireless
 
@@ -64,12 +61,9 @@ script:
              data_template:
                entity_id: media_player.spotify
                source: >
-                {% if is_state("input_select.spotify_source", "All Home Speakers") %} All Home Speakers
-                {% elif is_state("input_select.spotify_source", "Bedroom Speakers") %} Bedroom Speakers
-                {% elif is_state("input_select.spotify_source", "Livingroom Speakers") %} Livingroom Speakers
-                {% elif is_state("input_select.spotify_source", "Kitchen Speakers") %} Kitchen Speakers
-                {% elif is_state("input_select.spotify_source", "Bathroom Speakers") %} Bathroom Speakers
-                {% elif is_state("input_select.spotify_source", "PS4-353") %} PS4-353
+                {% if is_state("input_select.spotify_source", "Downstairs") %} Downstairs
+                {% elif is_state("input_select.spotify_source", "Upstairs") %} Upstairs
+                {% elif is_state("input_select.spotify_source", "Whole House") %} Whole House
                 {% endif %}
           -  service: media_player.play_media
              data_template:
