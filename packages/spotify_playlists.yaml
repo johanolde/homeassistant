@@ -38,7 +38,10 @@ input_select:
       - FUTURESYNTH
       - From a Smokey Bar
       - Piano in the Background
-    initial: Your Favorite Coffehouse
+      - Dalecarlia Music Festival
+      - Counrty 2017
+      - Favorites
+    initial: Favorites
     icon: mdi:spotify
   spotify_source:
     name: 'Source:'
@@ -78,7 +81,7 @@ script:
                 {% elif is_state("input_select.spotify_playlist", "Your Favorite Coffehouse") %} spotify:user:spotify:playlist:37i9dQZF1DX6ziVCJnEm59
                 {% elif is_state("input_select.spotify_playlist", "Dalecarlia Music Festival") %} spotify:user:johanolde:playlist:7jqslSYSRArxHe3a2HPbiu
                 {% elif is_state("input_select.spotify_playlist", "Country 2017") %} spotify:user:lizoft:playlist:4RQ9oVtQ68VCGWN6z0jkoC
-                {% elif is_state("input_select.spotify_playlist", "Country 2017") %} spotify:user:johanolde:playlist:3m39dvJcTIIJoVIFrOddfV
+                {% elif is_state("input_select.spotify_playlist", "Favorites") %} spotify:user:johanolde:playlist:3m39dvJcTIIJoVIFrOddfV
                 {% endif %}
 
 automation:
