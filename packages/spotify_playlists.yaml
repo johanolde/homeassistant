@@ -10,7 +10,7 @@ group:
 #Use this to find aliases for your spotify media_player component (in your configuration.yaml file).  Look at home-assistant.log to find the aliases of your components.  Enter these aliases into that component in configuration.yaml.
 # https://home-assistant.io/components/media_player.spotify/
 logger:
-    default: warning
+#    default: warning
     logs:
         homeassistant.components.media_player.spotify: info
 
