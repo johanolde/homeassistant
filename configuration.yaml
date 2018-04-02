@@ -135,7 +135,7 @@ switch:
   - platform: broadlink
     host: 10.11.12.23
     mac: '34:ea:34:b2:f7:fd'
-    type:rm_mini
+    type: rm_mini
     switches:
       livingroom_receiver_power:
         command_on: 'JgCQAAABGIoTMhASETQTDxIREjMSEBMyEBIRNBMQEDUSMhESEDUSEBERExAQNRIzEjITEBMQERERNBIzEBIRERIREDUSMxIyEwADcgABFYwSMxIRETQQEw8TEDUSEBE0EBISMxIRETMSMxMQETMSERERERIQNRIzEzESEREREhERNBIzEBITEBATDzUQNRMyEgANBQAAAAAAAAAA'
