@@ -36,6 +36,10 @@ frontend:
 http:
   api_password: !secret http_password
   base_url: http://localhost:8123
+  cors_allowed_origins:
+    - https://reformedreality.com
+    - http://reformedreality.com
+
 
 #emulated_hue:
 #  type: alexa
