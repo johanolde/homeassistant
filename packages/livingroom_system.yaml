@@ -1,4 +1,3 @@
-homeassistant:
 
 group:
     Pioneer_Receiver:
@@ -7,10 +6,12 @@ group:
       - switch.pioneer_reciever_power
       - switch.pioneer_reciever_squeezebox
 
+homeassistant:
+
 switch:
   - platform: broadlink
     host: 10.11.12.23
-    mac: '34:ea:34:b2:f7:fd'it
+    mac: '34:ea:34:b2:f7:fd'
 #    type: rm_mini
     switches:
       livingroom_receiver_power:
