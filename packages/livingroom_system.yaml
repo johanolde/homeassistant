@@ -4,7 +4,10 @@ group:
       name: Livingroom Receiver
       entities:
       - switch.pioneer_reciever_power
+      - switch.pioneer_reciever_apple_tv
       - switch.pioneer_reciever_squeezebox
+      - switch.pioneer_reciever_volume_up
+      - switch.pioneer_reciever_volume_down
 
 homeassistant:
 

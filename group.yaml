@@ -37,6 +37,7 @@ Upstairs:
     - group.stairs
     - group.closet
     - group.dressingroom
+    - group.pioneer_receiver
 
 
 Downstairs:
@@ -162,6 +163,7 @@ Media-players:
   view: yes
   icon: mdi:music-circle
   entities:
+    - group.pioneer_receiver
     - media_player.apple_tv
     - media_player.macbook_squeezeplay
     - media_player.max2play
