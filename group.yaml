@@ -685,6 +685,8 @@ evilautomations:
 - automation.pantry_turn_on
 - automation.generate_zwave_graph
 - automation.restart_ha_nightly
+- automation.count_warnings
+- automation.log_level
 
 conservatory:
 - sensor.temperature_158d000155c9cc
