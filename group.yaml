@@ -14,7 +14,7 @@ default_view:
     - sensor.nibe_1255_avg_outdoor_temp
     - sensor.yr_wind_speed
     - sensor.nibe_1255_kitchen_temp
-    - sensor.energy_usage
+    - sensor.efergy_555610
     - media_player.spotify
     - group.music_spotify
 
