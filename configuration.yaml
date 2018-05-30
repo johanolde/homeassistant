@@ -12,11 +12,11 @@ homeassistant:
   customize_glob:
     "automation.disabled*":
       hidden: true
-    "*.*":
-      custom_ui_state_card: state-card-custom-ui
+#    "*.*":
+#      custom_ui_state_card: state-card-custom-ui
         #turn device trackers into badges in groups
-    "device_tracker.*":
-      state_card_mode: badges
+#    "device_tracker.*":
+#      state_card_mode: badges
   packages: !include_dir_named packages
 
 
@@ -230,8 +230,8 @@ script: !include scripts.yaml
 timer:
   timer:
 
-customizer:
-  custom_ui: local
+#customizer:
+#  custom_ui: local
 
 hue:
   bridges:
