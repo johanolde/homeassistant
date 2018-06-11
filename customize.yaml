@@ -274,15 +274,15 @@
 #      state_card_mode: break-slider
 #      stretch_slider: true
 
-    binary_sensor.bathroom_multisensor_sensor:
-      show_last_changed: true
-      extra_badge:
-        entity_id:
+#    binary_sensor.bathroom_multisensor_sensor:
+#      show_last_changed: true
+#      extra_badge:
+#        entity_id:
           sensor.bathroom_multisensor_temperature
 #          sensor.bathroom_multisensor_relative_humidity
 #          sensor.bathroom_multisensor_luminance
 # Not working - verkar inte gå att ha flera? eller fel syntax ovan. gör om
 
-    binary_sensor.entrance_multisensor_sensor:
-      show_last_changed: true
+#    binary_sensor.entrance_multisensor_sensor:
+#      show_last_changed: true
 
