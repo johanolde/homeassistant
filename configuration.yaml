@@ -229,7 +229,7 @@ script: !include scripts.yaml
 
 timer:
   timer:
-a
+
 #customizer:
 #  custom_ui: local
 
