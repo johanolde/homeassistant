@@ -35,7 +35,7 @@ frontend:
 
 http:
   api_password: !secret http_password
-  base_url: http://localhost:8123
+#  base_url: http://localhost:8123
   cors_allowed_origins:
     - https://reformedreality.com
     - http://reformedreality.com
@@ -229,7 +229,7 @@ script: !include scripts.yaml
 
 timer:
   timer:
-
+a
 #customizer:
 #  custom_ui: local
 
