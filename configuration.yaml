@@ -227,8 +227,8 @@ script: !include scripts.yaml
 #    url_path: floorplan
 #    config: !include floorplan.yaml
 
-timer:
-  timer:
+#timer:
+#  timer:
 
 #customizer:
 #  custom_ui: local
