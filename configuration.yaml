@@ -69,7 +69,7 @@ history:
       - sensor.diningroom_light_alarm_type_14_0
 
 recorder:
-  db_url: !secret mysql_url
+#  db_url: !secret mysql_url
 
 logbook:
 #  include:
