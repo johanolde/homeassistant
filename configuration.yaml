@@ -31,7 +31,8 @@ sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
 
 frontend:
-  javascript_version: latest
+#  javascript_version: latest
+# not needed anymore
 
 http:
   api_password: !secret http_password
@@ -61,7 +62,8 @@ discovery:
 #    - yeelight
 #    - xiaomi_gw
 
-conversation:
+#conversation:
+#never used, disabled to minimize problems
 
 ######################### LOGGING #########################
 history:
@@ -143,6 +145,7 @@ scene: !include_dir_list scenes
 #tellstick:
 #  signal_repetitions: 5
 
+
 switch:
   - platform: tellstick
   - platform: wake_on_lan
@@ -151,6 +154,7 @@ switch:
 
 
 #battery_state:
+#custom untested component - disabled to resolve possible problems
 
 notify:
   - name: slack
@@ -172,11 +176,12 @@ notify:
     name: livingroom_tv
     filename: webostv.conf
 
-telegram_bot:
-  platform: polling
-  api_key: !secret telegram_api
-  allowed_chat_ids:
-    - !secret telegram_chatid
+#telegram_bot:
+#  platform: polling
+#  api_key: !secret telegram_api
+#  allowed_chat_ids:
+#    - !secret telegram_chatid
+#presently not used
 
 media_player:
   - platform: squeezebox
@@ -194,11 +199,12 @@ media_player:
 
 #apple_tv: !include apple_tv.yaml
 
-tts:
-  - platform: google
-    cache: true
-    cache_dir: /tmp/tts
-    time_memory: 300
+#tts:
+#  - platform: google
+#    cache: true
+#    cache_dir: /tmp/tts
+#    time_memory: 300
+# Not used at the moment
 
 xiaomi_aqara:
   gateways:
