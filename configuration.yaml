@@ -128,12 +128,12 @@ light:
     devices:
       !secret yeelight3_ip:
         name: Den.Ceiling
-      !secret yeelight2_ip:
-        name: Bathroom.shower
-      !secret yeelight4_ip:
-        name: Showerroom.shower
-      !secret yeelight1_ip:
-        name: Showerroom
+#      !secret yeelight2_ip:
+#        name: Bathroom.shower
+#      !secret yeelight4_ip:
+#        name: Showerroom.shower
+#      !secret yeelight1_ip:
+#        name: Showerroom
       !secret yeelight5_ip:
         name: Pantry
       !secret yeelight_strip_ip:
