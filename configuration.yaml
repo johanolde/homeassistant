@@ -150,7 +150,7 @@ switch:
     host: !secret office_host
 
 
-battery_state:
+#battery_state:
 
 notify:
   - name: slack
