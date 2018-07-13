@@ -51,7 +51,7 @@ http:
 #    - light
 updater:
   include_used_components: true
-#discovery:
+discovery:
 #  ignore:
 #    - axis
 #    - ikea_tradfri
@@ -140,8 +140,8 @@ light:
 
 scene: !include_dir_list scenes
 
-tellstick:
-  signal_repetitions: 5
+#tellstick:
+#  signal_repetitions: 5
 
 switch:
   - platform: tellstick
@@ -192,7 +192,7 @@ media_player:
     name: Livingroom TV
     filename: webostv.conf
 
-apple_tv: !include apple_tv.yaml
+#apple_tv: !include apple_tv.yaml
 
 tts:
   - platform: google
@@ -242,6 +242,6 @@ script: !include scripts.yaml
 #customizer:
 #  custom_ui: local
 
-hue:
-  bridges:
-    - host: !secret hue_ip
+#hue:
+#  bridges:
+#    - host: !secret hue_ip
