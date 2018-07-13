@@ -161,13 +161,13 @@ notify:
     platform: slack
     api_key: !secret slack_api
     default_channel: '#skarsjo'
-  - name: pushbullet
-    platform: pushbullet
-    api_key: !secret pushbullet_api
-  - name: telegram
-    platform: telegram
-    api_key: !secret telegram_api
-    chat_id: !secret telegram_chatid
+#  - name: pushbullet
+#    platform: pushbullet
+#    api_key: !secret pushbullet_api
+#  - name: telegram
+#    platform: telegram
+#    api_key: !secret telegram_api
+#    chat_id: !secret telegram_chatid
   - name: iOSApp
     platform: ios
     target: !secret ios_token
