@@ -112,9 +112,9 @@ device_tracker:
     track_new_devices: no
     consider_home: 1800
     interval_seconds: 30
-  - platform: trackr
-    username: !secret email
-    password: !secret trackr_pw
+#  - platform: trackr
+#    username: !secret email
+#    password: !secret trackr_pw
 
 panel_iframe: !include panel_iframe.yaml
 
