@@ -11,7 +11,7 @@ default_view:
     - sensor.yr_temperature
     - sensor.nibe_11920_40004
     - sensor.temperature_158d000155c9cc
-    - sensor.nibe_1255_avg_outdoor_temp
+    - sensor.nibe_11920_40067
     - sensor.yr_wind_speed
     - sensor.nibe_11920_40033
     - sensor.efergy_555610
@@ -72,7 +72,7 @@ Outdoors:
     - group.outside
     - camera.axis00408cad45972local
     - sensor.nibe_11920_40004
-    - sensor.nibe_1255_avg_outdoor_temp
+    - sensor.nibe_11920_40067
     - sensor.temperature_158d000155c9cc
     - group.conservatory
     - group.bbqhut
