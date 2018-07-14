@@ -9,11 +9,11 @@ default_view:
     - group.cameras_home
     - group.family
     - sensor.yr_temperature
-    - sensor.nibe_1255_outdoor_temp
+    - sensor.nibe_11920_40004
     - sensor.temperature_158d000155c9cc
     - sensor.nibe_1255_avg_outdoor_temp
     - sensor.yr_wind_speed
-    - sensor.nibe_1255_kitchen_temp
+    - sensor.nibe_11920_40033
     - sensor.efergy_555610
     - media_player.spotify
     - group.music_spotify
@@ -71,7 +71,7 @@ Outdoors:
     - group.mower
     - group.outside
     - camera.axis00408cad45972local
-    - sensor.nibe_1255_outdoor_temp
+    - sensor.nibe_11920_40004
     - sensor.nibe_1255_avg_outdoor_temp
     - sensor.temperature_158d000155c9cc
     - group.conservatory
@@ -181,14 +181,21 @@ Heating:
   view: yes
   icon: mdi:fan
   entities:
-    - sensor.nibe_1255_avg_outdoor_temp
-    - sensor.nibe_1255_degree_minutes
-    - sensor.nibe_1255_hot_gas
-    - sensor.nibe_1255_hot_water_charging
-    - sensor.nibe_1255_kitchen_temp
-    - sensor.nibe_1255_liquid_line
-    - sensor.nibe_1255_outdoor_temp
-    - sensor.nibe_1255_return_temp
+    - sensor.nibe_11920_40067
+    - sensor.nibe_11920_40008
+    - sensor.nibe_11920_40012
+    - sensor.nibe_11920_40013
+    - sensor.nibe_11920_40033
+    - sensor.nibe_11920_40014
+    - sensor.nibe_11920_40004
+    - sensor.nibe_11920_40015
+    - sensor.nibe_11920_40016
+    - sensor.nibe_11920_40017
+    - sensor.nibe_11920_40018
+    - sensor.nibe_11920_40019
+    - sensor.nibe_11920_40022
+    - sensor.nibe_11920_40033
+    - sensor.nibe_11920_43416
 
 ###########################################################
 ## Groups
@@ -234,7 +241,7 @@ kitchen:
     - switch.kitchenwindowsouth
     - binary_sensor.door_window_sensor_158d00013fd5b4
     - binary_sensor.cube_158d0001104272
-    - sensor.nibe_1255_kitchen_temp
+    - sensor.nibe_11920_40033
     - binary_sensor.water_leak_sensor_158d0001d76674
 
 livingroom:
@@ -378,10 +385,9 @@ Temperature:
     - sensor.temperature_158d00010678df
     - sensor.temperature_158d00012cb38e
     - sensor.temperature_158d00012cb2f7
-    - sensor.nibe_1255_kitchen_temp
-    - sensor.nibe_1255_avg_outdoor_temp
-    - sensor.nibe_1255_outdoor_temp
-
+    - sensor.nibe_11920_40033
+    - sensor.nibe_11920_40067
+    - sensor.nibe_11920_40004
 Humidity:
   entities:
     - sensor.entrance_multisensor_relative_humidity
