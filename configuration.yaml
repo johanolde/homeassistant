@@ -251,3 +251,35 @@ script: !include scripts.yaml
 #hue:
 #  bridges:
 #    - host: !secret hue_ip
+
+nibe:
+    client_id: !secret nibe_client_id
+    client_secret: !secret nibe_client_secret
+    redirect_uri: !secret nibe_redirect_uri
+    writeaccess: false # set to true to support climate write (needs new tokens)
+
+    systems:
+        # required system identifier
+        - system: Nibe 1250
+
+          # list of units to retrieve data for
+          units:
+              # unit to retrieve data for (0 is the master unit and should always exist)
+            - unit: 0
+
+              # retrieve categories, leave empty for all, remove tag for none
+              categories:
+              #  - <identifer>  # category identifier like 'SYSTEM_1'
+              #  - <identifer>
+
+              # retrieve status parameters, remove tag for none
+              statuses:
+
+              # optional list of additional parameters to retrieve, can be done here or on the sensor platform
+              #sensors:
+              #  - <parameter identifier>
+              #  - <parameter identifier>
+
+              # optional list of switches (note, for ability to change, you need to use writeaccess and have payed license)
+              #switches:
+              #  - hot_water_boost
