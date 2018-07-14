@@ -260,7 +260,7 @@ nibe:
 
     systems:
         # required system identifier
-        - system: Nibe 1250
+        - system: 0
 
           # list of units to retrieve data for
           units:
