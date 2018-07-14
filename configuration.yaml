@@ -176,12 +176,11 @@ notify:
     name: livingroom_tv
     filename: webostv.conf
 
-#telegram_bot:
-#  platform: polling
-#  api_key: !secret telegram_api
-#  allowed_chat_ids:
-#    - !secret telegram_chatid
-#presently not used
+telegram_bot:
+  platform: polling
+  api_key: !secret telegram_api
+  allowed_chat_ids:
+    - !secret telegram_chatid
 
 media_player:
   - platform: squeezebox
