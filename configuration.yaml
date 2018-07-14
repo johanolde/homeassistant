@@ -260,7 +260,7 @@ nibe:
 
     systems:
         # required system identifier
-        - system: 0
+        - system: 11920
 
           # list of units to retrieve data for
           units:
