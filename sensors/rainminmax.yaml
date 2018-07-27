@@ -1,0 +1,4 @@
+- platform: min_max
+  name: Rain-min-max
+  entity_ids:
+    - sensor.popp_popp_zrain_rain_sensor_rain_rate

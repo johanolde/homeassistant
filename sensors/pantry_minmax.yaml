@@ -1,0 +1,4 @@
+- platform: min_max
+  name: Pantry-min-max
+  entity_ids:
+    - sensor.temperature_158d00012cb38e

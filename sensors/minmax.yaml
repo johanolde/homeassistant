@@ -1,7 +1,0 @@
-- platform: min_max
-  entity_ids:
-    - sensor.popp_popp_zrain_rain_sensor_rain_rate
-    - sensor.temperature_158d00010678df
-    - sensor.temperature_158d00012cb2f7
-    - sensor.temperature_158d00012cb38e
-    - sensor.temperature_158000155c9cc

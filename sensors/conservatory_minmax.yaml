@@ -1,0 +1,4 @@
+- platform: min_max
+  name: Conservatory-min-max
+  entity_ids:
+    - sensor.temperature_158000155c9cc
