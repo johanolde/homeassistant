@@ -1,0 +1,4 @@
+- platform: statistics
+  entity_id: sensor.popp_popp_zrain_rain_sensor_rain_rate
+- platform: statistics
+  entity_id: sensor.popp_popp_zrain_rain_sensor_water
