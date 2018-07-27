@@ -15,6 +15,7 @@ default_view:
     - sensor.yr_wind_speed
     - sensor.nibe_11920_40033
     - sensor.efergy_555610
+    - group.rain
     - media_player.spotify
     - group.music_spotify
 
@@ -365,6 +366,14 @@ family:
     - device_tracker.wilma_iphone
     - device_tracker.fanny_iphone
     - device_tracker.kim
+
+Rain:
+  name: "Regnmätare"
+    - sensor.popp_popp_zrain_rain_sensor_water
+    - sensor.popp_popp_zrain_rain_sensor_rain_rate
+    - sensor.popp_popp_zrain_rain_sensor_general
+    - sensor.popp_popp_zrain_rain_sensor_exporting
+    - binary_sensor.popp_popp_zrain_rain_sensor_sensor
 
 Networking:
   entities:
