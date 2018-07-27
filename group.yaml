@@ -369,6 +369,7 @@ family:
 
 Rain:
   name: "Regnmätare"
+  entities:
     - sensor.popp_popp_zrain_rain_sensor_water
     - sensor.popp_popp_zrain_rain_sensor_rain_rate
     - sensor.popp_popp_zrain_rain_sensor_general
