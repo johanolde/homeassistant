@@ -1,10 +1,16 @@
 - platform: darksky
-  api_key: bf1180c4bae919256dd6828bc1cf13a1
+  api_key: !secret darksky
+  forecast:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
   monitored_conditions:
-#    - summary
+    - summary
     - icon
     - nearest_storm_distance
-#    - nearest_storm_bearing
+    - nearest_storm_bearing
     - precip_type
     - precip_intensity
     - precip_probability
@@ -21,8 +27,8 @@
 #    - minutely_summary
     - hourly_summary
     - daily_summary
-#    - temperature_max
-#    - temperature_min
+    - temperature_max
+    - temperature_min
 #    - apparent_temperature_max
 #    - apparent_temperature_min
     - precip_intensity_max
