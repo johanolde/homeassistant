@@ -104,6 +104,9 @@ influxdb:
 ######################### /LOGGING ########################
 
 sun:
+weather:
+  - platform: darksky
+    api_key: !secret darksky
 mqtt: !include mqtt.yaml
 
 device_tracker:
