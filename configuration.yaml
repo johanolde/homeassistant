@@ -145,8 +145,9 @@ light:
 
 scene: !include_dir_list scenes
 
-#tellstick:
-#  signal_repetitions: 5
+tellstick:
+    host: core-tellstick
+    port: [50800, 50801]
 
 
 switch:
