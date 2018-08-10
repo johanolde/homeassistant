@@ -1,12 +1,12 @@
 - platform: mqtt
-  name: "Temperature"
+  name: "Temperature ESSD"
   state_topic: "/airport/temperature"
 - platform: mqtt
-  name: "Windspeed"
+  name: "Windspeed ESSD"
   state_topic: "/airport/windspeed"
 - platform: mqtt
-  name: "Windgust"
+  name: "Windgust ESSD"
   state_topic: "/airport/windgust"
 - platform: mqtt
-  name: "Winddirection"
+  name: "Winddirection ESSD"
   state_topic: "/airport/winddirection"
