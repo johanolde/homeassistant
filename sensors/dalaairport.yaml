@@ -1,12 +1,16 @@
 - platform: mqtt
   name: "Temperature ESSD"
+  unit_of_measurement: "°C"
   state_topic: "/airport/temperature"
 - platform: mqtt
   name: "Windspeed ESSD"
+  unit_of_measurement: "m/s"
   state_topic: "/airport/windspeed"
 - platform: mqtt
   name: "Windgust ESSD"
+  unit_of_measurement: "m/s"
   state_topic: "/airport/windgust"
 - platform: mqtt
   name: "Winddirection ESSD"
+  unit_of_measurement: "Degrees"
   state_topic: "/airport/winddirection"
