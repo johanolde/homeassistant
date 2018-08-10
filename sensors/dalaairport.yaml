@@ -4,9 +4,9 @@
 - platform: mqtt
   name: "Windspeed"
   state_topic: "/airport/windspeed"
-  - platform: mqtt
+- platform: mqtt
   name: "Windgust"
   state_topic: "/airport/windgust"
-  - platform: mqtt
+- platform: mqtt
   name: "Winddirection"
   state_topic: "/airport/winddirection"
