@@ -201,6 +201,7 @@ media_player:
     filename: webostv.conf
   - platform: dlna_dmr
     url: http://10.11.12.42/dmr
+    name: TV Living room
 
 #apple_tv: !include apple_tv.yaml
 
