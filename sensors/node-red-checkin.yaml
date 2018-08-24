@@ -1,0 +1,4 @@
+- platform: mqtt
+  name: "Node RED"
+  state_topic: "checkIn/nodeRED"
+  expire_after: 300

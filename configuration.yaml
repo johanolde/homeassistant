@@ -36,6 +36,7 @@ frontend:
 
 http:
   api_password: !secret http_password
+
 #  base_url: http://localhost:8123
   cors_allowed_origins:
     - https://reformedreality.com
@@ -289,3 +290,7 @@ nibe:
               # optional list of switches (note, for ability to change, you need to use writeaccess and have payed license)
               #switches:
               #  - hot_water_boost
+input_boolean:
+  node_red:
+    name: Node Red Watchdog
+    initial: on
