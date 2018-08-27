@@ -12,11 +12,7 @@ homeassistant:
   customize_glob:
     "automation.disabled*":
       hidden: true
-#    "*.*":
-#      custom_ui_state_card: state-card-custom-ui
-        #turn device trackers into badges in groups
-#    "device_tracker.*":
-#      state_card_mode: badges
+
   packages: !include_dir_named packages
 
 
@@ -31,40 +27,21 @@ sensor: !include_dir_merge_list sensors
 camera: !include cameras.yaml
 
 frontend:
-#  javascript_version: latest
-# not needed anymore
+
 
 http:
   api_password: !secret http_password
 
-#  base_url: http://localhost:8123
+
   cors_allowed_origins:
     - https://reformedreality.com
     - http://reformedreality.com
 
 
-#emulated_hue:
-#  type: alexa
-#  host_ip: !secret ha_ip
-#  listen_port: 8300
-#  expose_by_default: true
-#  exposed_domains:
-#    - scene
-#    - light
+
 updater:
   include_used_components: true
 discovery:
-#  ignore:
-#    - axis
-#    - ikea_tradfri
-#    - logitech_mediaserver
-#    - philips_hue
-#    - plex_mediaserver
-#    - yeelight
-#    - xiaomi_gw
-
-#conversation:
-#never used, disabled to minimize problems
 
 ######################### LOGGING #########################
 history:
@@ -156,8 +133,6 @@ switch:
     host: !secret office_host
 
 
-battery_state:
-
 
 notify:
   - name: slack
@@ -182,7 +157,6 @@ media_player:
   - platform: squeezebox
     host: !secret squeezebox_ip
     port: 9000
-  - platform: plex
   - platform: spotify
     client_id: !secret spot_id
     client_secret: !secret spot_pass
@@ -191,12 +165,6 @@ media_player:
     mac: !secret lg_mac
     name: Livingroom TV
     filename: webostv.conf
-  - platform: dlna_dmr
-    url: http://10.11.12.42/dmr
-    name: TV Living room
-
-#apple_tv: !include apple_tv.yaml
-
 
 xiaomi_aqara:
   gateways:
