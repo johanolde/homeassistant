@@ -116,13 +116,11 @@ device_tracker:
     track_new_devices: no
     consider_home: 1800
     interval_seconds: 30
-#  - platform: trackr
-#    username: !secret email
-#    password: !secret trackr_pw
+
 
 panel_iframe: !include panel_iframe.yaml
 
-# Remove automation-editor automations. automation: !include automations.yaml
+automation: !include automations.yaml
 automation old: !include_dir_merge_list automation/
 
 light:
@@ -132,12 +130,12 @@ light:
     devices:
       !secret yeelight3_ip:
         name: Den.Ceiling
-#      !secret yeelight2_ip:
-#        name: Bathroom.shower
-#      !secret yeelight4_ip:
-#        name: Showerroom.shower
-#      !secret yeelight1_ip:
-#        name: Showerroom
+      !secret yeelight2_ip:
+        name: Bathroom.shower
+      !secret yeelight4_ip:
+        name: Showerroom.shower
+      !secret yeelight1_ip:
+        name: Showerroom
       !secret yeelight5_ip:
         name: Pantry
       !secret yeelight_strip_ip:
@@ -158,21 +156,14 @@ switch:
     host: !secret office_host
 
 
-#battery_state:
-#custom untested component - disabled to resolve possible problems
+battery_state:
+
 
 notify:
   - name: slack
     platform: slack
     api_key: !secret slack_api
     default_channel: '#skarsjo'
-#  - name: pushbullet
-#    platform: pushbullet
-#    api_key: !secret pushbullet_api
-#  - name: telegram
-#    platform: telegram
-#    api_key: !secret telegram_api
-#    chat_id: !secret telegram_chatid
   - name: iOSApp
     platform: ios
     target: !secret ios_token
@@ -206,12 +197,6 @@ media_player:
 
 #apple_tv: !include apple_tv.yaml
 
-#tts:
-#  - platform: google
-#    cache: true
-#    cache_dir: /tmp/tts
-#    time_memory: 300
-# Not used at the moment
 
 xiaomi_aqara:
   gateways:
