@@ -1,77 +1,25 @@
 <dom-module id='ha-panel-zwavegraph2'>
   <template>
-    <style include="ha-style">
-      .node.Layer1 > rect, .node.Layer1 > circle
-      {
-        fill: lightblue;
-      }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css"/>
 
-      .node.Layer2 > rect, .node.Layer2 > circle
-      {
-        fill: yellow;
-      }
-
-      .node.Layer3 > rect, .node.Layer3 > circle
-      {
-        fill: green;
-      }
-
-      .node.Layer4 > rect, .node.Layer4 > circle
-      {
-        fill: orange;
-      }
-
-      .node.Layer5 > rect, .node.Layer5 > circle
-      {
-        fill: grey;
-      }
-
-      .node.Error > rect, .node.Error > circle
-      {
-        fill: red;
-      }
-
-      .node.unset > rect, .node.unset > circle
-      {
-        fill: white;
-      }
-
-      .node > rect, .node > circle
-      {
-        stroke: black;
-      }
-
-      .node text
-      {
-        font-size: 12px;
-      }
-
-      .edgePath path {
-        stroke: #333;
-        fill: #333;
-        stroke-width: 1.5px;
-      }
-
+    <style type="text/css">
+        #mynetwork {
+            border: 1px solid lightgray;
+            height: 90%;
+        }
+        #mygraph { height:90% }
     </style>
 
-    <app-header-layout has-scrolling-region>
-      <app-header slot="header" fixed>
-        <app-toolbar>
-          <ha-menu-button narrow='[[narrow]]' show-menu='[[showMenu]]'></ha-menu-button>
-          <div main-title>Zwave Graph</div>
-        </app-toolbar>
-      </app-header>
-
-      <div class="content">
-        <svg id="svg"></svg>
-      </div>
-    </app-header-layout>
+    <div id="mynetwork">
+      <div id="configuration"></div>
+      <div id="mygraph"></div>
+    </div>
 
   </template>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
 
 </dom-module>
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dagre-d3/0.6.1/dagre-d3.js"></script>
+
 <script>
 class HaPanelZWave extends Polymer.Element {
   static get is() { return 'ha-panel-zwavegraph2'; }
@@ -90,7 +38,7 @@ class HaPanelZWave extends Polymer.Element {
         type: Boolean,
         value: false,
       },
-      // Home Assistant panel info99
+      // Home Assistant panel info
       // panel.config contains config passed to register_panel serverside
       panel: Object,
     };
@@ -99,96 +47,64 @@ class HaPanelZWave extends Polymer.Element {
 
   ready() {
     super.ready();
+    let data = this.listNodes(this.hass);
 
-    var data=this.listNodes(this.hass);
-
-
-    var g = new dagreD3.graphlib.Graph().setGraph({});
-    g.graph().rankDir="BT";
-    g.graph().nodeSep=15;
-
-    for (var i = 0; i < data["nodes"].length; i++) {
-      var node=data["nodes"][i];
-      g.setNode(node.id, node);
-    }
-
-    for (var i =0; i< data["edges"].length; i++)
-    {
-      g.setEdge(data["edges"][i].from, data["edges"][i].to, {label:"", arrowhead: "undirected"})
-    }
-
-    // Create the renderer
-    var render = new dagreD3.render();
-
-    var svg=d3.select(this.$.svg);
-    var inner = svg.append("g").attr("transform", "translate(20,120)scale(1)");
-
-    g.graph().minlen = 0;
-
-    // Run the renderer. This is what draws the final graph.
-    render(inner, g);
+    data.nodes.splice(0,0,
+	{id: "legendBox",
+         label: "Battery\nPowered\nDevice",
+         x:50, y:50, physics: false, shape: "box", fixed: true, group: "legend"
+        },{id: "legendCircle",
+         label: "Mains\nPowered\nDevice",
+         x:150, y:150, physics: false, shape: "circle", fixed:true, group: "legend"
+        });
 
 
-    // Add the title element to be used for a tooltip (SVG functionality)
-    inner.selectAll("g.node")
-        .append("title").html(function(d) {return g.node(d).title;});
-    svg.attr('height', g.graph().height + 140);
-    svg.attr('width', g.graph().width + 140);
-
-    var legends=[{shape: "rect", color:"lightblue", text:"Hub"},
-                 {shape: "rect", color:"yellow", text:"1 hop"},
-                 {shape: "rect", color:"green", text:"2 hops"},
-                 {shape: "rect", color:"orange", text:"3 hops"},
-                 {shape: "rect", color:"grey", text:"4 hops"},
-                 {shape: "rect", color:"red", text:"Failed Node"},
-                 {shape: "rect", color:"white", text:"Unconnected"}];
-
-    this.addLegend(svg, legends, 5, 20);
-
-
-    legends = [{shape: "circle", text: "Mains power", color: "black"},
-               {shape: "rect", text: "Battery power", color: "black"}]
-
-    this.addLegend(svg, legends, 5 + g.graph().width/4, 20)
-
-
+    var options = {
+      height: '100%',
+      configure: {
+        enabled: true,
+        filter: function (option, path) {
+          if (option === "nodeDistance") {
+            return true;
+          }
+          return false;
+        },
+        container: this.$.configuration,
+        showButton: false
+      },
+      layout: {
+        hierarchical: {
+          enabled: true,
+          direction: "DU",
+          nodeSpacing: 25,
+          sortMethod: "directed"
+        }
+      },
+      interaction: {dragNodes: true, hover: true},
+      physics: {
+        hierarchicalRepulsion: {
+          centralGravity: 0.25,
+          springLength: 100,
+          springConstant: 0.01,
+          nodeDistance: 100
+        },
+        minVelocity: 0.75,
+        solver: "hierarchicalRepulsion"
+      },
+      nodes: {
+        borderWidth: 1,
+        scaling: {
+          label: false
+        }
+      }
+    };
+    // create a network
+    var container = this.$.mygraph;
+    // initialize your network!
+    var network = new vis.Network(container, data, options);
 
   }
 
-  addLegend(svg, legends, startX, startY)
-  {
-    for(var counter=0;counter < legends.length;counter++)
-    {
-      if (legends[counter].shape == "circle")
-      {
-        svg.append(legends[counter].shape)
-          .attr('cx', startX + 5 )
-          .attr('cy',startY + 5 + 20 * counter)
-          .attr('r', 5)
-          .style("stroke", "black")
-          .style("fill", legends[counter].color);
-      }
-      else
-      {
-        svg.append(legends[counter].shape)
-          .attr('x',startX)
-          .attr('y',startY + 20 * counter)
-          .attr('width', 10)
-          .attr('height', 10)
-          .style("stroke", "black")
-          .style("fill", legends[counter].color);
-      }
-      svg.append('text')
-        .attr("x", startX + 20)
-        .attr("y", startY + 10 + 20*counter)
-        .text(legends[counter].text)
-        .attr("class", "textselected")
-        .style("text-anchor", "start")
-        .style("font-size", 15);
-
-    }
-
-  }
 
   listNodes(hass) {
     let states=new Array();
@@ -219,8 +135,8 @@ class HaPanelZWave extends Polymer.Element {
        let batlev=node.attributes.battery_level;
        let entity={"id":  id,
                    "label": (node.attributes["node_name"] + " (" + node.attributes["averageResponseRTT"]+"ms)").replace(/ /g, "\n"),
-                   "class": "unset",
-                   "shape": batlev != undefined ? "rect" : "circle",
+                   "group": "unset",
+                   "shape": batlev != undefined ? "box" : "circle",
                    "title": "<b>"+node.attributes["node_name"]+"</b>" +
                             "<br />Node: " + id + (node.attributes["is_zwave_plus"] ? "+" : "") +
                             "<br />Product Name: " + node.attributes["product_name"] +
@@ -262,7 +178,7 @@ class HaPanelZWave extends Polymer.Element {
         for (let target in previousRow)
         {
           result.nodes.filter((n) => {return ((n.id ==previousRow[target]) && (n.group="unset"))})
-                      .every((d) => {d.class="Layer" + layer;})
+                      .every((d) => {d.group="Layer " + layer;})
 
           if (result.nodes.filter((n) => {return ((n.id == previousRow[target]) && (n.forwards))}).length > 0)
           {
@@ -293,3 +209,14 @@ class HaPanelZWave extends Polymer.Element {
 }
 customElements.define(HaPanelZWave.is, HaPanelZWave);
 </script>
+
+
+
+edif30
+8d
+So how does this work? It just updates the graph in real time vs having to call the python script in the former method?
+
+
+
+
+NigelL
